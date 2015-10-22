@@ -32,8 +32,12 @@ class ColorViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
-        self.model?.startUpdates()
+
+        // update the offset and city label in case they were changed elsewhere
+        self.model?.offset = UserDefaultsManager.getTimeOffset()
         self.cityLabel.text = UserDefaultsManager.getCurrentCity()
+
+        self.model?.startUpdates()
     }
     
     override func viewWillDisappear(animated: Bool) {

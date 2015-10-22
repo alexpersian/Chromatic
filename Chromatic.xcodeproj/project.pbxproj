@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		945A8EB41BD8B3F2004FD636 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEE81BA67DC5000DC2F9 /* ColorModel.swift */; settings = {ASSET_TAGS = (); }; };
+		945A8EB51BD8B3F2004FD636 /* UIColor+HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */; settings = {ASSET_TAGS = (); }; };
 		EA1734261BA676DE008F9BB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1734251BA676DE008F9BB0 /* AppDelegate.swift */; };
 		EA17342B1BA676DE008F9BB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1734291BA676DE008F9BB0 /* Main.storyboard */; };
 		EA17342D1BA676DE008F9BB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA17342C1BA676DE008F9BB0 /* Assets.xcassets */; };
@@ -27,8 +29,6 @@
 		EA4576A31BC766E2007B5BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA4576A21BC766E2007B5BC6 /* Assets.xcassets */; };
 		EA4576A71BC766E2007B5BC6 /* Chromatic Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EA45768B1BC766E2007B5BC6 /* Chromatic Watch App.app */; };
 		EA74B1361BB3555100EDA4B5 /* SettingsVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA74B1351BB3555100EDA4B5 /* SettingsVC+Delegate.swift */; settings = {ASSET_TAGS = (); }; };
-		EAA4AB791BCEF3C500474F19 /* WatchColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA4AB781BCEF3C500474F19 /* WatchColorModel.swift */; settings = {ASSET_TAGS = (); }; };
-		EAA4AB7B1BCEF3D300474F19 /* WatchUIColor+HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA4AB7A1BCEF3D300474F19 /* WatchUIColor+HexConverter.swift */; settings = {ASSET_TAGS = (); }; };
 		EAA73B711BABA5DE00BC3988 /* CityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA73B701BABA5DE00BC3988 /* CityList.swift */; settings = {ASSET_TAGS = (); }; };
 		EAA73B731BABB02100BC3988 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -119,8 +119,6 @@
 		EA4576A21BC766E2007B5BC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA4576A41BC766E2007B5BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA74B1351BB3555100EDA4B5 /* SettingsVC+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingsVC+Delegate.swift"; sourceTree = "<group>"; };
-		EAA4AB781BCEF3C500474F19 /* WatchColorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchColorModel.swift; sourceTree = "<group>"; };
-		EAA4AB7A1BCEF3D300474F19 /* WatchUIColor+HexConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WatchUIColor+HexConverter.swift"; sourceTree = "<group>"; };
 		EAA73B701BABA5DE00BC3988 /* CityList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityList.swift; sourceTree = "<group>"; };
 		EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,10 +163,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		945A8EB61BD8BFC6004FD636 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EA3CEEE81BA67DC5000DC2F9 /* ColorModel.swift */,
+				EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */,
+			);
+			name = Common;
+			path = Chromatic;
+			sourceTree = "<group>";
+		};
 		EA1734191BA676DE008F9BB0 = {
 			isa = PBXGroup;
 			children = (
 				EA2B5E3A1BD499A6005DAB1F /* StoreKit.framework */,
+				945A8EB61BD8BFC6004FD636 /* Common */,
 				EA1734241BA676DE008F9BB0 /* Chromatic */,
 				EA1734391BA676DE008F9BB0 /* ChromaticTests */,
 				EA1734441BA676DE008F9BB0 /* ChromaticUITests */,
@@ -195,8 +204,6 @@
 			children = (
 				EA1734251BA676DE008F9BB0 /* AppDelegate.swift */,
 				EA3CEEE91BA67DC5000DC2F9 /* ColorViewController.swift */,
-				EA3CEEE81BA67DC5000DC2F9 /* ColorModel.swift */,
-				EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */,
 				EA3CEEEA1BA67DC5000DC2F9 /* SettingsViewController.swift */,
 				EA1A5F3F1BB0626A00EC1183 /* SettingsVC+DataSource.swift */,
 				EA74B1351BB3555100EDA4B5 /* SettingsVC+Delegate.swift */,
@@ -267,8 +274,6 @@
 			isa = PBXGroup;
 			children = (
 				EA45769C1BC766E2007B5BC6 /* InterfaceController.swift */,
-				EAA4AB781BCEF3C500474F19 /* WatchColorModel.swift */,
-				EAA4AB7A1BCEF3D300474F19 /* WatchUIColor+HexConverter.swift */,
 				EA45769E1BC766E2007B5BC6 /* ExtensionDelegate.swift */,
 				EA4576A21BC766E2007B5BC6 /* Assets.xcassets */,
 				EA4576A41BC766E2007B5BC6 /* Info.plist */,
@@ -519,8 +524,8 @@
 			files = (
 				EA45769F1BC766E2007B5BC6 /* ExtensionDelegate.swift in Sources */,
 				EA45769D1BC766E2007B5BC6 /* InterfaceController.swift in Sources */,
-				EAA4AB7B1BCEF3D300474F19 /* WatchUIColor+HexConverter.swift in Sources */,
-				EAA4AB791BCEF3C500474F19 /* WatchColorModel.swift in Sources */,
+				945A8EB51BD8B3F2004FD636 /* UIColor+HexConverter.swift in Sources */,
+				945A8EB41BD8B3F2004FD636 /* ColorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
