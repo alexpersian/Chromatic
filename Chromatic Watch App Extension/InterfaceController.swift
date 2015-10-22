@@ -14,11 +14,11 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var hexLabel: WKInterfaceLabel!
     @IBOutlet var colorImage: WKInterfaceImage!
     
-    private var model: WatchColorModel?
+    private var model: ColorModel?
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        self.model = WatchColorModel()
+        self.model = ColorModel()
         self.bindToModel()
     }
 

@@ -10,27 +10,41 @@ import XCTest
 @testable import Chromatic
 
 class ChromaticTests: XCTestCase {
+
+    let formatter = NSDateFormatter()
+    let model = ColorModel()
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+        // TODO: This should really be configurable on the model and not need to be hardcoded here.
+        formatter.dateFormat = "HH : mm : ss"
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    func checkStringForDateWithOffset(offset: Int) {
+        // given
+        let date = NSDate()
+        model.offset = offset
+        formatter.timeZone = NSTimeZone(forSecondsFromGMT: offset)
+        let expected = formatter.stringFromDate(date)
+
+        // when
+        let result = model.stringForDate(date)
+
+        // then
+        XCTAssertEqual(result, expected)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+
+    func testStringForDate_shouldReturnAppropriatelyOffsetString() {
+        checkStringForDateWithOffset(0)
+        checkStringForDateWithOffset(-2000)
+        checkStringForDateWithOffset(10)
+        checkStringForDateWithOffset(25200)
+        checkStringForDateWithOffset(-25200)
     }
-    
 }

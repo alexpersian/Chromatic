@@ -15,6 +15,9 @@ class ColorModel: NSObject {
     
     var didUpdate: didUpdateBlock?
     var timer = NSTimer()
+
+    /// The GMT offset to be applied to the time as we format our dateStrings.
+    var offset = NSTimeZone.localTimeZone().secondsFromGMT
     
     func startUpdates() {
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "sendData", userInfo: nil, repeats: true)
@@ -36,8 +39,8 @@ class ColorModel: NSObject {
     }
     
     func sendData(date: NSDate) {
-        if (self.didUpdate == nil) { return }
-        
+        guard let updateBlock = self.didUpdate else { return }
+
         let dateString: NSString = self.stringForDate(date)
         let hexString: NSString = self.hexStringFromDateString(dateString as String)
         let color: UIColor = self.colorFromHexString(hexString as String)
@@ -47,22 +50,19 @@ class ColorModel: NSObject {
             NSCalendarUnit.Minute
             ], fromDate: date)
         
-        self.didUpdate!(timeString: dateString as String, hex: hexString as String, color: color, hours: components.hour, minutes: components.minute)
+        updateBlock(timeString: dateString as String, hex: hexString as String, color: color, hours: components.hour, minutes: components.minute)
     }
     
     func stringForDate(date: NSDate) -> String {
         var onceToken: dispatch_once_t = dispatch_once_t()
         var formatter: NSDateFormatter = NSDateFormatter()
         
-        // Set this up to be changed from the picker view on the settings page.
-        let offset = UserDefaultsManager.getTimeOffset()
-        let newTZ = NSTimeZone(forSecondsFromGMT: offset)
-        
         dispatch_once(&onceToken, {
             formatter = NSDateFormatter()
-            formatter.timeZone = newTZ
             formatter.dateFormat = "HH : mm : ss"
         })
+        formatter.timeZone = NSTimeZone(forSecondsFromGMT: offset)
+
         return formatter.stringFromDate(date)
     }
     
