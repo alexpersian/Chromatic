@@ -11,7 +11,7 @@ import StoreKit
 
 class SettingsViewController: UIViewController, UITextFieldDelegate, SKProductsRequestDelegate, SKPaymentTransactionObserver  {
     
-    @IBOutlet weak var placesTextField: UITextField!
+    @IBOutlet weak var placesTextField: GooglePlacesField!
     @IBOutlet weak var citySuperView: UIView!
     @IBOutlet weak var cityPickerView: UIPickerView!
     @IBOutlet weak var timeStyleSwitch: UISwitch!
@@ -28,14 +28,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate, SKProductsR
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setNeedsStatusBarAppearanceUpdate()
-        self.title = "Settings"
-        
-        /* IAP setup */
-        productIDs.insert("chromatic.developer_thank_you")
-        productIDs.insert("chromatic.developer_beer")
-        requestProductInfo()
-        SKPaymentQueue.defaultQueue().addTransactionObserver(self)
+        self.setup()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -53,6 +46,19 @@ class SettingsViewController: UIViewController, UITextFieldDelegate, SKProductsR
 
 // MARK: Custom functions
     
+    func setup() {
+        self.setNeedsStatusBarAppearanceUpdate()
+        self.title = "Settings"
+        self.placesTextField.delegate = self
+        placesTextField.hidePredictionWhenResigningFirstResponder = true
+        
+        /* IAP setup */
+        productIDs.insert("chromatic.developer_thank_you")
+        productIDs.insert("chromatic.developer_beer")
+        requestProductInfo()
+        SKPaymentQueue.defaultQueue().addTransactionObserver(self)
+    }
+    
     func saveNewCity(city: String) {
         UserDefaultsManager.setCurrentCity(city)
     }
@@ -60,6 +66,48 @@ class SettingsViewController: UIViewController, UITextFieldDelegate, SKProductsR
     func saveNewOffset(offset: Int) {
         UserDefaultsManager.setTimeOffset(offset)
     }
+    
+    func findNewCity() {
+        guard (placesTextField.selectedPlaceId != nil) else {
+            showBasicAlert("Woops!", message: "You must select a city.")
+            print("Error: city not selected")
+            return
+        }
+        guard (placesTextField.text?.characters.count > 0) else {
+            print("Error: text field is empty")
+            return
+        }
+        guard let place = placesTextField.text?.componentsSeparatedByString(",") else {
+                print("Error: unable to separate text")
+                return
+        }
+        saveNewCity(place[0])
+    }
+    
+    func showBasicAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let okAction = UIAlertAction(title: "Ok", style: .Default) { (action) -> Void in }
+        
+        alertController.addAction(okAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func showBasicAlertWithProduct(title: String, message: String, product: Int) {
+        let actionSheetController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        
+        let buyAction = UIAlertAction(title: "Buy", style: UIAlertActionStyle.Default) { (action) -> Void in
+            let payment = SKPayment(product: self.productsArray[product])
+            SKPaymentQueue.defaultQueue().addPayment(payment)
+            self.transactionInProgress = true
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action) -> Void in }
+        
+        actionSheetController.addAction(buyAction)
+        actionSheetController.addAction(cancelAction)
+        presentViewController(actionSheetController, animated: true, completion: nil)
+    }
+
+// MARK: In app purchases
     
     func requestProductInfo() {
         if SKPaymentQueue.canMakePayments() {
@@ -173,6 +221,14 @@ class SettingsViewController: UIViewController, UITextFieldDelegate, SKProductsR
                 print(transaction.transactionState.rawValue)
             }
         }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if (textField == self.placesTextField) {
+            textField.resignFirstResponder()
+            self.findNewCity()
+        }
+        return true
     }
     
 // MARK: IBActions

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        // Setup Google Maps services
+        GMSServices.provideAPIKey("AIzaSyAsyfZGRe9ZscQPhUMXz0JQDiW2r9NGC1E")
         
         // If the user doesn't have a city chosen, set it to the default.
         UserDefaultsManager.setDefaultCity()

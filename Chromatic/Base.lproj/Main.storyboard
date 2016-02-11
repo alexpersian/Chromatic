@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -19,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GiF-rI-dEo">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GiF-rI-dEo">
                                 <rect key="frame" x="547" y="547" width="33" height="33"/>
                                 <state key="normal" image="Gear"/>
                                 <connections>
@@ -81,10 +82,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GiF-rI-dEo" secondAttribute="bottom" constant="20" id="1v9-Rf-f8W"/>
                             <constraint firstItem="rbJ-YD-MQA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H5Q-Cb-Jjb"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GiF-rI-dEo" secondAttribute="bottom" constant="20" id="IcW-ck-eTd"/>
                             <constraint firstItem="rbJ-YD-MQA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ijt-OZ-26u"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GiF-rI-dEo" secondAttribute="trailing" id="awK-cb-8Bz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GiF-rI-dEo" secondAttribute="trailing" id="Zcz-c0-n8Q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hjy-5e-v65"/>
@@ -137,9 +138,6 @@
                                 <state key="normal" title="Pick a New City">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="pickCityButtonPressed:" destination="N5d-Oo-c5U" eventType="touchUpInside" id="8Dh-hW-ppj"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See time in color around the world." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uH-ya-o21">
                                 <rect key="frame" x="20" y="144" width="184" height="14"/>
@@ -230,12 +228,32 @@
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CITIES (Temporarily disabled)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dON-KK-PMd">
-                                <rect key="frame" x="20" y="72" width="180" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHANGE CITY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dON-KK-PMd">
+                                <rect key="frame" x="20" y="72" width="88" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Start typing a city name..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XoY-ST-mA7" customClass="GooglePlacesField">
+                                <rect key="frame" x="20" y="96" width="560" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="oHF-F7-Pvu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" red="0.45991909503936768" green="0.87288957834243774" blue="0.46211105585098267" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="insetX">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="successBackgroundColor">
+                                        <color key="value" red="0.76477032899856567" green="0.93788021802902222" blue="0.70708721876144409" alpha="0.25253018465909088" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -253,17 +271,27 @@
                             <constraint firstItem="CBA-Fq-dPj" firstAttribute="leading" secondItem="tsX-Ig-inM" secondAttribute="leading" id="aP5-vu-59h"/>
                             <constraint firstItem="tsX-Ig-inM" firstAttribute="top" secondItem="5uH-ya-o21" secondAttribute="bottom" constant="40" id="aoy-dy-yMO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pGj-ov-E27" secondAttribute="trailing" constant="-20" id="bPp-lD-qiP"/>
+                            <constraint firstItem="5uH-ya-o21" firstAttribute="top" secondItem="XoY-ST-mA7" secondAttribute="bottom" constant="8" id="cdT-el-bTf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Iep-3n-3aW" secondAttribute="trailing" id="eIQ-r9-WDq"/>
+                            <constraint firstItem="XoY-ST-mA7" firstAttribute="top" secondItem="dON-KK-PMd" secondAttribute="bottom" constant="8" id="eQr-Vh-onk"/>
                             <constraint firstItem="msL-IZ-eOW" firstAttribute="leading" secondItem="tsX-Ig-inM" secondAttribute="leading" id="i1l-ks-l35"/>
                             <constraint firstItem="msL-IZ-eOW" firstAttribute="top" secondItem="MGM-ix-vbK" secondAttribute="bottom" constant="8" id="mT4-jv-x87"/>
+                            <constraint firstItem="XoY-ST-mA7" firstAttribute="leading" secondItem="dON-KK-PMd" secondAttribute="leading" id="onw-Xs-xAx"/>
                             <constraint firstItem="pGj-ov-E27" firstAttribute="bottom" secondItem="jDH-fH-VG2" secondAttribute="top" id="rae-rC-Wsn"/>
                             <constraint firstItem="tsX-Ig-inM" firstAttribute="leading" secondItem="dON-KK-PMd" secondAttribute="leading" id="rrS-1A-Aws"/>
                             <constraint firstItem="CBA-Fq-dPj" firstAttribute="top" secondItem="msL-IZ-eOW" secondAttribute="bottom" constant="8" id="uhb-Ma-INT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XoY-ST-mA7" secondAttribute="trailing" id="zKN-g4-HDm"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Iep-3n-3aW"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="cityPickerView" destination="l7z-u8-TQF" id="yrf-pN-X0h"/>
                         <outlet property="citySuperView" destination="pGj-ov-E27" id="0oS-fr-P7k"/>
+                        <outlet property="placesTextField" destination="XoY-ST-mA7" id="3hK-4N-adj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wt7-3W-4j9" userLabel="First Responder" sceneMemberID="firstResponder"/>
