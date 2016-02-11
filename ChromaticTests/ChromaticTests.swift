@@ -47,4 +47,34 @@ class ChromaticTests: XCTestCase {
         checkStringForDateWithOffset(25200)
         checkStringForDateWithOffset(-25200)
     }
+    
+    //TODO: Write a test for the date string -> hex string conversion
+    func checkDateStringForHexStringEqual(dateString: String, _ expected: String) {
+        // when
+        let result = model.hexStringFromDateString(dateString)
+        
+        // then
+        XCTAssertEqual(result, expected)
+    }
+    
+    func checkDateStringForHexStringNotEqual(dateString: String, _ expected: String) {
+        // when
+        let result = model.hexStringFromDateString(dateString)
+        
+        // then
+        XCTAssertNotEqual(result, expected)
+    }
+    
+    func testDateStringForHexString_shouldReturnAppropriateHexString() {
+        // given equal cases
+        checkDateStringForHexStringEqual("08 : 10 : 54", "#08 : A0 : ED")
+        checkDateStringForHexStringEqual("14 : 43 : 27", "#AD : DC : B7")
+        checkDateStringForHexStringEqual("23 : 59 : 59", "#BC : E9 : E9")
+        checkDateStringForHexStringEqual("01 : 01 : 01", "#0A : 0A : 0A")
+        // given not-equal cases
+        checkDateStringForHexStringNotEqual("08 : 10 : 54", "#0F : A0 : ED")
+        checkDateStringForHexStringNotEqual("16 : 33 : 27", "#AD : DC : B7")
+        checkDateStringForHexStringNotEqual("23 : 59 : 59", "#BC : E9 : A9")
+        checkDateStringForHexStringNotEqual("01 : 01 : 01", "#1A : 0A : 0A")
+    }
 }

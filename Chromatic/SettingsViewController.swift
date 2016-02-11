@@ -28,7 +28,6 @@ class SettingsViewController: UIViewController, UITextFieldDelegate, SKProductsR
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         self.setNeedsStatusBarAppearanceUpdate()
         self.title = "Settings"
         
@@ -77,7 +76,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate, SKProductsR
             return
         }
         
-        let actionSheetController = UIAlertController(title: "Chromatic", message: "Send a thank you to the dev? ($0.99)", preferredStyle: .Alert)
+        let actionSheetController = UIAlertController(title: "Chromatic", message: "Send a thank you to the developer? ($0.99)", preferredStyle: .Alert)
         
         let buyAction = UIAlertAction(title: "Buy", style: UIAlertActionStyle.Default) { (action) -> Void in
             let payment = SKPayment(product: self.productsArray[1])
@@ -98,7 +97,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate, SKProductsR
             return
         }
         
-        let actionSheetController = UIAlertController(title: "Chromatic", message: "Buy the dev a beer? ($2.99)", preferredStyle: .Alert)
+        let actionSheetController = UIAlertController(title: "Chromatic", message: "Buy the developer a coffee? ($2.99)", preferredStyle: .Alert)
         
         let buyAction = UIAlertAction(title: "Buy", style: UIAlertActionStyle.Default) { (action) -> Void in
             let payment = SKPayment(product: self.productsArray[0])
@@ -179,9 +178,18 @@ class SettingsViewController: UIViewController, UITextFieldDelegate, SKProductsR
 // MARK: IBActions
 
     @IBAction func pickCityButtonPressed(sender: UIButton) {
-        if (citySuperView.hidden) {
-            citySuperView.hidden = false
-        }
+        
+        //TODO: Remove this once dynamic time zones are working
+        let actionSheetController = UIAlertController(title: "Sorry", message: "This will be back once I get dynamic time zones working.", preferredStyle: .Alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default) { (action) -> Void in }
+        
+        actionSheetController.addAction(okAction)
+        presentViewController(actionSheetController, animated: true, completion: nil)
+        
+//        if (citySuperView.hidden) {
+//            citySuperView.hidden = false
+//        }
     }
     
     @IBAction func chooseButtonPressed(sender: UIBarButtonItem) {

@@ -35,7 +35,10 @@ class ColorViewController: UIViewController {
 
         // update the offset and city label in case they were changed elsewhere
         self.model?.offset = UserDefaultsManager.getTimeOffset()
-        self.cityLabel.text = UserDefaultsManager.getCurrentCity()
+        
+        //TODO: Remove once dynamic time zones are working
+        self.cityLabel.text = "Local"
+//        self.cityLabel.text = UserDefaultsManager.getCurrentCity()
 
         self.model?.startUpdates()
     }

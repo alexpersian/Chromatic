@@ -34,7 +34,7 @@ class InterfaceController: WKInterfaceController {
         self.model?.stopUpdates()
     }
 
-    // MARK: Model
+// MARK: Model
     func bindToModel() {
         self.model?.didUpdate = self.modelDidUpdate
     }

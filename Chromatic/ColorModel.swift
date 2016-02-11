@@ -61,6 +61,8 @@ class ColorModel: NSObject {
             formatter = NSDateFormatter()
             formatter.dateFormat = "HH : mm : ss"
         })
+        // TODO: Remove once dynamic time zones are working
+//        formatter.timeZone = NSTimeZone.localTimeZone()
         formatter.timeZone = NSTimeZone(forSecondsFromGMT: offset)
 
         return formatter.stringFromDate(date)

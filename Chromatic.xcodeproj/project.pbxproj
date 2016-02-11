@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		945A8EB41BD8B3F2004FD636 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEE81BA67DC5000DC2F9 /* ColorModel.swift */; settings = {ASSET_TAGS = (); }; };
-		945A8EB51BD8B3F2004FD636 /* UIColor+HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */; settings = {ASSET_TAGS = (); }; };
+		945A8EB41BD8B3F2004FD636 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEE81BA67DC5000DC2F9 /* ColorModel.swift */; };
+		945A8EB51BD8B3F2004FD636 /* UIColor+HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */; };
 		EA1734261BA676DE008F9BB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1734251BA676DE008F9BB0 /* AppDelegate.swift */; };
 		EA17342B1BA676DE008F9BB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1734291BA676DE008F9BB0 /* Main.storyboard */; };
 		EA17342D1BA676DE008F9BB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA17342C1BA676DE008F9BB0 /* Assets.xcassets */; };
 		EA1734301BA676DE008F9BB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA17342E1BA676DE008F9BB0 /* LaunchScreen.storyboard */; };
 		EA17343B1BA676DE008F9BB0 /* ChromaticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17343A1BA676DE008F9BB0 /* ChromaticTests.swift */; };
 		EA1734461BA676DE008F9BB0 /* ChromaticUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1734451BA676DE008F9BB0 /* ChromaticUITests.swift */; };
-		EA1A5F401BB0626A00EC1183 /* SettingsVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A5F3F1BB0626A00EC1183 /* SettingsVC+DataSource.swift */; settings = {ASSET_TAGS = (); }; };
+		EA1A5F401BB0626A00EC1183 /* SettingsVC+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1A5F3F1BB0626A00EC1183 /* SettingsVC+DataSource.swift */; };
 		EA2B5E3B1BD499A6005DAB1F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2B5E3A1BD499A6005DAB1F /* StoreKit.framework */; };
-		EA3CEEEE1BA67DC5000DC2F9 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEE81BA67DC5000DC2F9 /* ColorModel.swift */; settings = {ASSET_TAGS = (); }; };
-		EA3CEEEF1BA67DC5000DC2F9 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEE91BA67DC5000DC2F9 /* ColorViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		EA3CEEF01BA67DC5000DC2F9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEA1BA67DC5000DC2F9 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		EA3CEEF11BA67DC5000DC2F9 /* UIColor+HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */; settings = {ASSET_TAGS = (); }; };
+		EA3CEEEE1BA67DC5000DC2F9 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEE81BA67DC5000DC2F9 /* ColorModel.swift */; };
+		EA3CEEEF1BA67DC5000DC2F9 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEE91BA67DC5000DC2F9 /* ColorViewController.swift */; };
+		EA3CEEF01BA67DC5000DC2F9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEA1BA67DC5000DC2F9 /* SettingsViewController.swift */; };
+		EA3CEEF11BA67DC5000DC2F9 /* UIColor+HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */; };
 		EA45768F1BC766E2007B5BC6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA45768D1BC766E2007B5BC6 /* Interface.storyboard */; };
 		EA4576911BC766E2007B5BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA4576901BC766E2007B5BC6 /* Assets.xcassets */; };
 		EA4576981BC766E2007B5BC6 /* Chromatic Watch App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EA4576971BC766E2007B5BC6 /* Chromatic Watch App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -28,9 +28,9 @@
 		EA45769F1BC766E2007B5BC6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA45769E1BC766E2007B5BC6 /* ExtensionDelegate.swift */; };
 		EA4576A31BC766E2007B5BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA4576A21BC766E2007B5BC6 /* Assets.xcassets */; };
 		EA4576A71BC766E2007B5BC6 /* Chromatic Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EA45768B1BC766E2007B5BC6 /* Chromatic Watch App.app */; };
-		EA74B1361BB3555100EDA4B5 /* SettingsVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA74B1351BB3555100EDA4B5 /* SettingsVC+Delegate.swift */; settings = {ASSET_TAGS = (); }; };
-		EAA73B711BABA5DE00BC3988 /* CityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA73B701BABA5DE00BC3988 /* CityList.swift */; settings = {ASSET_TAGS = (); }; };
-		EAA73B731BABB02100BC3988 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */; settings = {ASSET_TAGS = (); }; };
+		EA74B1361BB3555100EDA4B5 /* SettingsVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA74B1351BB3555100EDA4B5 /* SettingsVC+Delegate.swift */; };
+		EAA73B711BABA5DE00BC3988 /* CityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA73B701BABA5DE00BC3988 /* CityList.swift */; };
+		EAA73B731BABB02100BC3988 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */

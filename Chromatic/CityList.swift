@@ -22,6 +22,7 @@ struct CityList {
         "Tokyo":        9,
         "Beijing":      8,
         "Manilla":      8,
-        "Minneapolis":  -5
+        "Minneapolis":  -5,
+        "Amsterdam":    1
     ]
 }
