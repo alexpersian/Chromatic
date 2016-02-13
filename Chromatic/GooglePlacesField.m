@@ -105,7 +105,6 @@ static CGFloat PredictionTableAnimationLength = 0.35;
     self.attributedText = prediction.attributedFullText;
     [self hidePredictions];
     [self sendActionsForControlEvents:UIControlEventValueChanged];
-    self.backgroundColor = self.successBackgroundColor;
 }
 
 #pragma mark - Spinner

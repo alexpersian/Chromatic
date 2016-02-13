@@ -17,7 +17,7 @@ class ColorModel: NSObject {
     var timer = NSTimer()
 
     /// The GMT offset to be applied to the time as we format our dateStrings.
-    var offset = NSTimeZone.localTimeZone().secondsFromGMT
+    var offset = UserDefaultsManager.getTimeOffset()
     
     func startUpdates() {
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "sendData", userInfo: nil, repeats: true)

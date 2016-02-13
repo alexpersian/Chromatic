@@ -13,6 +13,7 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable CGFloat insetX;
 @property (nonatomic) IBInspectable CGFloat insetY;
 @property (nonatomic, strong) IBInspectable UIColor *successBackgroundColor;
+@property (nonatomic, strong) IBInspectable UIColor *failureBackgroundColor;
 @property (readonly) NSString *selectedPlaceId;
 @property (nonatomic, assign) BOOL hidePredictionWhenResigningFirstResponder; //default: NO
 @end
