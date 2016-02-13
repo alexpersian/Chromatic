@@ -183,8 +183,7 @@
 				EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */,
 				EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */,
 			);
-			name = Common;
-			path = Chromatic;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		9F484268543F32A398D39E43 /* Frameworks */ = {
@@ -207,16 +206,16 @@
 		EA1734191BA676DE008F9BB0 = {
 			isa = PBXGroup;
 			children = (
-				EA2B5E3A1BD499A6005DAB1F /* StoreKit.framework */,
-				945A8EB61BD8BFC6004FD636 /* Common */,
 				EA1734241BA676DE008F9BB0 /* Chromatic */,
-				EA1734391BA676DE008F9BB0 /* ChromaticTests */,
-				EA1734441BA676DE008F9BB0 /* ChromaticUITests */,
 				EA45768C1BC766E2007B5BC6 /* Chromatic Watch App */,
 				EA45769B1BC766E2007B5BC6 /* Chromatic Watch App Extension */,
-				EA1734231BA676DE008F9BB0 /* Products */,
-				C174A2D666AB161DB1060D41 /* Pods */,
+				EA1734391BA676DE008F9BB0 /* ChromaticTests */,
+				EA1734441BA676DE008F9BB0 /* ChromaticUITests */,
+				945A8EB61BD8BFC6004FD636 /* Common */,
 				9F484268543F32A398D39E43 /* Frameworks */,
+				C174A2D666AB161DB1060D41 /* Pods */,
+				EA1734231BA676DE008F9BB0 /* Products */,
+				EA2B5E3A1BD499A6005DAB1F /* StoreKit.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -263,22 +262,22 @@
 		EA3CEEE21BA67A8E000DC2F9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA63C1391C6D05B100AE5B04 /* GooglePlacesField */,
+				EA3CEEE41BA67AB9000DC2F9 /* Images */,
+				EA3CEEE31BA67AAF000DC2F9 /* Storyboards */,
 				EA1734251BA676DE008F9BB0 /* AppDelegate.swift */,
 				EA1734311BA676DE008F9BB0 /* Info.plist */,
-				EA63C1391C6D05B100AE5B04 /* GooglePlacesField */,
-				EA3CEEE31BA67AAF000DC2F9 /* Storyboards */,
-				EA3CEEE41BA67AB9000DC2F9 /* Images */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		EA3CEEE31BA67AAF000DC2F9 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				EA1734291BA676DE008F9BB0 /* Main.storyboard */,
 				EA17342E1BA676DE008F9BB0 /* LaunchScreen.storyboard */,
+				EA1734291BA676DE008F9BB0 /* Main.storyboard */,
 			);
-			name = Storyboards;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		EA3CEEE41BA67AB9000DC2F9 /* Images */ = {
@@ -286,16 +285,16 @@
 			children = (
 				EA17342C1BA676DE008F9BB0 /* Assets.xcassets */,
 			);
-			name = Images;
+			path = Images;
 			sourceTree = "<group>";
 		};
 		EA45768C1BC766E2007B5BC6 /* Chromatic Watch App */ = {
 			isa = PBXGroup;
 			children = (
-				EA0561551BD48FD300C25142 /* Chromatic Watch App.entitlements */,
-				EA45768D1BC766E2007B5BC6 /* Interface.storyboard */,
 				EA4576901BC766E2007B5BC6 /* Assets.xcassets */,
+				EA0561551BD48FD300C25142 /* Chromatic Watch App.entitlements */,
 				EA4576921BC766E2007B5BC6 /* Info.plist */,
+				EA45768D1BC766E2007B5BC6 /* Interface.storyboard */,
 			);
 			path = "Chromatic Watch App";
 			sourceTree = "<group>";
@@ -303,10 +302,10 @@
 		EA45769B1BC766E2007B5BC6 /* Chromatic Watch App Extension */ = {
 			isa = PBXGroup;
 			children = (
-				EA45769C1BC766E2007B5BC6 /* InterfaceController.swift */,
-				EA45769E1BC766E2007B5BC6 /* ExtensionDelegate.swift */,
 				EA4576A21BC766E2007B5BC6 /* Assets.xcassets */,
+				EA45769E1BC766E2007B5BC6 /* ExtensionDelegate.swift */,
 				EA4576A41BC766E2007B5BC6 /* Info.plist */,
+				EA45769C1BC766E2007B5BC6 /* InterfaceController.swift */,
 			);
 			path = "Chromatic Watch App Extension";
 			sourceTree = "<group>";
@@ -314,13 +313,13 @@
 		EA63C1391C6D05B100AE5B04 /* GooglePlacesField */ = {
 			isa = PBXGroup;
 			children = (
+				EA63C13A1C6D05CB00AE5B04 /* Chromatic-Bridging-Header.h */,
 				EA63C13B1C6D05CC00AE5B04 /* GooglePlacesField.h */,
 				EA63C13C1C6D05CC00AE5B04 /* GooglePlacesField.m */,
 				EA63C13D1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.h */,
 				EA63C13E1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m */,
-				EA63C13A1C6D05CB00AE5B04 /* Chromatic-Bridging-Header.h */,
 			);
-			name = GooglePlacesField;
+			path = GooglePlacesField;
 			sourceTree = "<group>";
 		};
 		EA63C1411C6D067400AE5B04 /* Controllers */ = {
@@ -329,17 +328,17 @@
 				EA3CEEE91BA67DC5000DC2F9 /* ColorViewController.swift */,
 				EA3CEEEA1BA67DC5000DC2F9 /* SettingsViewController.swift */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		EA63C1421C6D068000AE5B04 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */,
-				EA3C9C211C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift */,
 				EA3C9C231C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift */,
+				EA3C9C211C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift */,
+				EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */,
 			);
-			name = Extensions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -676,6 +675,7 @@
 				EA17342A1BA676DE008F9BB0 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		EA17342E1BA676DE008F9BB0 /* LaunchScreen.storyboard */ = {
@@ -684,6 +684,7 @@
 				EA17342F1BA676DE008F9BB0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		EA45768D1BC766E2007B5BC6 /* Interface.storyboard */ = {
@@ -692,6 +693,7 @@
 				EA45768E1BC766E2007B5BC6 /* Base */,
 			);
 			name = Interface.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -788,7 +790,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Chromatic/Info.plist;
+				INFOPLIST_FILE = "Chromatic/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.Chromatic;
@@ -811,7 +813,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Chromatic/Info.plist;
+				INFOPLIST_FILE = "Chromatic/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.Chromatic;
