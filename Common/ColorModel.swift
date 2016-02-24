@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-typealias didUpdateBlock = (timeString: String, hex: String, color: UIColor, hours: Int, minutes: Int) -> Void
+typealias didUpdateBlock = (timeString: String, hex: String, color: UIColor, nextColor: UIColor, hours: Int, minutes: Int) -> Void
 
 class ColorModel: NSObject {
     
@@ -45,12 +45,16 @@ class ColorModel: NSObject {
         let hexString: NSString = self.hexStringFromDateString(dateString as String)
         let color: UIColor = self.colorFromHexString(hexString as String)
         
+        let nextDateString: NSString = self.stringForDate(date.dateByAddingTimeInterval(1.0))
+        let nextHexString: NSString = self.hexStringFromDateString(nextDateString as String)
+        let nextColor: UIColor = self.colorFromHexString(nextHexString as String)
+        
         let components: NSDateComponents = NSCalendar.currentCalendar().components([
             NSCalendarUnit.Hour,
             NSCalendarUnit.Minute
             ], fromDate: date)
         
-        updateBlock(timeString: dateString as String, hex: hexString as String, color: color, hours: components.hour, minutes: components.minute)
+        updateBlock(timeString: dateString as String, hex: hexString as String, color: color, nextColor: nextColor, hours: components.hour, minutes: components.minute)
     }
     
     func stringForDate(date: NSDate) -> String {
@@ -61,8 +65,6 @@ class ColorModel: NSObject {
             formatter = NSDateFormatter()
             formatter.dateFormat = "HH : mm : ss"
         })
-        // TODO: Remove once dynamic time zones are working
-//        formatter.timeZone = NSTimeZone.localTimeZone()
         formatter.timeZone = NSTimeZone(forSecondsFromGMT: offset)
 
         return formatter.stringFromDate(date)

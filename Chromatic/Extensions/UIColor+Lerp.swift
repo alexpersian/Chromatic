@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+extension UIColor {
+    
+    func lerp(currentColor: UIColor, finalColor: UIColor, progress: CGFloat) -> UIColor {
+        let c1 = CGColorGetComponents(currentColor.CGColor)
+        let c2 = CGColorGetComponents(finalColor.CGColor)
+        
+        let r: CGFloat = ((1.0 - progress) * c1[0]) + (progress * c2[0])
+        let g: CGFloat = ((1.0 - progress) * c1[1]) + (progress * c2[1])
+        let b: CGFloat = ((1.0 - progress) * c1[2]) + (progress * c2[2])
+        let a: CGFloat = ((1.0 - progress) * c1[3]) + (progress * c2[3])
+        
+        return UIColor(red: r, green: g, blue: b, alpha: a)
+    }
+}

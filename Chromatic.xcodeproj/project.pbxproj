@@ -16,6 +16,7 @@
 		EA1734301BA676DE008F9BB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA17342E1BA676DE008F9BB0 /* LaunchScreen.storyboard */; };
 		EA17343B1BA676DE008F9BB0 /* ChromaticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17343A1BA676DE008F9BB0 /* ChromaticTests.swift */; };
 		EA1734461BA676DE008F9BB0 /* ChromaticUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1734451BA676DE008F9BB0 /* ChromaticUITests.swift */; };
+		EA2537881C7C1413008ED52C /* UIColor+Lerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2537871C7C1413008ED52C /* UIColor+Lerp.swift */; };
 		EA2B5E3B1BD499A6005DAB1F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2B5E3A1BD499A6005DAB1F /* StoreKit.framework */; };
 		EA3C9C1C1C6E758500DE09E5 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */; };
 		EA3C9C201C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */; };
@@ -110,6 +111,7 @@
 		EA1734411BA676DE008F9BB0 /* ChromaticUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChromaticUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1734451BA676DE008F9BB0 /* ChromaticUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromaticUITests.swift; sourceTree = "<group>"; };
 		EA1734471BA676DE008F9BB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA2537871C7C1413008ED52C /* UIColor+Lerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Lerp.swift"; sourceTree = "<group>"; };
 		EA2B5E3A1BD499A6005DAB1F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingsVC+UITextFieldHandler.swift"; sourceTree = "<group>"; };
 		EA3C9C211C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingsVC+SKHandler.swift"; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				EA3C9C231C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift */,
 				EA3C9C211C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift */,
 				EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */,
+				EA2537871C7C1413008ED52C /* UIColor+Lerp.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA2537881C7C1413008ED52C /* UIColor+Lerp.swift in Sources */,
 				EA3CEEF11BA67DC5000DC2F9 /* UIColor+HexConverter.swift in Sources */,
 				EA3C9C241C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift in Sources */,
 				EA1734261BA676DE008F9BB0 /* AppDelegate.swift in Sources */,
@@ -788,6 +792,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Chromatic/Supporting Files/Info.plist";
@@ -797,7 +802,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "Chromatic/Chromatic-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chromatic/Supporting Files/GooglePlacesField/Chromatic-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -811,6 +816,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Chromatic/Supporting Files/Info.plist";
@@ -820,7 +826,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "Chromatic/Chromatic-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chromatic/Supporting Files/GooglePlacesField/Chromatic-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

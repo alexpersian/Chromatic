@@ -39,7 +39,7 @@ class InterfaceController: WKInterfaceController {
         self.model?.didUpdate = self.modelDidUpdate
     }
     
-    func modelDidUpdate(dateString: String, hexString: String, color: UIColor, hour: Int, minutes: Int) {
+    func modelDidUpdate(dateString: String, hexString: String, color: UIColor, nextColor: UIColor, hour: Int, minutes: Int) {
         self.hexLabel.setText(hexString)
         self.colorImage.setTintColor(color)
     }

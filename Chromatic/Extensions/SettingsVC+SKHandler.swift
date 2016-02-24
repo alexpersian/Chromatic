@@ -22,7 +22,7 @@ extension SettingsViewController: SKProductsRequestDelegate, SKPaymentTransactio
         
         /* Check for invalid product identifiers */
         if (response.invalidProductIdentifiers.count != 0) {
-            print(response.invalidProductIdentifiers.description)
+            print("Invalid products: \(response.invalidProductIdentifiers.description)")
         }
     }
     
@@ -36,7 +36,7 @@ extension SettingsViewController: SKProductsRequestDelegate, SKPaymentTransactio
                 presentThankYouMessage()
                 
             case SKPaymentTransactionState.Failed:
-                print("Transaction failed.")
+                print("Transaction failed: \(transaction.error?.localizedDescription)")
                 SKPaymentQueue.defaultQueue().finishTransaction(transaction)
                 transactionInProgress = false
                 presentFailedTransaction()

@@ -5,6 +5,7 @@ target 'Chromatic' do
 
 pod 'GoogleMaps'
 pod 'Alamofire'
+pod 'SwiftyTimer'
 
 end
 

@@ -52,7 +52,7 @@ class SettingsViewController: UIViewController {
         
         /* IAP setup */
         productIDs.insert("chromatic.developer_thank_you")
-        productIDs.insert("chromatic.developer_beer")
+        productIDs.insert("chromatic.developer_coffee")
         requestProductInfo()
         SKPaymentQueue.defaultQueue().addTransactionObserver(self)
     }

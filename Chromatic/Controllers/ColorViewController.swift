@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyTimer
 
 class ColorViewController: UIViewController {
     
@@ -55,9 +56,22 @@ class ColorViewController: UIViewController {
         self.model?.didUpdate = self.modelDidUpdate
     }
     
-    func modelDidUpdate(dateString: String, hexString: String, color: UIColor, hour: Int, minutes: Int) {
+    func modelDidUpdate(dateString: String, hexString: String, color: UIColor, nextColor: UIColor, hour: Int, minutes: Int) {
         self.timeLabel.text = dateString
         self.hexLabel.text = hexString
-        self.view.backgroundColor = color
+        lerpBackgroundColor(color, fColor: nextColor, step: 0.05)
+    }
+    
+    func lerpBackgroundColor(cColor: UIColor, fColor: UIColor, step: CGFloat) {
+        var progress: CGFloat = 0.0
+
+        NSTimer.every(Double(step)) {
+            if (progress <= 1.0) {
+                self.view.backgroundColor = cColor.lerp(cColor, finalColor: fColor, progress: progress)
+                progress += step
+            } else {
+                return
+            }
+        }
     }
 }
