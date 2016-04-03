@@ -20,7 +20,7 @@ class ColorModel: NSObject {
     var offset = UserDefaultsManager.getTimeOffset()
     
     func startUpdates() {
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "sendData", userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ColorModel.sendData as (ColorModel) -> () -> ()), userInfo: nil, repeats: true)
         self.sendData()
     }
     
@@ -80,7 +80,7 @@ class ColorModel: NSObject {
             "5" : "E",
             "6" : "F"
         ]
-        for (var i = 0; i < components.count; i++) {
+        for i in 0..<components.count {
             for (key, obj) in changes {
                 components[i] = components[i].stringByReplacingOccurrencesOfString(key, withString: obj)
             }

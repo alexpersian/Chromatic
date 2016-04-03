@@ -62,7 +62,11 @@ extension SettingsViewController: SKProductsRequestDelegate, SKPaymentTransactio
             return
         }
         
-        showBasicAlertWithProduct("Chromatic", message: "Send a thank you to the developer? ($0.99)", product: self.productsArray[1])
+        guard let iap = self.productsArray.ref(1) else {
+            showBasicAlert("Chromatic", message: "I'm sorry, but in app purchases are not available at this time. Please try again.")
+            return
+        }
+        showBasicAlertWithProduct("Chromatic", message: "Send a thank you to the developer? ($0.99)", product: iap)
     }
     
     func showCoffeePurchaseAction() {
@@ -70,7 +74,11 @@ extension SettingsViewController: SKProductsRequestDelegate, SKPaymentTransactio
             return
         }
         
-        showBasicAlertWithProduct("Chromatic", message: "Buy the developer a coffee? ($2.99)", product: self.productsArray[0])
+        guard let iap = self.productsArray.ref(0) else {
+            showBasicAlert("Chromatic", message: "I'm sorry, but in app purchases are not available at this time. Please try again.")
+            return
+        }
+        showBasicAlertWithProduct("Chromatic", message: "Buy the developer a coffee? ($2.99)", product: iap)
     }
     
     func presentThankYouMessage() {

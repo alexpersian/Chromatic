@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		945A8EB41BD8B3F2004FD636 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEE81BA67DC5000DC2F9 /* ColorModel.swift */; };
-		945A8EB51BD8B3F2004FD636 /* UIColor+HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */; };
-		B267FF2E8E7E34293B63F781 /* Pods_Chromatic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 583E05856A5DEC1B0AC7D3D7 /* Pods_Chromatic.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8825C4B6B52FCBB96B0FCF98 /* Pods_Chromatic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A98C530AA95B20DA78E2CB7 /* Pods_Chromatic.framework */; };
 		EA1734261BA676DE008F9BB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1734251BA676DE008F9BB0 /* AppDelegate.swift */; };
 		EA17342B1BA676DE008F9BB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1734291BA676DE008F9BB0 /* Main.storyboard */; };
 		EA17342D1BA676DE008F9BB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA17342C1BA676DE008F9BB0 /* Assets.xcassets */; };
@@ -18,7 +16,7 @@
 		EA1734461BA676DE008F9BB0 /* ChromaticUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1734451BA676DE008F9BB0 /* ChromaticUITests.swift */; };
 		EA2537881C7C1413008ED52C /* UIColor+Lerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2537871C7C1413008ED52C /* UIColor+Lerp.swift */; };
 		EA2B5E3B1BD499A6005DAB1F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2B5E3A1BD499A6005DAB1F /* StoreKit.framework */; };
-		EA3C9C1C1C6E758500DE09E5 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */; };
+		EA2DD6301C8F4A1300BC68AD /* Array+Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2DD62F1C8F4A1300BC68AD /* Array+Ref.swift */; };
 		EA3C9C201C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */; };
 		EA3C9C221C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9C211C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift */; };
 		EA3C9C241C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9C231C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift */; };
@@ -26,13 +24,8 @@
 		EA3CEEEF1BA67DC5000DC2F9 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEE91BA67DC5000DC2F9 /* ColorViewController.swift */; };
 		EA3CEEF01BA67DC5000DC2F9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEA1BA67DC5000DC2F9 /* SettingsViewController.swift */; };
 		EA3CEEF11BA67DC5000DC2F9 /* UIColor+HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */; };
-		EA45768F1BC766E2007B5BC6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA45768D1BC766E2007B5BC6 /* Interface.storyboard */; };
-		EA4576911BC766E2007B5BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA4576901BC766E2007B5BC6 /* Assets.xcassets */; };
-		EA4576981BC766E2007B5BC6 /* Chromatic Watch App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EA4576971BC766E2007B5BC6 /* Chromatic Watch App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		EA45769D1BC766E2007B5BC6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA45769C1BC766E2007B5BC6 /* InterfaceController.swift */; };
-		EA45769F1BC766E2007B5BC6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA45769E1BC766E2007B5BC6 /* ExtensionDelegate.swift */; };
-		EA4576A31BC766E2007B5BC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA4576A21BC766E2007B5BC6 /* Assets.xcassets */; };
-		EA4576A71BC766E2007B5BC6 /* Chromatic Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EA45768B1BC766E2007B5BC6 /* Chromatic Watch App.app */; };
+		EA4DF6A71CB0B9E900128FAB /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA4DF6A61CB0B9E900128FAB /* Data.plist */; };
+		EA4DF6A91CB0FD1000128FAB /* Dictionary+PList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DF6A81CB0FD1000128FAB /* Dictionary+PList.swift */; };
 		EA63C13F1C6D05CC00AE5B04 /* GooglePlacesField.m in Sources */ = {isa = PBXBuildFile; fileRef = EA63C13C1C6D05CC00AE5B04 /* GooglePlacesField.m */; };
 		EA63C1401C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA63C13E1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m */; };
 		EAA73B731BABB02100BC3988 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */; };
@@ -53,51 +46,12 @@
 			remoteGlobalIDString = EA1734211BA676DE008F9BB0;
 			remoteInfo = Chromatic;
 		};
-		EA4576991BC766E2007B5BC6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA17341A1BA676DE008F9BB0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA4576961BC766E2007B5BC6;
-			remoteInfo = "Chromatic Watch App Extension";
-		};
-		EA4576A51BC766E2007B5BC6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA17341A1BA676DE008F9BB0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA45768A1BC766E2007B5BC6;
-			remoteInfo = "Chromatic Watch App";
-		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		EA4576AD1BC766E2007B5BC6 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				EA4576981BC766E2007B5BC6 /* Chromatic Watch App Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA4576AF1BC766E2007B5BC6 /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				EA4576A71BC766E2007B5BC6 /* Chromatic Watch App.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		3D71354DD4D2405A1BCD67E4 /* Pods-Chromatic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chromatic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chromatic/Pods-Chromatic.debug.xcconfig"; sourceTree = "<group>"; };
-		583E05856A5DEC1B0AC7D3D7 /* Pods_Chromatic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chromatic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61EC9D1D7FD4423FCE1B9CEC /* Pods-Chromatic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chromatic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chromatic/Pods-Chromatic.release.xcconfig"; sourceTree = "<group>"; };
+		4A98C530AA95B20DA78E2CB7 /* Pods_Chromatic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chromatic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90C5B8DE3B5353E9958C6912 /* Pods-Chromatic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chromatic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chromatic/Pods-Chromatic.release.xcconfig"; sourceTree = "<group>"; };
+		DA47C1A6B912A8CC99F7A444 /* Pods-Chromatic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chromatic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chromatic/Pods-Chromatic.debug.xcconfig"; sourceTree = "<group>"; };
 		EA0561551BD48FD300C25142 /* Chromatic Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Chromatic Watch App.entitlements"; sourceTree = "<group>"; };
 		EA1734221BA676DE008F9BB0 /* Chromatic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chromatic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1734251BA676DE008F9BB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +67,7 @@
 		EA1734471BA676DE008F9BB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA2537871C7C1413008ED52C /* UIColor+Lerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Lerp.swift"; sourceTree = "<group>"; };
 		EA2B5E3A1BD499A6005DAB1F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		EA2DD62F1C8F4A1300BC68AD /* Array+Ref.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Ref.swift"; sourceTree = "<group>"; };
 		EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingsVC+UITextFieldHandler.swift"; sourceTree = "<group>"; };
 		EA3C9C211C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingsVC+SKHandler.swift"; sourceTree = "<group>"; };
 		EA3C9C231C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingsVC+GoogleHandler.swift"; sourceTree = "<group>"; };
@@ -120,15 +75,15 @@
 		EA3CEEE91BA67DC5000DC2F9 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		EA3CEEEA1BA67DC5000DC2F9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexConverter.swift"; sourceTree = "<group>"; };
-		EA45768B1BC766E2007B5BC6 /* Chromatic Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chromatic Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA45768E1BC766E2007B5BC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		EA4576901BC766E2007B5BC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA4576921BC766E2007B5BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA4576971BC766E2007B5BC6 /* Chromatic Watch App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Chromatic Watch App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA45769C1BC766E2007B5BC6 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		EA45769E1BC766E2007B5BC6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		EA4576A21BC766E2007B5BC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA4576A41BC766E2007B5BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA4DF6A61CB0B9E900128FAB /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
+		EA4DF6A81CB0FD1000128FAB /* Dictionary+PList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+PList.swift"; sourceTree = "<group>"; };
 		EA63C13A1C6D05CB00AE5B04 /* Chromatic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chromatic-Bridging-Header.h"; sourceTree = "<group>"; };
 		EA63C13B1C6D05CC00AE5B04 /* GooglePlacesField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlacesField.h; sourceTree = "<group>"; };
 		EA63C13C1C6D05CC00AE5B04 /* GooglePlacesField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesField.m; sourceTree = "<group>"; };
@@ -138,19 +93,12 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		01FF441198D351442A2C60A9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EA17341F1BA676DE008F9BB0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EA2B5E3B1BD499A6005DAB1F /* StoreKit.framework in Frameworks */,
-				B267FF2E8E7E34293B63F781 /* Pods_Chromatic.framework in Frameworks */,
+				8825C4B6B52FCBB96B0FCF98 /* Pods_Chromatic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,16 +116,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA4576941BC766E2007B5BC6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		075F8A7442CA59391463D740 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A98C530AA95B20DA78E2CB7 /* Pods_Chromatic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C5F2FFAD003482855B831CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA47C1A6B912A8CC99F7A444 /* Pods-Chromatic.debug.xcconfig */,
+				90C5B8DE3B5353E9958C6912 /* Pods-Chromatic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		945A8EB61BD8BFC6004FD636 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,23 +144,6 @@
 				EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		9F484268543F32A398D39E43 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				583E05856A5DEC1B0AC7D3D7 /* Pods_Chromatic.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C174A2D666AB161DB1060D41 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3D71354DD4D2405A1BCD67E4 /* Pods-Chromatic.debug.xcconfig */,
-				61EC9D1D7FD4423FCE1B9CEC /* Pods-Chromatic.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		EA1734191BA676DE008F9BB0 = {
@@ -214,10 +155,10 @@
 				EA1734391BA676DE008F9BB0 /* ChromaticTests */,
 				EA1734441BA676DE008F9BB0 /* ChromaticUITests */,
 				945A8EB61BD8BFC6004FD636 /* Common */,
-				9F484268543F32A398D39E43 /* Frameworks */,
-				C174A2D666AB161DB1060D41 /* Pods */,
 				EA1734231BA676DE008F9BB0 /* Products */,
 				EA2B5E3A1BD499A6005DAB1F /* StoreKit.framework */,
+				5C5F2FFAD003482855B831CB /* Pods */,
+				075F8A7442CA59391463D740 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,8 +168,6 @@
 				EA1734221BA676DE008F9BB0 /* Chromatic.app */,
 				EA1734361BA676DE008F9BB0 /* ChromaticTests.xctest */,
 				EA1734411BA676DE008F9BB0 /* ChromaticUITests.xctest */,
-				EA45768B1BC766E2007B5BC6 /* Chromatic Watch App.app */,
-				EA4576971BC766E2007B5BC6 /* Chromatic Watch App Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -269,6 +208,7 @@
 				EA3CEEE31BA67AAF000DC2F9 /* Storyboards */,
 				EA1734251BA676DE008F9BB0 /* AppDelegate.swift */,
 				EA1734311BA676DE008F9BB0 /* Info.plist */,
+				EA4DF6A61CB0B9E900128FAB /* Data.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -340,6 +280,8 @@
 				EA3C9C211C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift */,
 				EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */,
 				EA2537871C7C1413008ED52C /* UIColor+Lerp.swift */,
+				EA2DD62F1C8F4A1300BC68AD /* Array+Ref.swift */,
+				EA4DF6A81CB0FD1000128FAB /* Dictionary+PList.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,18 +293,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA17344A1BA676DE008F9BB0 /* Build configuration list for PBXNativeTarget "Chromatic" */;
 			buildPhases = (
-				974EF2E40D366B5C948E0BF0 /* Check Pods Manifest.lock */,
+				D3F40015227B66CE340A6DC7 /* Check Pods Manifest.lock */,
 				EA17341E1BA676DE008F9BB0 /* Sources */,
 				EA17341F1BA676DE008F9BB0 /* Frameworks */,
 				EA1734201BA676DE008F9BB0 /* Resources */,
-				EA4576AF1BC766E2007B5BC6 /* Embed Watch Content */,
-				516DDD2016C86CB802318C76 /* Copy Pods Resources */,
-				761278B2954B839BC9F446A4 /* Embed Pods Frameworks */,
+				B7D86D025E31D40A05EAA5F4 /* Embed Pods Frameworks */,
+				14206231B598740FA647B960 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EA4576A61BC766E2007B5BC6 /* PBXTargetDependency */,
 			);
 			name = Chromatic;
 			productName = Chromatic;
@@ -405,41 +345,6 @@
 			productReference = EA1734411BA676DE008F9BB0 /* ChromaticUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		EA45768A1BC766E2007B5BC6 /* Chromatic Watch App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EA4576AE1BC766E2007B5BC6 /* Build configuration list for PBXNativeTarget "Chromatic Watch App" */;
-			buildPhases = (
-				EA4576891BC766E2007B5BC6 /* Resources */,
-				EA4576AD1BC766E2007B5BC6 /* Embed App Extensions */,
-				01FF441198D351442A2C60A9 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EA45769A1BC766E2007B5BC6 /* PBXTargetDependency */,
-			);
-			name = "Chromatic Watch App";
-			productName = "Chromatic Watch App";
-			productReference = EA45768B1BC766E2007B5BC6 /* Chromatic Watch App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		EA4576961BC766E2007B5BC6 /* Chromatic Watch App Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EA4576AC1BC766E2007B5BC6 /* Build configuration list for PBXNativeTarget "Chromatic Watch App Extension" */;
-			buildPhases = (
-				EA4576931BC766E2007B5BC6 /* Sources */,
-				EA4576941BC766E2007B5BC6 /* Frameworks */,
-				EA4576951BC766E2007B5BC6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Chromatic Watch App Extension";
-			productName = "Chromatic Watch App Extension";
-			productReference = EA4576971BC766E2007B5BC6 /* Chromatic Watch App Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -470,19 +375,6 @@
 						CreatedOnToolsVersion = 7.0;
 						TestTargetID = EA1734211BA676DE008F9BB0;
 					};
-					EA45768A1BC766E2007B5BC6 = {
-						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 67BLBCQE27;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
-							};
-						};
-					};
-					EA4576961BC766E2007B5BC6 = {
-						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 67BLBCQE27;
-					};
 				};
 			};
 			buildConfigurationList = EA17341D1BA676DE008F9BB0 /* Build configuration list for PBXProject "Chromatic" */;
@@ -501,8 +393,6 @@
 				EA1734211BA676DE008F9BB0 /* Chromatic */,
 				EA1734351BA676DE008F9BB0 /* ChromaticTests */,
 				EA1734401BA676DE008F9BB0 /* ChromaticUITests */,
-				EA45768A1BC766E2007B5BC6 /* Chromatic Watch App */,
-				EA4576961BC766E2007B5BC6 /* Chromatic Watch App Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -514,6 +404,7 @@
 			files = (
 				EA1734301BA676DE008F9BB0 /* LaunchScreen.storyboard in Resources */,
 				EA17342D1BA676DE008F9BB0 /* Assets.xcassets in Resources */,
+				EA4DF6A71CB0B9E900128FAB /* Data.plist in Resources */,
 				EA17342B1BA676DE008F9BB0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,27 +423,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA4576891BC766E2007B5BC6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA4576911BC766E2007B5BC6 /* Assets.xcassets in Resources */,
-				EA45768F1BC766E2007B5BC6 /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA4576951BC766E2007B5BC6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA4576A31BC766E2007B5BC6 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		516DDD2016C86CB802318C76 /* Copy Pods Resources */ = {
+		14206231B598740FA647B960 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -567,7 +441,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chromatic/Pods-Chromatic-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		761278B2954B839BC9F446A4 /* Embed Pods Frameworks */ = {
+		B7D86D025E31D40A05EAA5F4 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -582,7 +456,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chromatic/Pods-Chromatic-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		974EF2E40D366B5C948E0BF0 /* Check Pods Manifest.lock */ = {
+		D3F40015227B66CE340A6DC7 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -610,8 +484,10 @@
 				EA1734261BA676DE008F9BB0 /* AppDelegate.swift in Sources */,
 				EA3CEEEF1BA67DC5000DC2F9 /* ColorViewController.swift in Sources */,
 				EA63C1401C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m in Sources */,
+				EA4DF6A91CB0FD1000128FAB /* Dictionary+PList.swift in Sources */,
 				EAA73B731BABB02100BC3988 /* UserDefaultsManager.swift in Sources */,
 				EA3C9C221C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift in Sources */,
+				EA2DD6301C8F4A1300BC68AD /* Array+Ref.swift in Sources */,
 				EA63C13F1C6D05CC00AE5B04 /* GooglePlacesField.m in Sources */,
 				EA3CEEEE1BA67DC5000DC2F9 /* ColorModel.swift in Sources */,
 				EA3C9C201C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift in Sources */,
@@ -635,18 +511,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA4576931BC766E2007B5BC6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EA45769F1BC766E2007B5BC6 /* ExtensionDelegate.swift in Sources */,
-				EA3C9C1C1C6E758500DE09E5 /* UserDefaultsManager.swift in Sources */,
-				EA45769D1BC766E2007B5BC6 /* InterfaceController.swift in Sources */,
-				945A8EB51BD8B3F2004FD636 /* UIColor+HexConverter.swift in Sources */,
-				945A8EB41BD8B3F2004FD636 /* ColorModel.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -659,16 +523,6 @@
 			isa = PBXTargetDependency;
 			target = EA1734211BA676DE008F9BB0 /* Chromatic */;
 			targetProxy = EA1734421BA676DE008F9BB0 /* PBXContainerItemProxy */;
-		};
-		EA45769A1BC766E2007B5BC6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA4576961BC766E2007B5BC6 /* Chromatic Watch App Extension */;
-			targetProxy = EA4576991BC766E2007B5BC6 /* PBXContainerItemProxy */;
-		};
-		EA4576A61BC766E2007B5BC6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EA45768A1BC766E2007B5BC6 /* Chromatic Watch App */;
-			targetProxy = EA4576A51BC766E2007B5BC6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -786,18 +640,57 @@
 		};
 		EA17344B1BA676DE008F9BB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D71354DD4D2405A1BCD67E4 /* Pods-Chromatic.debug.xcconfig */;
+			baseConfigurationReference = DA47C1A6B912A8CC99F7A444 /* Pods-Chromatic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Chromatic/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CoreBluetooth\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SwiftyTimer\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.Chromatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -810,18 +703,57 @@
 		};
 		EA17344C1BA676DE008F9BB0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61EC9D1D7FD4423FCE1B9CEC /* Pods-Chromatic.release.xcconfig */;
+			baseConfigurationReference = 90C5B8DE3B5353E9958C6912 /* Pods-Chromatic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Chromatic/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CoreBluetooth\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SwiftyTimer\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.Chromatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -879,76 +811,6 @@
 			};
 			name = Release;
 		};
-		EA4576A81BC766E2007B5BC6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				IBSC_MODULE = Chromatic_Watch_App_Extension;
-				INFOPLIST_FILE = "Chromatic Watch App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.Chromatic.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		EA4576A91BC766E2007B5BC6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				IBSC_MODULE = Chromatic_Watch_App_Extension;
-				INFOPLIST_FILE = "Chromatic Watch App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.Chromatic.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		EA4576AA1BC766E2007B5BC6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Chromatic Watch App Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.Chromatic.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		EA4576AB1BC766E2007B5BC6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Chromatic Watch App Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.Chromatic.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -984,24 +846,6 @@
 			buildConfigurations = (
 				EA1734511BA676DE008F9BB0 /* Debug */,
 				EA1734521BA676DE008F9BB0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EA4576AC1BC766E2007B5BC6 /* Build configuration list for PBXNativeTarget "Chromatic Watch App Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EA4576AA1BC766E2007B5BC6 /* Debug */,
-				EA4576AB1BC766E2007B5BC6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EA4576AE1BC766E2007B5BC6 /* Build configuration list for PBXNativeTarget "Chromatic Watch App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EA4576A81BC766E2007B5BC6 /* Debug */,
-				EA4576A91BC766E2007B5BC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

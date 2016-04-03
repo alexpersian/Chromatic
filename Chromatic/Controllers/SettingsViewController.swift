@@ -14,9 +14,10 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
     @IBOutlet weak var placesTextField: GooglePlacesField!
-    let googleAPIKey = "AIzaSyAsyfZGRe9ZscQPhUMXz0JQDiW2r9NGC1E"
     
-    /* IAP stuff */
+    let data = Dictionary<String, String>.fromPlist("Data")
+    
+    // IAP stuff
     var productIDs: Set<String> = []
     var productsArray: Array<SKProduct!> = []
     var transactionInProgress = false
@@ -50,9 +51,13 @@ class SettingsViewController: UIViewController {
         self.placesTextField.delegate = self
         placesTextField.hidePredictionWhenResigningFirstResponder = true
         
-        /* IAP setup */
-        productIDs.insert("chromatic.developer_thank_you")
-        productIDs.insert("chromatic.developer_coffee")
+        // IAP setup
+        guard let iap1 = data["IAP 1"], let iap2 = data["IAP 2"] else {
+            print("Error retrieving IAP from plist")
+            return
+        }
+        productIDs.insert(iap1)
+        productIDs.insert(iap2)
         requestProductInfo()
         SKPaymentQueue.defaultQueue().addTransactionObserver(self)
     }
@@ -68,13 +73,8 @@ class SettingsViewController: UIViewController {
     func findNewCity() {
         if !activitySpinner.isAnimating() { activitySpinner.startAnimating() }
         
-        guard (placesTextField.selectedPlaceId != nil) else {
+        guard (placesTextField.selectedPlaceId != nil) && (placesTextField.text?.characters.count > 0) else {
             showBasicAlert("Woops!", message: "You must select a city.")
-            print("Error: city not selected")
-            return
-        }
-        guard (placesTextField.text?.characters.count > 0) else {
-            print("Error: text field is empty")
             return
         }
         guard let address = placesTextField.text else {
@@ -128,7 +128,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func twitterButtonPressed(sender: UIButton) {
-        guard let url = NSURL(string: "https://twitter.com/alex_persian") else { return }
+        guard let url = NSURL(string: data["Twitter"]!) else { return }
         if #available(iOS 9.0, *) {
             let svc = SFSafariViewController(URL: url)
             self.presentViewController(svc, animated: true, completion: nil)
@@ -138,7 +138,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func githubButtonPressed(sender: UIButton) {
-        guard let url = NSURL(string: "https://github.com/alexpersian") else { return }
+        guard let url = NSURL(string: data["GitHub"]!) else { return }
         if #available(iOS 9.0, *) {
             let svc = SFSafariViewController(URL: url)
             self.presentViewController(svc, animated: true, completion: nil)

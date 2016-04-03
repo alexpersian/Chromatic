@@ -12,6 +12,8 @@ import Alamofire
 extension SettingsViewController {
     
     func requestGeocodingFromGoogle(address: String) {
+        guard let googleAPIKey = data["Google API Key"] else { return }
+        
         let params = [
             "address": address,
             "key": googleAPIKey
@@ -42,6 +44,7 @@ extension SettingsViewController {
     }
     
     func requestTimeZoneFromGoogle(location: String, address: String) {
+        guard let googleAPIKey = data["Google API Key"] else { return }
         
         let params = [
             "location": location,
@@ -54,10 +57,17 @@ extension SettingsViewController {
                 switch response.result {
                 case .Success(let value):
                     do {
-                        guard let offset = value.objectForKey("rawOffset") as? Int else { return }
+                        guard let dstOffset = value.objectForKey("dstOffset") as? Int else {
+                            print("Error parsing DST offset")
+                            return
+                        }
+                        guard let offset = value.objectForKey("rawOffset") as? Int else {
+                            print("Error parsing raw offset")
+                            return
+                        }
                         let city = address.componentsSeparatedByString(",")[0]
-                        
-                        self.updateLocationData(city, offset: offset)
+                        let totalOffset = offset + dstOffset
+                        self.updateLocationData(city, offset: totalOffset)
                         self.placesTextField.backgroundColor = self.placesTextField.successBackgroundColor
                         if self.activitySpinner.isAnimating() { self.activitySpinner.stopAnimating() }
                     }

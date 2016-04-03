@@ -15,8 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        // Gather information from plist file
+        let data = Dictionary<String, String>.fromPlist("Data")
+        
         // Setup Google Maps services
-        GMSServices.provideAPIKey("AIzaSyAsyfZGRe9ZscQPhUMXz0JQDiW2r9NGC1E")
+        GMSServices.provideAPIKey(data["Google API Key"])
         
         // If the user doesn't have a city chosen, set it to the default.
         UserDefaultsManager.setDefaultCity()
