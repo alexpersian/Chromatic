@@ -24,10 +24,10 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setup()
     }
     
     override func viewWillAppear(animated: Bool) {
+        self.setup()
         self.navigationController?.navigationBarHidden = false
     }
     
