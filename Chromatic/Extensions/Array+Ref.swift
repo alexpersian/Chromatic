@@ -9,7 +9,7 @@
 import Foundation
 
 extension Array {
-    func ref (i: Int) -> Element? {
+    func ref (_ i: Int) -> Element? {
         return 0 <= i && i < count ? self[i] : nil
     }
 }

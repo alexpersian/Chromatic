@@ -11,7 +11,7 @@ import UIKit
 
 extension SettingsViewController: UITextFieldDelegate {
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if (textField == self.placesTextField) {
             textField.resignFirstResponder()
             self.findNewCity()

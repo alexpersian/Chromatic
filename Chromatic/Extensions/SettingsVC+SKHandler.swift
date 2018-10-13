@@ -11,7 +11,7 @@ import StoreKit
 
 extension SettingsViewController: SKProductsRequestDelegate, SKPaymentTransactionObserver {
     
-    func productsRequest(request: SKProductsRequest, didReceiveResponse response: SKProductsResponse) {
+    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         if (response.products.count != 0) {
             for product in response.products {
                 productsArray.append(product)
@@ -26,18 +26,18 @@ extension SettingsViewController: SKProductsRequestDelegate, SKPaymentTransactio
         }
     }
     
-    func paymentQueue(queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
             switch transaction.transactionState {
-            case SKPaymentTransactionState.Purchased:
+            case SKPaymentTransactionState.purchased:
                 print("Transaction completed successfully.")
-                SKPaymentQueue.defaultQueue().finishTransaction(transaction)
+                SKPaymentQueue.default().finishTransaction(transaction)
                 transactionInProgress = false
                 presentThankYouMessage()
                 
-            case SKPaymentTransactionState.Failed:
+            case SKPaymentTransactionState.failed:
                 print("Transaction failed: \(transaction.error?.localizedDescription)")
-                SKPaymentQueue.defaultQueue().finishTransaction(transaction)
+                SKPaymentQueue.default().finishTransaction(transaction)
                 transactionInProgress = false
                 presentFailedTransaction()
                 
@@ -66,7 +66,7 @@ extension SettingsViewController: SKProductsRequestDelegate, SKPaymentTransactio
             showBasicAlert("Chromatic", message: "I'm sorry, but in app purchases are not available at this time. Please try again.")
             return
         }
-        showBasicAlertWithProduct("Chromatic", message: "Send a thank you to the developer? ($0.99)", product: iap)
+        showBasicAlertWithProduct("Chromatic", message: "Send a thank you to the developer? ($0.99)", product: iap!)
     }
     
     func showCoffeePurchaseAction() {
@@ -78,7 +78,7 @@ extension SettingsViewController: SKProductsRequestDelegate, SKPaymentTransactio
             showBasicAlert("Chromatic", message: "I'm sorry, but in app purchases are not available at this time. Please try again.")
             return
         }
-        showBasicAlertWithProduct("Chromatic", message: "Buy the developer a coffee? ($2.99)", product: iap)
+        showBasicAlertWithProduct("Chromatic", message: "Buy the developer a coffee? ($2.99)", product: iap!)
     }
     
     func presentThankYouMessage() {

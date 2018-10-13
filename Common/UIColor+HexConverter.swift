@@ -14,7 +14,7 @@ import UIKit
 
 extension UIColor {
     public convenience init(rgba: String) {
-        let hexString = rgba.stringByReplacingOccurrencesOfString(" : ", withString: "")
+        let hexString = rgba.replacingOccurrences(of: " : ", with: "")
         
         var red:   CGFloat = 0.0
         var green: CGFloat = 0.0
@@ -22,11 +22,11 @@ extension UIColor {
         var alpha: CGFloat = 1.0
         
         if hexString.hasPrefix("#") {
-            let index   = rgba.startIndex.advancedBy(1)
-            let hex     = hexString.substringFromIndex(index)
-            let scanner = NSScanner(string: hex)
+            let index   = rgba.characters.index(rgba.startIndex, offsetBy: 1)
+            let hex     = hexString.substring(from: index)
+            let scanner = Scanner(string: hex)
             var hexValue: CUnsignedLongLong = 0
-            if scanner.scanHexLongLong(&hexValue) {
+            if scanner.scanHexInt64(&hexValue) {
                 switch (hex.characters.count) {
                 case 3:
                     red   = CGFloat((hexValue & 0xF00) >> 8)       / 15.0

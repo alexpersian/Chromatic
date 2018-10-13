@@ -9,6 +9,30 @@
 import UIKit
 import StoreKit
 import SafariServices
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class SettingsViewController: UIViewController {
     
@@ -19,27 +43,27 @@ class SettingsViewController: UIViewController {
     
     // IAP stuff
     var productIDs: Set<String> = []
-    var productsArray: Array<SKProduct!> = []
+    var productsArray: Array<SKProduct?> = []
     var transactionInProgress = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.setup()
-        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = false
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.Default
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.default
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
 
@@ -59,19 +83,19 @@ class SettingsViewController: UIViewController {
         productIDs.insert(iap1)
         productIDs.insert(iap2)
         requestProductInfo()
-        SKPaymentQueue.defaultQueue().addTransactionObserver(self)
+        SKPaymentQueue.default().add(self)
     }
     
-    func saveNewCity(city: String) {
+    func saveNewCity(_ city: String) {
         UserDefaultsManager.setCurrentCity(city)
     }
     
-    func saveNewOffset(offset: Int) {
+    func saveNewOffset(_ offset: Int) {
         UserDefaultsManager.setTimeOffset(offset)
     }
     
     func findNewCity() {
-        if !activitySpinner.isAnimating() { activitySpinner.startAnimating() }
+        if !activitySpinner.isAnimating { activitySpinner.startAnimating() }
         
         guard (placesTextField.selectedPlaceId != nil) && (placesTextField.text?.characters.count > 0) else {
             showBasicAlert("Woops!", message: "You must select a city.")
@@ -85,65 +109,65 @@ class SettingsViewController: UIViewController {
         requestGeocodingFromGoogle(address)
     }
     
-    func updateLocationData(city: String, offset: Int) {
+    func updateLocationData(_ city: String, offset: Int) {
         self.saveNewCity(city)
         self.saveNewOffset(offset)
     }
 
 // MARK: Alert view helpers
 
-    func showBasicAlert(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        let okAction = UIAlertAction(title: "Ok", style: .Default) { (action) -> Void in }
+    func showBasicAlert(_ title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default) { (action) -> Void in }
         
         alertController.addAction(okAction)
-        presentViewController(alertController, animated: true, completion: nil)
+        present(alertController, animated: true, completion: nil)
     }
     
-    func showBasicAlertWithProduct(title: String, message: String, product: SKProduct) {
-        let actionSheetController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+    func showBasicAlertWithProduct(_ title: String, message: String, product: SKProduct) {
+        let actionSheetController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        let buyAction = UIAlertAction(title: "Buy", style: UIAlertActionStyle.Default) { (action) -> Void in
+        let buyAction = UIAlertAction(title: "Buy", style: UIAlertActionStyle.default) { (action) -> Void in
             let payment = SKPayment(product: product)
-            SKPaymentQueue.defaultQueue().addPayment(payment)
+            SKPaymentQueue.default().add(payment)
             self.transactionInProgress = true
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action) -> Void in }
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (action) -> Void in }
         
         actionSheetController.addAction(buyAction)
         actionSheetController.addAction(cancelAction)
-        presentViewController(actionSheetController, animated: true, completion: nil)
+        present(actionSheetController, animated: true, completion: nil)
     }
     
 // MARK: IBActions
     
-    @IBAction func supportThanksButtonPressed(sender: UIButton) {
+    @IBAction func supportThanksButtonPressed(_ sender: UIButton) {
         print("Thanks for the support!")
         showThankYouPurchaseAction()
     }
     
-    @IBAction func supportCoffeeButtonPressed(sender: UIButton) {
+    @IBAction func supportCoffeeButtonPressed(_ sender: UIButton) {
         print("Thanks for the coffee!")
         showCoffeePurchaseAction()
     }
     
-    @IBAction func twitterButtonPressed(sender: UIButton) {
-        guard let url = NSURL(string: data["Twitter"]!) else { return }
+    @IBAction func twitterButtonPressed(_ sender: UIButton) {
+        guard let url = URL(string: data["Twitter"]!) else { return }
         if #available(iOS 9.0, *) {
-            let svc = SFSafariViewController(URL: url)
-            self.presentViewController(svc, animated: true, completion: nil)
+            let svc = SFSafariViewController(url: url)
+            self.present(svc, animated: true, completion: nil)
         } else {
-            UIApplication.sharedApplication().openURL(url)
+            UIApplication.shared.openURL(url)
         }
     }
     
-    @IBAction func githubButtonPressed(sender: UIButton) {
-        guard let url = NSURL(string: data["GitHub"]!) else { return }
+    @IBAction func githubButtonPressed(_ sender: UIButton) {
+        guard let url = URL(string: data["GitHub"]!) else { return }
         if #available(iOS 9.0, *) {
-            let svc = SFSafariViewController(URL: url)
-            self.presentViewController(svc, animated: true, completion: nil)
+            let svc = SFSafariViewController(url: url)
+            self.present(svc, animated: true, completion: nil)
         } else {
-            UIApplication.sharedApplication().openURL(url)
+            UIApplication.shared.openURL(url)
         }
     }
 }

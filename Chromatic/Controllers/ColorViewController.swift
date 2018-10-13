@@ -15,7 +15,7 @@ class ColorViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var hexLabel: UILabel!
     
-    private var model: ColorModel?
+    fileprivate var model: ColorModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,13 +26,13 @@ class ColorViewController: UIViewController {
         self.bindToModel()
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = true
 
         // update the offset and city label in case they were changed elsewhere
         self.model?.offset = UserDefaultsManager.getTimeOffset()
@@ -41,7 +41,7 @@ class ColorViewController: UIViewController {
         self.model?.startUpdates()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.model?.stopUpdates()
     }
@@ -56,16 +56,16 @@ class ColorViewController: UIViewController {
         self.model?.didUpdate = self.modelDidUpdate
     }
     
-    func modelDidUpdate(dateString: String, hexString: String, color: UIColor, nextColor: UIColor, hour: Int, minutes: Int) {
+    func modelDidUpdate(_ dateString: String, hexString: String, color: UIColor, nextColor: UIColor, hour: Int, minutes: Int) {
         self.timeLabel.text = dateString
         self.hexLabel.text = hexString
         lerpBackgroundColor(color, fColor: nextColor, step: 0.05)
     }
     
-    func lerpBackgroundColor(cColor: UIColor, fColor: UIColor, step: CGFloat) {
+    func lerpBackgroundColor(_ cColor: UIColor, fColor: UIColor, step: CGFloat) {
         var progress: CGFloat = 0.0
 
-        NSTimer.every(Double(step)) {
+        Timer.every(Double(step)) {
             if (progress <= 1.0) {
                 self.view.backgroundColor = cColor.lerp(cColor, finalColor: fColor, progress: progress)
                 progress += step
