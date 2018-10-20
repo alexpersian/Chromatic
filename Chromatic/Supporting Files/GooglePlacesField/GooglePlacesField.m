@@ -6,8 +6,9 @@
 //
 
 #import "GooglePlacesField.h"
-#import <GoogleMaps/GMSPlacesClient.h>
-#import <GoogleMaps/GMSAutocompletePrediction.h>
+#import <GooglePlaces/GMSPlacesClient.h>
+#import <GooglePlaces/GMSAutocompletePrediction.h>
+#import <GooglePlaces/GMSAutocompleteFilter.h>
 #import "GooglePlacesFieldPredictionsView.h"
 
 @interface GooglePlacesField ()

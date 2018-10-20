@@ -24,11 +24,11 @@
 		EA3CEEEF1BA67DC5000DC2F9 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEE91BA67DC5000DC2F9 /* ColorViewController.swift */; };
 		EA3CEEF01BA67DC5000DC2F9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEA1BA67DC5000DC2F9 /* SettingsViewController.swift */; };
 		EA3CEEF11BA67DC5000DC2F9 /* UIColor+HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */; };
-		EA4DF6A71CB0B9E900128FAB /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA4DF6A61CB0B9E900128FAB /* Data.plist */; };
 		EA4DF6A91CB0FD1000128FAB /* Dictionary+PList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DF6A81CB0FD1000128FAB /* Dictionary+PList.swift */; };
 		EA63C13F1C6D05CC00AE5B04 /* GooglePlacesField.m in Sources */ = {isa = PBXBuildFile; fileRef = EA63C13C1C6D05CC00AE5B04 /* GooglePlacesField.m */; };
 		EA63C1401C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA63C13E1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m */; };
 		EAA73B731BABB02100BC3988 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */; };
+		FA9E15C421727B05003D67D2 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA9E15C321727B05003D67D2 /* Data.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +82,6 @@
 		EA45769E1BC766E2007B5BC6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		EA4576A21BC766E2007B5BC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA4576A41BC766E2007B5BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA4DF6A61CB0B9E900128FAB /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 		EA4DF6A81CB0FD1000128FAB /* Dictionary+PList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+PList.swift"; sourceTree = "<group>"; };
 		EA63C13A1C6D05CB00AE5B04 /* Chromatic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chromatic-Bridging-Header.h"; sourceTree = "<group>"; };
 		EA63C13B1C6D05CC00AE5B04 /* GooglePlacesField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlacesField.h; sourceTree = "<group>"; };
@@ -90,6 +89,7 @@
 		EA63C13D1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlacesFieldPredictionsView.h; sourceTree = "<group>"; };
 		EA63C13E1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesFieldPredictionsView.m; sourceTree = "<group>"; };
 		EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		FA9E15C321727B05003D67D2 /* Data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,7 +199,7 @@
 				EA3CEEE41BA67AB9000DC2F9 /* Images */,
 				EA3CEEE31BA67AAF000DC2F9 /* Storyboards */,
 				EA1734251BA676DE008F9BB0 /* AppDelegate.swift */,
-				EA4DF6A61CB0B9E900128FAB /* Data.plist */,
+				FA9E15C321727B05003D67D2 /* Data.plist */,
 				EA1734311BA676DE008F9BB0 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -407,7 +407,7 @@
 			files = (
 				EA1734301BA676DE008F9BB0 /* LaunchScreen.storyboard in Resources */,
 				EA17342D1BA676DE008F9BB0 /* Assets.xcassets in Resources */,
-				EA4DF6A71CB0B9E900128FAB /* Data.plist in Resources */,
+				FA9E15C421727B05003D67D2 /* Data.plist in Resources */,
 				EA17342B1BA676DE008F9BB0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

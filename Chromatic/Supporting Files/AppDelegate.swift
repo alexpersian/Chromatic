@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import GoogleMaps
+import GooglePlaces
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Setup Google Maps services
         if let apiKey = data["Google API Key"] {
-            GMSServices.provideAPIKey(apiKey)
+            GMSPlacesClient.provideAPIKey(apiKey)
         }
         
         // If the user doesn't have a city chosen, set it to the default.
