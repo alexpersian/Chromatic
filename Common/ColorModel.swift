@@ -16,7 +16,7 @@ final class ColorModel: NSObject {
     private var timer = Timer()
     private lazy var formatter: DateFormatter = {
         let fmt: DateFormatter = DateFormatter()
-        fmt.dateFormat = "HH : mm : ss"
+        fmt.dateFormat = "HH:mm:ss"
         return fmt
     }()
 

@@ -14,7 +14,7 @@ import UIKit
 
 extension UIColor {
     public convenience init(rgba: String) {
-        let hexString = rgba.replacingOccurrences(of: " : ", with: "")
+        let hexString = rgba.replacingOccurrences(of: ":", with: "")
         
         var red:   CGFloat = 0.0
         var green: CGFloat = 0.0
