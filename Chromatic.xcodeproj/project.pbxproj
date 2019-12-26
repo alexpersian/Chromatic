@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D43DD630E43BD2B4BD20E19 /* Pods_Chromatic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D555392809E07E1AE0721B /* Pods_Chromatic.framework */; };
+		E08751F54E85BF346DCFA679 /* Pods_Chromatic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47D1C5C0B08D08B3B92D9F3 /* Pods_Chromatic.framework */; };
 		EA1734261BA676DE008F9BB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1734251BA676DE008F9BB0 /* AppDelegate.swift */; };
 		EA17342B1BA676DE008F9BB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1734291BA676DE008F9BB0 /* Main.storyboard */; };
 		EA17342D1BA676DE008F9BB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA17342C1BA676DE008F9BB0 /* Assets.xcassets */; };
@@ -49,9 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		58981AF67D7BB32E21E5D3AB /* Pods-Chromatic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chromatic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chromatic/Pods-Chromatic.debug.xcconfig"; sourceTree = "<group>"; };
-		BB687B5505BDDE9C4164C3FE /* Pods-Chromatic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chromatic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chromatic/Pods-Chromatic.release.xcconfig"; sourceTree = "<group>"; };
-		D3D555392809E07E1AE0721B /* Pods_Chromatic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chromatic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		389C15795E8AAAD17EFA0468 /* Pods-Chromatic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chromatic.debug.xcconfig"; path = "Target Support Files/Pods-Chromatic/Pods-Chromatic.debug.xcconfig"; sourceTree = "<group>"; };
+		802A81123A4E7C8C789C0C03 /* Pods-Chromatic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chromatic.release.xcconfig"; path = "Target Support Files/Pods-Chromatic/Pods-Chromatic.release.xcconfig"; sourceTree = "<group>"; };
+		D47D1C5C0B08D08B3B92D9F3 /* Pods_Chromatic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chromatic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0561551BD48FD300C25142 /* Chromatic Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Chromatic Watch App.entitlements"; sourceTree = "<group>"; };
 		EA1734221BA676DE008F9BB0 /* Chromatic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chromatic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1734251BA676DE008F9BB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA2B5E3B1BD499A6005DAB1F /* StoreKit.framework in Frameworks */,
-				6D43DD630E43BD2B4BD20E19 /* Pods_Chromatic.framework in Frameworks */,
+				E08751F54E85BF346DCFA679 /* Pods_Chromatic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +119,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AE8D33E2D84E6342D47DCAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D47D1C5C0B08D08B3B92D9F3 /* Pods_Chromatic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D8C7F8EAEBAC617F971C771 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				389C15795E8AAAD17EFA0468 /* Pods-Chromatic.debug.xcconfig */,
+				802A81123A4E7C8C789C0C03 /* Pods-Chromatic.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		945A8EB61BD8BFC6004FD636 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,15 +144,6 @@
 				EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		B9CD73B8DC0F1C90FDF64718 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				58981AF67D7BB32E21E5D3AB /* Pods-Chromatic.debug.xcconfig */,
-				BB687B5505BDDE9C4164C3FE /* Pods-Chromatic.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		EA1734191BA676DE008F9BB0 = {
@@ -149,8 +157,8 @@
 				945A8EB61BD8BFC6004FD636 /* Common */,
 				EA1734231BA676DE008F9BB0 /* Products */,
 				EA2B5E3A1BD499A6005DAB1F /* StoreKit.framework */,
-				B9CD73B8DC0F1C90FDF64718 /* Pods */,
-				FEE0EDC969F77CBE4F862780 /* Frameworks */,
+				6D8C7F8EAEBAC617F971C771 /* Pods */,
+				2AE8D33E2D84E6342D47DCAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -278,14 +286,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		FEE0EDC969F77CBE4F862780 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D3D555392809E07E1AE0721B /* Pods_Chromatic.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -293,12 +293,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA17344A1BA676DE008F9BB0 /* Build configuration list for PBXNativeTarget "Chromatic" */;
 			buildPhases = (
-				B0AF799427E68E477EEAB11C /* [CP] Check Pods Manifest.lock */,
+				758DB8125156F3E931212405 /* [CP] Check Pods Manifest.lock */,
 				EA17341E1BA676DE008F9BB0 /* Sources */,
 				EA17341F1BA676DE008F9BB0 /* Frameworks */,
 				EA1734201BA676DE008F9BB0 /* Resources */,
-				30C1FBF9AC1723BB5608A80F /* [CP] Embed Pods Frameworks */,
-				F494EC265B471BCE32100A22 /* [CP] Copy Pods Resources */,
+				34FA08D32954BF6AF415D433 /* [CP] Embed Pods Frameworks */,
+				C7527992418EA3B883457073 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -352,13 +352,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = alexpersian;
 				TargetAttributes = {
 					EA1734211BA676DE008F9BB0 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 67BLBCQE27;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1110;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -370,19 +370,19 @@
 					};
 					EA1734351BA676DE008F9BB0 = {
 						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1110;
 						TestTargetID = EA1734211BA676DE008F9BB0;
 					};
 					EA1734401BA676DE008F9BB0 = {
 						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1110;
 						TestTargetID = EA1734211BA676DE008F9BB0;
 					};
 				};
 			};
 			buildConfigurationList = EA17341D1BA676DE008F9BB0 /* Build configuration list for PBXProject "Chromatic" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -429,31 +429,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		30C1FBF9AC1723BB5608A80F /* [CP] Embed Pods Frameworks */ = {
+		34FA08D32954BF6AF415D433 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Chromatic/Pods-Chromatic-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Chromatic/Pods-Chromatic-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyTimer/SwiftyTimer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyTimer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chromatic/Pods-Chromatic-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chromatic/Pods-Chromatic-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B0AF799427E68E477EEAB11C /* [CP] Check Pods Manifest.lock */ = {
+		758DB8125156F3E931212405 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -475,22 +471,18 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F494EC265B471BCE32100A22 /* [CP] Copy Pods Resources */ = {
+		C7527992418EA3B883457073 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Chromatic/Pods-Chromatic-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Chromatic/Pods-Chromatic-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
@@ -498,7 +490,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chromatic/Pods-Chromatic-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chromatic/Pods-Chromatic-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -591,17 +583,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -623,11 +626,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -635,17 +639,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -661,22 +676,24 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		EA17344B1BA676DE008F9BB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58981AF67D7BB32E21E5D3AB /* Pods-Chromatic.debug.xcconfig */;
+			baseConfigurationReference = 389C15795E8AAAD17EFA0468 /* Pods-Chromatic.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Chromatic/Supporting Files/Info.plist";
@@ -727,21 +744,21 @@
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Chromatic/Supporting Files/GooglePlacesField/Chromatic-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		EA17344C1BA676DE008F9BB0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB687B5505BDDE9C4164C3FE /* Pods-Chromatic.release.xcconfig */;
+			baseConfigurationReference = 802A81123A4E7C8C789C0C03 /* Pods-Chromatic.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Chromatic/Supporting Files/Info.plist";
@@ -791,8 +808,8 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "Chromatic/Supporting Files/GooglePlacesField/Chromatic-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -805,8 +822,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.ChromaticTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chromatic.app/Chromatic";
 			};
 			name = Debug;
@@ -819,8 +836,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.ChromaticTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chromatic.app/Chromatic";
 			};
 			name = Release;
@@ -832,8 +849,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.ChromaticUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = Chromatic;
 				USES_XCTRUNNER = YES;
 			};
@@ -846,8 +863,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.ChromaticUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = Chromatic;
 				USES_XCTRUNNER = YES;
 			};
