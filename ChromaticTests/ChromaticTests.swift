@@ -11,7 +11,7 @@ import XCTest
 
 class ChromaticTests: XCTestCase {
 
-    let formatter = NSDateFormatter()
+    let formatter = DateFormatter()
     let model = ColorModel()
     
     override func setUp() {
@@ -26,12 +26,12 @@ class ChromaticTests: XCTestCase {
         super.tearDown()
     }
 
-    func checkStringForDateWithOffset(offset: Int) {
+    func checkStringForDateWithOffset(_ offset: Int) {
         // given
-        let date = NSDate()
+        let date = Date()
         model.offset = offset
-        formatter.timeZone = NSTimeZone(forSecondsFromGMT: offset)
-        let expected = formatter.stringFromDate(date)
+        formatter.timeZone = TimeZone(secondsFromGMT: offset)
+        let expected = formatter.string(from: date)
 
         // when
         let result = model.stringForDate(date)
@@ -49,7 +49,7 @@ class ChromaticTests: XCTestCase {
     }
     
     //TODO: Write a test for the date string -> hex string conversion
-    func checkDateStringForHexStringEqual(dateString: String, _ expected: String) {
+    func checkDateStringForHexStringEqual(_ dateString: String, _ expected: String) {
         // when
         let result = model.hexStringFromDateString(dateString)
         
@@ -57,7 +57,7 @@ class ChromaticTests: XCTestCase {
         XCTAssertEqual(result, expected)
     }
     
-    func checkDateStringForHexStringNotEqual(dateString: String, _ expected: String) {
+    func checkDateStringForHexStringNotEqual(_ dateString: String, _ expected: String) {
         // when
         let result = model.hexStringFromDateString(dateString)
         

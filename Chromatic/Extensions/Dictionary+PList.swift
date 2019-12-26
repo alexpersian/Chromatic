@@ -10,9 +10,9 @@ import Foundation
 
 extension Dictionary {
     // Thanks to Ian Keen for the help with this great function
-    static func fromPlist(named: String) -> [Key : Value] {
+    static func fromPlist(_ named: String) -> [Key : Value] {
         guard
-            let pList = NSBundle.mainBundle().pathForResource(named, ofType: "plist"),
+            let pList = Bundle.main.path(forResource: named, ofType: "plist"),
             let dict = NSDictionary(contentsOfFile: pList)
         else { return [:] }
         

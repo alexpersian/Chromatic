@@ -6,7 +6,7 @@
 //
 
 #import "GooglePlacesFieldPredictionsView.h"
-#import <GoogleMaps/GMSAutocompletePrediction.h>
+#import <GooglePlaces/GMSAutocompletePrediction.h>
 
 @interface GooglePlacesFieldPredictionsView () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, copy) didSelectPredictionBlock selected;

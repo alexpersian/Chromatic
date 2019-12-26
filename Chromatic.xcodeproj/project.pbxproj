@@ -1,1848 +1,915 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>075F8A7442CA59391463D740</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4A98C530AA95B20DA78E2CB7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>14206231B598740FA647B960</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Chromatic/Pods-Chromatic-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>4A98C530AA95B20DA78E2CB7</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_Chromatic.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5C5F2FFAD003482855B831CB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DA47C1A6B912A8CC99F7A444</string>
-				<string>90C5B8DE3B5353E9958C6912</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8825C4B6B52FCBB96B0FCF98</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4A98C530AA95B20DA78E2CB7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>90C5B8DE3B5353E9958C6912</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Chromatic.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Chromatic/Pods-Chromatic.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>945A8EB61BD8BFC6004FD636</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA3CEEE81BA67DC5000DC2F9</string>
-				<string>EA3CEEEB1BA67DC5000DC2F9</string>
-				<string>EAA73B721BABB02100BC3988</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Common</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B7D86D025E31D40A05EAA5F4</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Chromatic/Pods-Chromatic-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>D3F40015227B66CE340A6DC7</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>DA47C1A6B912A8CC99F7A444</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Chromatic.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Chromatic/Pods-Chromatic.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA0561551BD48FD300C25142</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xml</string>
-			<key>path</key>
-			<string>Chromatic Watch App.entitlements</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA1734191BA676DE008F9BB0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA1734241BA676DE008F9BB0</string>
-				<string>EA45768C1BC766E2007B5BC6</string>
-				<string>EA45769B1BC766E2007B5BC6</string>
-				<string>EA1734391BA676DE008F9BB0</string>
-				<string>EA1734441BA676DE008F9BB0</string>
-				<string>945A8EB61BD8BFC6004FD636</string>
-				<string>075F8A7442CA59391463D740</string>
-				<string>5C5F2FFAD003482855B831CB</string>
-				<string>EA1734231BA676DE008F9BB0</string>
-				<string>EA2B5E3A1BD499A6005DAB1F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA17341A1BA676DE008F9BB0</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0720</string>
-				<key>LastUpgradeCheck</key>
-				<string>0700</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>alexpersian</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>EA1734211BA676DE008F9BB0</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.0</string>
-						<key>DevelopmentTeam</key>
-						<string>67BLBCQE27</string>
-						<key>SystemCapabilities</key>
-						<dict>
-							<key>com.apple.ApplicationGroups.iOS</key>
-							<dict>
-								<key>enabled</key>
-								<string>0</string>
-							</dict>
-							<key>com.apple.InAppPurchase</key>
-							<dict>
-								<key>enabled</key>
-								<string>1</string>
-							</dict>
-						</dict>
-					</dict>
-					<key>EA1734351BA676DE008F9BB0</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.0</string>
-						<key>TestTargetID</key>
-						<string>EA1734211BA676DE008F9BB0</string>
-					</dict>
-					<key>EA1734401BA676DE008F9BB0</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.0</string>
-						<key>TestTargetID</key>
-						<string>EA1734211BA676DE008F9BB0</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>EA17341D1BA676DE008F9BB0</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>EA1734191BA676DE008F9BB0</string>
-			<key>productRefGroup</key>
-			<string>EA1734231BA676DE008F9BB0</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>EA1734211BA676DE008F9BB0</string>
-				<string>EA1734351BA676DE008F9BB0</string>
-				<string>EA1734401BA676DE008F9BB0</string>
-			</array>
-		</dict>
-		<key>EA17341D1BA676DE008F9BB0</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>EA1734481BA676DE008F9BB0</string>
-				<string>EA1734491BA676DE008F9BB0</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>EA17341E1BA676DE008F9BB0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EA2537881C7C1413008ED52C</string>
-				<string>EA3CEEF11BA67DC5000DC2F9</string>
-				<string>EA3C9C241C6FCB9D00DE09E5</string>
-				<string>EA1734261BA676DE008F9BB0</string>
-				<string>EA3CEEEF1BA67DC5000DC2F9</string>
-				<string>EA63C1401C6D05CC00AE5B04</string>
-				<string>EA4DF6A91CB0FD1000128FAB</string>
-				<string>EAA73B731BABB02100BC3988</string>
-				<string>EA3C9C221C6FAEDA00DE09E5</string>
-				<string>EA2DD6301C8F4A1300BC68AD</string>
-				<string>EA63C13F1C6D05CC00AE5B04</string>
-				<string>EA3CEEEE1BA67DC5000DC2F9</string>
-				<string>EA3C9C201C6FAE7100DE09E5</string>
-				<string>EA3CEEF01BA67DC5000DC2F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>EA17341F1BA676DE008F9BB0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EA2B5E3B1BD499A6005DAB1F</string>
-				<string>8825C4B6B52FCBB96B0FCF98</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>EA1734201BA676DE008F9BB0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EA1734301BA676DE008F9BB0</string>
-				<string>EA17342D1BA676DE008F9BB0</string>
-				<string>EA4DF6A71CB0B9E900128FAB</string>
-				<string>EA17342B1BA676DE008F9BB0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>EA1734211BA676DE008F9BB0</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>EA17344A1BA676DE008F9BB0</string>
-			<key>buildPhases</key>
-			<array>
-				<string>D3F40015227B66CE340A6DC7</string>
-				<string>EA17341E1BA676DE008F9BB0</string>
-				<string>EA17341F1BA676DE008F9BB0</string>
-				<string>EA1734201BA676DE008F9BB0</string>
-				<string>B7D86D025E31D40A05EAA5F4</string>
-				<string>14206231B598740FA647B960</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Chromatic</string>
-			<key>productName</key>
-			<string>Chromatic</string>
-			<key>productReference</key>
-			<string>EA1734221BA676DE008F9BB0</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>EA1734221BA676DE008F9BB0</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Chromatic.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>EA1734231BA676DE008F9BB0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA1734221BA676DE008F9BB0</string>
-				<string>EA1734361BA676DE008F9BB0</string>
-				<string>EA1734411BA676DE008F9BB0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA1734241BA676DE008F9BB0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA63C1411C6D067400AE5B04</string>
-				<string>EA63C1421C6D068000AE5B04</string>
-				<string>EA3CEEE21BA67A8E000DC2F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Chromatic</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA1734251BA676DE008F9BB0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA1734261BA676DE008F9BB0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA1734251BA676DE008F9BB0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA1734291BA676DE008F9BB0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA17342A1BA676DE008F9BB0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>path</key>
-			<string>.</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA17342A1BA676DE008F9BB0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA17342B1BA676DE008F9BB0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA1734291BA676DE008F9BB0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA17342C1BA676DE008F9BB0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA17342D1BA676DE008F9BB0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA17342C1BA676DE008F9BB0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA17342E1BA676DE008F9BB0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA17342F1BA676DE008F9BB0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>path</key>
-			<string>.</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA17342F1BA676DE008F9BB0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA1734301BA676DE008F9BB0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA17342E1BA676DE008F9BB0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA1734311BA676DE008F9BB0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA1734321BA676DE008F9BB0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EA17343B1BA676DE008F9BB0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>EA1734331BA676DE008F9BB0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>EA1734341BA676DE008F9BB0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>EA1734351BA676DE008F9BB0</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>EA17344D1BA676DE008F9BB0</string>
-			<key>buildPhases</key>
-			<array>
-				<string>EA1734321BA676DE008F9BB0</string>
-				<string>EA1734331BA676DE008F9BB0</string>
-				<string>EA1734341BA676DE008F9BB0</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>EA1734381BA676DE008F9BB0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ChromaticTests</string>
-			<key>productName</key>
-			<string>ChromaticTests</string>
-			<key>productReference</key>
-			<string>EA1734361BA676DE008F9BB0</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>EA1734361BA676DE008F9BB0</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ChromaticTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>EA1734371BA676DE008F9BB0</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>EA17341A1BA676DE008F9BB0</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>EA1734211BA676DE008F9BB0</string>
-			<key>remoteInfo</key>
-			<string>Chromatic</string>
-		</dict>
-		<key>EA1734381BA676DE008F9BB0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>EA1734211BA676DE008F9BB0</string>
-			<key>targetProxy</key>
-			<string>EA1734371BA676DE008F9BB0</string>
-		</dict>
-		<key>EA1734391BA676DE008F9BB0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA17343A1BA676DE008F9BB0</string>
-				<string>EA17343C1BA676DE008F9BB0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ChromaticTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA17343A1BA676DE008F9BB0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ChromaticTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA17343B1BA676DE008F9BB0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA17343A1BA676DE008F9BB0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA17343C1BA676DE008F9BB0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA17343D1BA676DE008F9BB0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EA1734461BA676DE008F9BB0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>EA17343E1BA676DE008F9BB0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>EA17343F1BA676DE008F9BB0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>EA1734401BA676DE008F9BB0</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>EA1734501BA676DE008F9BB0</string>
-			<key>buildPhases</key>
-			<array>
-				<string>EA17343D1BA676DE008F9BB0</string>
-				<string>EA17343E1BA676DE008F9BB0</string>
-				<string>EA17343F1BA676DE008F9BB0</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>EA1734431BA676DE008F9BB0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>ChromaticUITests</string>
-			<key>productName</key>
-			<string>ChromaticUITests</string>
-			<key>productReference</key>
-			<string>EA1734411BA676DE008F9BB0</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.ui-testing</string>
-		</dict>
-		<key>EA1734411BA676DE008F9BB0</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>ChromaticUITests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>EA1734421BA676DE008F9BB0</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>EA17341A1BA676DE008F9BB0</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>EA1734211BA676DE008F9BB0</string>
-			<key>remoteInfo</key>
-			<string>Chromatic</string>
-		</dict>
-		<key>EA1734431BA676DE008F9BB0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>EA1734211BA676DE008F9BB0</string>
-			<key>targetProxy</key>
-			<string>EA1734421BA676DE008F9BB0</string>
-		</dict>
-		<key>EA1734441BA676DE008F9BB0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA1734451BA676DE008F9BB0</string>
-				<string>EA1734471BA676DE008F9BB0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>ChromaticUITests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA1734451BA676DE008F9BB0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ChromaticUITests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA1734461BA676DE008F9BB0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA1734451BA676DE008F9BB0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA1734471BA676DE008F9BB0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA1734481BA676DE008F9BB0</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>EA1734491BA676DE008F9BB0</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>EA17344A1BA676DE008F9BB0</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>EA17344B1BA676DE008F9BB0</string>
-				<string>EA17344C1BA676DE008F9BB0</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>EA17344B1BA676DE008F9BB0</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>DA47C1A6B912A8CC99F7A444</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>EMBEDDED_CONTENT_CONTAINS_SWIFT</key>
-				<string>NO</string>
-				<key>ENABLE_BITCODE</key>
-				<string>NO</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<string>$(inherited)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Chromatic/Supporting Files/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>OTHER_LDFLAGS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>-ObjC</string>
-					<string>-l"c++"</string>
-					<string>-l"icucore"</string>
-					<string>-l"z"</string>
-					<string>-framework</string>
-					<string>"AVFoundation"</string>
-					<string>-framework</string>
-					<string>"Accelerate"</string>
-					<string>-framework</string>
-					<string>"Alamofire"</string>
-					<string>-framework</string>
-					<string>"CoreBluetooth"</string>
-					<string>-framework</string>
-					<string>"CoreData"</string>
-					<string>-framework</string>
-					<string>"CoreGraphics"</string>
-					<string>-framework</string>
-					<string>"CoreLocation"</string>
-					<string>-framework</string>
-					<string>"CoreText"</string>
-					<string>-framework</string>
-					<string>"GLKit"</string>
-					<string>-framework</string>
-					<string>"GoogleMaps"</string>
-					<string>-framework</string>
-					<string>"ImageIO"</string>
-					<string>-framework</string>
-					<string>"OpenGLES"</string>
-					<string>-framework</string>
-					<string>"QuartzCore"</string>
-					<string>-framework</string>
-					<string>"Security"</string>
-					<string>-framework</string>
-					<string>"SwiftyTimer"</string>
-					<string>-framework</string>
-					<string>"SystemConfiguration"</string>
-				</array>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.alexpersian.Chromatic</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PROVISIONING_PROFILE</key>
-				<string></string>
-				<key>SWIFT_INSTALL_OBJC_HEADER</key>
-				<string>NO</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>Chromatic/Supporting Files/GooglePlacesField/Chromatic-Bridging-Header.h</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>EA17344C1BA676DE008F9BB0</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>90C5B8DE3B5353E9958C6912</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY</key>
-				<string>iPhone Developer</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>EMBEDDED_CONTENT_CONTAINS_SWIFT</key>
-				<string>NO</string>
-				<key>ENABLE_BITCODE</key>
-				<string>NO</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<string>$(inherited)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Chromatic/Supporting Files/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.1</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>OTHER_LDFLAGS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>-ObjC</string>
-					<string>-l"c++"</string>
-					<string>-l"icucore"</string>
-					<string>-l"z"</string>
-					<string>-framework</string>
-					<string>"AVFoundation"</string>
-					<string>-framework</string>
-					<string>"Accelerate"</string>
-					<string>-framework</string>
-					<string>"Alamofire"</string>
-					<string>-framework</string>
-					<string>"CoreBluetooth"</string>
-					<string>-framework</string>
-					<string>"CoreData"</string>
-					<string>-framework</string>
-					<string>"CoreGraphics"</string>
-					<string>-framework</string>
-					<string>"CoreLocation"</string>
-					<string>-framework</string>
-					<string>"CoreText"</string>
-					<string>-framework</string>
-					<string>"GLKit"</string>
-					<string>-framework</string>
-					<string>"GoogleMaps"</string>
-					<string>-framework</string>
-					<string>"ImageIO"</string>
-					<string>-framework</string>
-					<string>"OpenGLES"</string>
-					<string>-framework</string>
-					<string>"QuartzCore"</string>
-					<string>-framework</string>
-					<string>"Security"</string>
-					<string>-framework</string>
-					<string>"SwiftyTimer"</string>
-					<string>-framework</string>
-					<string>"SystemConfiguration"</string>
-				</array>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.alexpersian.Chromatic</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PROVISIONING_PROFILE</key>
-				<string></string>
-				<key>SWIFT_INSTALL_OBJC_HEADER</key>
-				<string>NO</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>Chromatic/Supporting Files/GooglePlacesField/Chromatic-Bridging-Header.h</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>EA17344D1BA676DE008F9BB0</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>EA17344E1BA676DE008F9BB0</string>
-				<string>EA17344F1BA676DE008F9BB0</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>EA17344E1BA676DE008F9BB0</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>ChromaticTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.alexpersian.ChromaticTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Chromatic.app/Chromatic</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>EA17344F1BA676DE008F9BB0</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>ChromaticTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.alexpersian.ChromaticTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Chromatic.app/Chromatic</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>EA1734501BA676DE008F9BB0</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>EA1734511BA676DE008F9BB0</string>
-				<string>EA1734521BA676DE008F9BB0</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>EA1734511BA676DE008F9BB0</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>ChromaticUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.alexpersian.ChromaticUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>Chromatic</string>
-				<key>USES_XCTRUNNER</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>EA1734521BA676DE008F9BB0</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>ChromaticUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.alexpersian.ChromaticUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>Chromatic</string>
-				<key>USES_XCTRUNNER</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>EA2537871C7C1413008ED52C</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>UIColor+Lerp.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA2537881C7C1413008ED52C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA2537871C7C1413008ED52C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA2B5E3A1BD499A6005DAB1F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>StoreKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/StoreKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>EA2B5E3B1BD499A6005DAB1F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA2B5E3A1BD499A6005DAB1F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA2DD62F1C8F4A1300BC68AD</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Array+Ref.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA2DD6301C8F4A1300BC68AD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA2DD62F1C8F4A1300BC68AD</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA3C9C1F1C6FAE7100DE09E5</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SettingsVC+UITextFieldHandler.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA3C9C201C6FAE7100DE09E5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA3C9C1F1C6FAE7100DE09E5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA3C9C211C6FAEDA00DE09E5</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SettingsVC+SKHandler.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA3C9C221C6FAEDA00DE09E5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA3C9C211C6FAEDA00DE09E5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA3C9C231C6FCB9D00DE09E5</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SettingsVC+GoogleHandler.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA3C9C241C6FCB9D00DE09E5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA3C9C231C6FCB9D00DE09E5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA3CEEE21BA67A8E000DC2F9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA63C1391C6D05B100AE5B04</string>
-				<string>EA3CEEE41BA67AB9000DC2F9</string>
-				<string>EA3CEEE31BA67AAF000DC2F9</string>
-				<string>EA1734251BA676DE008F9BB0</string>
-				<string>EA4DF6A61CB0B9E900128FAB</string>
-				<string>EA1734311BA676DE008F9BB0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA3CEEE31BA67AAF000DC2F9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA17342E1BA676DE008F9BB0</string>
-				<string>EA1734291BA676DE008F9BB0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Storyboards</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA3CEEE41BA67AB9000DC2F9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA17342C1BA676DE008F9BB0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Images</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA3CEEE81BA67DC5000DC2F9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ColorModel.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA3CEEE91BA67DC5000DC2F9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ColorViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA3CEEEA1BA67DC5000DC2F9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>SettingsViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA3CEEEB1BA67DC5000DC2F9</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>UIColor+HexConverter.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA3CEEEE1BA67DC5000DC2F9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA3CEEE81BA67DC5000DC2F9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA3CEEEF1BA67DC5000DC2F9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA3CEEE91BA67DC5000DC2F9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA3CEEF01BA67DC5000DC2F9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA3CEEEA1BA67DC5000DC2F9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA3CEEF11BA67DC5000DC2F9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA3CEEEB1BA67DC5000DC2F9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA45768C1BC766E2007B5BC6</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA4576901BC766E2007B5BC6</string>
-				<string>EA0561551BD48FD300C25142</string>
-				<string>EA4576921BC766E2007B5BC6</string>
-				<string>EA45768D1BC766E2007B5BC6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Chromatic Watch App</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA45768D1BC766E2007B5BC6</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA45768E1BC766E2007B5BC6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Interface.storyboard</string>
-			<key>path</key>
-			<string>.</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA45768E1BC766E2007B5BC6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Interface.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA4576901BC766E2007B5BC6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA4576921BC766E2007B5BC6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA45769B1BC766E2007B5BC6</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA4576A21BC766E2007B5BC6</string>
-				<string>EA45769E1BC766E2007B5BC6</string>
-				<string>EA4576A41BC766E2007B5BC6</string>
-				<string>EA45769C1BC766E2007B5BC6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Chromatic Watch App Extension</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA45769C1BC766E2007B5BC6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>InterfaceController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA45769E1BC766E2007B5BC6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ExtensionDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA4576A21BC766E2007B5BC6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA4576A41BC766E2007B5BC6</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA4DF6A61CB0B9E900128FAB</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Data.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA4DF6A71CB0B9E900128FAB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA4DF6A61CB0B9E900128FAB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA4DF6A81CB0FD1000128FAB</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Dictionary+PList.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA4DF6A91CB0FD1000128FAB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA4DF6A81CB0FD1000128FAB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA63C1391C6D05B100AE5B04</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA63C13A1C6D05CB00AE5B04</string>
-				<string>EA63C13B1C6D05CC00AE5B04</string>
-				<string>EA63C13C1C6D05CC00AE5B04</string>
-				<string>EA63C13D1C6D05CC00AE5B04</string>
-				<string>EA63C13E1C6D05CC00AE5B04</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>GooglePlacesField</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA63C13A1C6D05CB00AE5B04</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Chromatic-Bridging-Header.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA63C13B1C6D05CC00AE5B04</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>GooglePlacesField.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA63C13C1C6D05CC00AE5B04</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>GooglePlacesField.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA63C13D1C6D05CC00AE5B04</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>GooglePlacesFieldPredictionsView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA63C13E1C6D05CC00AE5B04</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>GooglePlacesFieldPredictionsView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA63C13F1C6D05CC00AE5B04</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA63C13C1C6D05CC00AE5B04</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA63C1401C6D05CC00AE5B04</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EA63C13E1C6D05CC00AE5B04</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EA63C1411C6D067400AE5B04</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA3CEEE91BA67DC5000DC2F9</string>
-				<string>EA3CEEEA1BA67DC5000DC2F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Controllers</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA63C1421C6D068000AE5B04</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EA2DD62F1C8F4A1300BC68AD</string>
-				<string>EA4DF6A81CB0FD1000128FAB</string>
-				<string>EA3C9C231C6FCB9D00DE09E5</string>
-				<string>EA3C9C211C6FAEDA00DE09E5</string>
-				<string>EA3C9C1F1C6FAE7100DE09E5</string>
-				<string>EA2537871C7C1413008ED52C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Extensions</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EAA73B721BABB02100BC3988</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>UserDefaultsManager.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EAA73B731BABB02100BC3988</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EAA73B721BABB02100BC3988</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>EA17341A1BA676DE008F9BB0</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E08751F54E85BF346DCFA679 /* Pods_Chromatic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47D1C5C0B08D08B3B92D9F3 /* Pods_Chromatic.framework */; };
+		EA1734261BA676DE008F9BB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1734251BA676DE008F9BB0 /* AppDelegate.swift */; };
+		EA17342B1BA676DE008F9BB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1734291BA676DE008F9BB0 /* Main.storyboard */; };
+		EA17342D1BA676DE008F9BB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA17342C1BA676DE008F9BB0 /* Assets.xcassets */; };
+		EA1734301BA676DE008F9BB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA17342E1BA676DE008F9BB0 /* LaunchScreen.storyboard */; };
+		EA17343B1BA676DE008F9BB0 /* ChromaticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17343A1BA676DE008F9BB0 /* ChromaticTests.swift */; };
+		EA1734461BA676DE008F9BB0 /* ChromaticUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1734451BA676DE008F9BB0 /* ChromaticUITests.swift */; };
+		EA2537881C7C1413008ED52C /* UIColor+Lerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2537871C7C1413008ED52C /* UIColor+Lerp.swift */; };
+		EA2B5E3B1BD499A6005DAB1F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2B5E3A1BD499A6005DAB1F /* StoreKit.framework */; };
+		EA2DD6301C8F4A1300BC68AD /* Array+Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2DD62F1C8F4A1300BC68AD /* Array+Ref.swift */; };
+		EA3C9C201C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */; };
+		EA3C9C221C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9C211C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift */; };
+		EA3C9C241C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9C231C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift */; };
+		EA3CEEEE1BA67DC5000DC2F9 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEE81BA67DC5000DC2F9 /* ColorModel.swift */; };
+		EA3CEEEF1BA67DC5000DC2F9 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEE91BA67DC5000DC2F9 /* ColorViewController.swift */; };
+		EA3CEEF01BA67DC5000DC2F9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEA1BA67DC5000DC2F9 /* SettingsViewController.swift */; };
+		EA3CEEF11BA67DC5000DC2F9 /* UIColor+HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */; };
+		EA4DF6A91CB0FD1000128FAB /* Dictionary+PList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DF6A81CB0FD1000128FAB /* Dictionary+PList.swift */; };
+		EA63C13F1C6D05CC00AE5B04 /* GooglePlacesField.m in Sources */ = {isa = PBXBuildFile; fileRef = EA63C13C1C6D05CC00AE5B04 /* GooglePlacesField.m */; };
+		EA63C1401C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA63C13E1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m */; };
+		EAA73B731BABB02100BC3988 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */; };
+		FA9E15C421727B05003D67D2 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA9E15C321727B05003D67D2 /* Data.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA1734371BA676DE008F9BB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA17341A1BA676DE008F9BB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA1734211BA676DE008F9BB0;
+			remoteInfo = Chromatic;
+		};
+		EA1734421BA676DE008F9BB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA17341A1BA676DE008F9BB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA1734211BA676DE008F9BB0;
+			remoteInfo = Chromatic;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		389C15795E8AAAD17EFA0468 /* Pods-Chromatic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chromatic.debug.xcconfig"; path = "Target Support Files/Pods-Chromatic/Pods-Chromatic.debug.xcconfig"; sourceTree = "<group>"; };
+		802A81123A4E7C8C789C0C03 /* Pods-Chromatic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chromatic.release.xcconfig"; path = "Target Support Files/Pods-Chromatic/Pods-Chromatic.release.xcconfig"; sourceTree = "<group>"; };
+		D47D1C5C0B08D08B3B92D9F3 /* Pods_Chromatic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chromatic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0561551BD48FD300C25142 /* Chromatic Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Chromatic Watch App.entitlements"; sourceTree = "<group>"; };
+		EA1734221BA676DE008F9BB0 /* Chromatic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chromatic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1734251BA676DE008F9BB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA17342A1BA676DE008F9BB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA17342C1BA676DE008F9BB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA17342F1BA676DE008F9BB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA1734311BA676DE008F9BB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA1734361BA676DE008F9BB0 /* ChromaticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChromaticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA17343A1BA676DE008F9BB0 /* ChromaticTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromaticTests.swift; sourceTree = "<group>"; };
+		EA17343C1BA676DE008F9BB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA1734411BA676DE008F9BB0 /* ChromaticUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChromaticUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1734451BA676DE008F9BB0 /* ChromaticUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromaticUITests.swift; sourceTree = "<group>"; };
+		EA1734471BA676DE008F9BB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA2537871C7C1413008ED52C /* UIColor+Lerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Lerp.swift"; sourceTree = "<group>"; };
+		EA2B5E3A1BD499A6005DAB1F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		EA2DD62F1C8F4A1300BC68AD /* Array+Ref.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Ref.swift"; sourceTree = "<group>"; };
+		EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingsVC+UITextFieldHandler.swift"; sourceTree = "<group>"; };
+		EA3C9C211C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingsVC+SKHandler.swift"; sourceTree = "<group>"; };
+		EA3C9C231C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingsVC+GoogleHandler.swift"; sourceTree = "<group>"; };
+		EA3CEEE81BA67DC5000DC2F9 /* ColorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
+		EA3CEEE91BA67DC5000DC2F9 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		EA3CEEEA1BA67DC5000DC2F9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexConverter.swift"; sourceTree = "<group>"; };
+		EA45768E1BC766E2007B5BC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		EA4576901BC766E2007B5BC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA4576921BC766E2007B5BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA45769C1BC766E2007B5BC6 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		EA45769E1BC766E2007B5BC6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		EA4576A21BC766E2007B5BC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA4576A41BC766E2007B5BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA4DF6A81CB0FD1000128FAB /* Dictionary+PList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+PList.swift"; sourceTree = "<group>"; };
+		EA63C13A1C6D05CB00AE5B04 /* Chromatic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chromatic-Bridging-Header.h"; sourceTree = "<group>"; };
+		EA63C13B1C6D05CC00AE5B04 /* GooglePlacesField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlacesField.h; sourceTree = "<group>"; };
+		EA63C13C1C6D05CC00AE5B04 /* GooglePlacesField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesField.m; sourceTree = "<group>"; };
+		EA63C13D1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlacesFieldPredictionsView.h; sourceTree = "<group>"; };
+		EA63C13E1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesFieldPredictionsView.m; sourceTree = "<group>"; };
+		EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		FA9E15C321727B05003D67D2 /* Data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA17341F1BA676DE008F9BB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2B5E3B1BD499A6005DAB1F /* StoreKit.framework in Frameworks */,
+				E08751F54E85BF346DCFA679 /* Pods_Chromatic.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA1734331BA676DE008F9BB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA17343E1BA676DE008F9BB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2AE8D33E2D84E6342D47DCAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D47D1C5C0B08D08B3B92D9F3 /* Pods_Chromatic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D8C7F8EAEBAC617F971C771 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				389C15795E8AAAD17EFA0468 /* Pods-Chromatic.debug.xcconfig */,
+				802A81123A4E7C8C789C0C03 /* Pods-Chromatic.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		945A8EB61BD8BFC6004FD636 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EA3CEEE81BA67DC5000DC2F9 /* ColorModel.swift */,
+				EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */,
+				EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EA1734191BA676DE008F9BB0 = {
+			isa = PBXGroup;
+			children = (
+				EA1734241BA676DE008F9BB0 /* Chromatic */,
+				EA45768C1BC766E2007B5BC6 /* Chromatic Watch App */,
+				EA45769B1BC766E2007B5BC6 /* Chromatic Watch App Extension */,
+				EA1734391BA676DE008F9BB0 /* ChromaticTests */,
+				EA1734441BA676DE008F9BB0 /* ChromaticUITests */,
+				945A8EB61BD8BFC6004FD636 /* Common */,
+				EA1734231BA676DE008F9BB0 /* Products */,
+				EA2B5E3A1BD499A6005DAB1F /* StoreKit.framework */,
+				6D8C7F8EAEBAC617F971C771 /* Pods */,
+				2AE8D33E2D84E6342D47DCAD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EA1734231BA676DE008F9BB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA1734221BA676DE008F9BB0 /* Chromatic.app */,
+				EA1734361BA676DE008F9BB0 /* ChromaticTests.xctest */,
+				EA1734411BA676DE008F9BB0 /* ChromaticUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA1734241BA676DE008F9BB0 /* Chromatic */ = {
+			isa = PBXGroup;
+			children = (
+				EA63C1411C6D067400AE5B04 /* Controllers */,
+				EA63C1421C6D068000AE5B04 /* Extensions */,
+				EA3CEEE21BA67A8E000DC2F9 /* Supporting Files */,
+			);
+			path = Chromatic;
+			sourceTree = "<group>";
+		};
+		EA1734391BA676DE008F9BB0 /* ChromaticTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA17343A1BA676DE008F9BB0 /* ChromaticTests.swift */,
+				EA17343C1BA676DE008F9BB0 /* Info.plist */,
+			);
+			path = ChromaticTests;
+			sourceTree = "<group>";
+		};
+		EA1734441BA676DE008F9BB0 /* ChromaticUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA1734451BA676DE008F9BB0 /* ChromaticUITests.swift */,
+				EA1734471BA676DE008F9BB0 /* Info.plist */,
+			);
+			path = ChromaticUITests;
+			sourceTree = "<group>";
+		};
+		EA3CEEE21BA67A8E000DC2F9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA63C1391C6D05B100AE5B04 /* GooglePlacesField */,
+				EA3CEEE41BA67AB9000DC2F9 /* Images */,
+				EA3CEEE31BA67AAF000DC2F9 /* Storyboards */,
+				EA1734251BA676DE008F9BB0 /* AppDelegate.swift */,
+				FA9E15C321727B05003D67D2 /* Data.plist */,
+				EA1734311BA676DE008F9BB0 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA3CEEE31BA67AAF000DC2F9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EA17342E1BA676DE008F9BB0 /* LaunchScreen.storyboard */,
+				EA1734291BA676DE008F9BB0 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EA3CEEE41BA67AB9000DC2F9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EA17342C1BA676DE008F9BB0 /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		EA45768C1BC766E2007B5BC6 /* Chromatic Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				EA4576901BC766E2007B5BC6 /* Assets.xcassets */,
+				EA0561551BD48FD300C25142 /* Chromatic Watch App.entitlements */,
+				EA4576921BC766E2007B5BC6 /* Info.plist */,
+				EA45768D1BC766E2007B5BC6 /* Interface.storyboard */,
+			);
+			path = "Chromatic Watch App";
+			sourceTree = "<group>";
+		};
+		EA45769B1BC766E2007B5BC6 /* Chromatic Watch App Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EA4576A21BC766E2007B5BC6 /* Assets.xcassets */,
+				EA45769E1BC766E2007B5BC6 /* ExtensionDelegate.swift */,
+				EA4576A41BC766E2007B5BC6 /* Info.plist */,
+				EA45769C1BC766E2007B5BC6 /* InterfaceController.swift */,
+			);
+			path = "Chromatic Watch App Extension";
+			sourceTree = "<group>";
+		};
+		EA63C1391C6D05B100AE5B04 /* GooglePlacesField */ = {
+			isa = PBXGroup;
+			children = (
+				EA63C13A1C6D05CB00AE5B04 /* Chromatic-Bridging-Header.h */,
+				EA63C13B1C6D05CC00AE5B04 /* GooglePlacesField.h */,
+				EA63C13C1C6D05CC00AE5B04 /* GooglePlacesField.m */,
+				EA63C13D1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.h */,
+				EA63C13E1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m */,
+			);
+			path = GooglePlacesField;
+			sourceTree = "<group>";
+		};
+		EA63C1411C6D067400AE5B04 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA3CEEE91BA67DC5000DC2F9 /* ColorViewController.swift */,
+				EA3CEEEA1BA67DC5000DC2F9 /* SettingsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EA63C1421C6D068000AE5B04 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA2DD62F1C8F4A1300BC68AD /* Array+Ref.swift */,
+				EA4DF6A81CB0FD1000128FAB /* Dictionary+PList.swift */,
+				EA3C9C231C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift */,
+				EA3C9C211C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift */,
+				EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */,
+				EA2537871C7C1413008ED52C /* UIColor+Lerp.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA1734211BA676DE008F9BB0 /* Chromatic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA17344A1BA676DE008F9BB0 /* Build configuration list for PBXNativeTarget "Chromatic" */;
+			buildPhases = (
+				758DB8125156F3E931212405 /* [CP] Check Pods Manifest.lock */,
+				EA17341E1BA676DE008F9BB0 /* Sources */,
+				EA17341F1BA676DE008F9BB0 /* Frameworks */,
+				EA1734201BA676DE008F9BB0 /* Resources */,
+				34FA08D32954BF6AF415D433 /* [CP] Embed Pods Frameworks */,
+				C7527992418EA3B883457073 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chromatic;
+			productName = Chromatic;
+			productReference = EA1734221BA676DE008F9BB0 /* Chromatic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA1734351BA676DE008F9BB0 /* ChromaticTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA17344D1BA676DE008F9BB0 /* Build configuration list for PBXNativeTarget "ChromaticTests" */;
+			buildPhases = (
+				EA1734321BA676DE008F9BB0 /* Sources */,
+				EA1734331BA676DE008F9BB0 /* Frameworks */,
+				EA1734341BA676DE008F9BB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA1734381BA676DE008F9BB0 /* PBXTargetDependency */,
+			);
+			name = ChromaticTests;
+			productName = ChromaticTests;
+			productReference = EA1734361BA676DE008F9BB0 /* ChromaticTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA1734401BA676DE008F9BB0 /* ChromaticUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA1734501BA676DE008F9BB0 /* Build configuration list for PBXNativeTarget "ChromaticUITests" */;
+			buildPhases = (
+				EA17343D1BA676DE008F9BB0 /* Sources */,
+				EA17343E1BA676DE008F9BB0 /* Frameworks */,
+				EA17343F1BA676DE008F9BB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA1734431BA676DE008F9BB0 /* PBXTargetDependency */,
+			);
+			name = ChromaticUITests;
+			productName = ChromaticUITests;
+			productReference = EA1734411BA676DE008F9BB0 /* ChromaticUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA17341A1BA676DE008F9BB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = alexpersian;
+				TargetAttributes = {
+					EA1734211BA676DE008F9BB0 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 67BLBCQE27;
+						LastSwiftMigration = 1110;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
+					};
+					EA1734351BA676DE008F9BB0 = {
+						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 1110;
+						TestTargetID = EA1734211BA676DE008F9BB0;
+					};
+					EA1734401BA676DE008F9BB0 = {
+						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 1110;
+						TestTargetID = EA1734211BA676DE008F9BB0;
+					};
+				};
+			};
+			buildConfigurationList = EA17341D1BA676DE008F9BB0 /* Build configuration list for PBXProject "Chromatic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA1734191BA676DE008F9BB0;
+			productRefGroup = EA1734231BA676DE008F9BB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA1734211BA676DE008F9BB0 /* Chromatic */,
+				EA1734351BA676DE008F9BB0 /* ChromaticTests */,
+				EA1734401BA676DE008F9BB0 /* ChromaticUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA1734201BA676DE008F9BB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA1734301BA676DE008F9BB0 /* LaunchScreen.storyboard in Resources */,
+				EA17342D1BA676DE008F9BB0 /* Assets.xcassets in Resources */,
+				FA9E15C421727B05003D67D2 /* Data.plist in Resources */,
+				EA17342B1BA676DE008F9BB0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA1734341BA676DE008F9BB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA17343F1BA676DE008F9BB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34FA08D32954BF6AF415D433 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chromatic/Pods-Chromatic-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyTimer/SwiftyTimer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyTimer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chromatic/Pods-Chromatic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		758DB8125156F3E931212405 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chromatic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7527992418EA3B883457073 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chromatic/Pods-Chromatic-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chromatic/Pods-Chromatic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA17341E1BA676DE008F9BB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2537881C7C1413008ED52C /* UIColor+Lerp.swift in Sources */,
+				EA3CEEF11BA67DC5000DC2F9 /* UIColor+HexConverter.swift in Sources */,
+				EA3C9C241C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift in Sources */,
+				EA1734261BA676DE008F9BB0 /* AppDelegate.swift in Sources */,
+				EA3CEEEF1BA67DC5000DC2F9 /* ColorViewController.swift in Sources */,
+				EA63C1401C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m in Sources */,
+				EA4DF6A91CB0FD1000128FAB /* Dictionary+PList.swift in Sources */,
+				EAA73B731BABB02100BC3988 /* UserDefaultsManager.swift in Sources */,
+				EA3C9C221C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift in Sources */,
+				EA2DD6301C8F4A1300BC68AD /* Array+Ref.swift in Sources */,
+				EA63C13F1C6D05CC00AE5B04 /* GooglePlacesField.m in Sources */,
+				EA3CEEEE1BA67DC5000DC2F9 /* ColorModel.swift in Sources */,
+				EA3C9C201C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift in Sources */,
+				EA3CEEF01BA67DC5000DC2F9 /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA1734321BA676DE008F9BB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA17343B1BA676DE008F9BB0 /* ChromaticTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA17343D1BA676DE008F9BB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA1734461BA676DE008F9BB0 /* ChromaticUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA1734381BA676DE008F9BB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA1734211BA676DE008F9BB0 /* Chromatic */;
+			targetProxy = EA1734371BA676DE008F9BB0 /* PBXContainerItemProxy */;
+		};
+		EA1734431BA676DE008F9BB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA1734211BA676DE008F9BB0 /* Chromatic */;
+			targetProxy = EA1734421BA676DE008F9BB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA1734291BA676DE008F9BB0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA17342A1BA676DE008F9BB0 /* Base */,
+			);
+			name = Main.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		EA17342E1BA676DE008F9BB0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA17342F1BA676DE008F9BB0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		EA45768D1BC766E2007B5BC6 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA45768E1BC766E2007B5BC6 /* Base */,
+			);
+			name = Interface.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA1734481BA676DE008F9BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		EA1734491BA676DE008F9BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 4.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA17344B1BA676DE008F9BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 389C15795E8AAAD17EFA0468 /* Pods-Chromatic.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "Chromatic/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CoreBluetooth\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SwiftyTimer\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.Chromatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Chromatic/Supporting Files/GooglePlacesField/Chromatic-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA17344C1BA676DE008F9BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 802A81123A4E7C8C789C0C03 /* Pods-Chromatic.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "Chromatic/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CoreBluetooth\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SwiftyTimer\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.Chromatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Chromatic/Supporting Files/GooglePlacesField/Chromatic-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EA17344E1BA676DE008F9BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ChromaticTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.ChromaticTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chromatic.app/Chromatic";
+			};
+			name = Debug;
+		};
+		EA17344F1BA676DE008F9BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ChromaticTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.ChromaticTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chromatic.app/Chromatic";
+			};
+			name = Release;
+		};
+		EA1734511BA676DE008F9BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ChromaticUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.ChromaticUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Chromatic;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		EA1734521BA676DE008F9BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ChromaticUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.ChromaticUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Chromatic;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA17341D1BA676DE008F9BB0 /* Build configuration list for PBXProject "Chromatic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA1734481BA676DE008F9BB0 /* Debug */,
+				EA1734491BA676DE008F9BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA17344A1BA676DE008F9BB0 /* Build configuration list for PBXNativeTarget "Chromatic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA17344B1BA676DE008F9BB0 /* Debug */,
+				EA17344C1BA676DE008F9BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA17344D1BA676DE008F9BB0 /* Build configuration list for PBXNativeTarget "ChromaticTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA17344E1BA676DE008F9BB0 /* Debug */,
+				EA17344F1BA676DE008F9BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA1734501BA676DE008F9BB0 /* Build configuration list for PBXNativeTarget "ChromaticUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA1734511BA676DE008F9BB0 /* Debug */,
+				EA1734521BA676DE008F9BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA17341A1BA676DE008F9BB0 /* Project object */;
+}

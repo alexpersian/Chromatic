@@ -9,69 +9,67 @@
 import Foundation
 import UIKit
 
-typealias didUpdateBlock = (timeString: String, hex: String, color: UIColor, nextColor: UIColor, hours: Int, minutes: Int) -> Void
+typealias didUpdateBlock = (_ timeString: String, _ hex: String, _ color: UIColor, _ nextColor: UIColor, _ hours: Int, _ minutes: Int) -> Void
 
-class ColorModel: NSObject {
-    
-    var didUpdate: didUpdateBlock?
-    var timer = NSTimer()
+final class ColorModel: NSObject {
+
+    private var timer = Timer()
+    private lazy var formatter: DateFormatter = {
+        let fmt: DateFormatter = DateFormatter()
+        fmt.dateFormat = "HH:mm:ss"
+        return fmt
+    }()
 
     /// The GMT offset to be applied to the time as we format our dateStrings.
     var offset = UserDefaultsManager.getTimeOffset()
-    
+    var didUpdate: didUpdateBlock?
+
+    // MARK: Public Interface
+
     func startUpdates() {
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ColorModel.sendData as (ColorModel) -> () -> ()), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ColorModel.sendData as (ColorModel) -> () -> ()), userInfo: nil, repeats: true)
         self.sendData()
     }
     
     func stopUpdates() {
-        timer.invalidate()
+        timer.invalidate() // TODO: Modify to be thread-safe
     }
+
+    // MARK: Private Interface
     
-    func timeTravelWithOffset(interval: NSTimeInterval) -> Void {
-        let date: NSDate = NSDate().dateByAddingTimeInterval(interval)
+    private func timeTravelWithOffset(_ interval: TimeInterval) -> Void {
+        let date: Date = Date().addingTimeInterval(interval)
+        self.sendData(date)
+    }
+
+    @objc private func sendData() {
+        let date = Date()
         self.sendData(date)
     }
     
-    func sendData() {
-        let date = NSDate()
-        self.sendData(date)
-    }
-    
-    func sendData(date: NSDate) {
+    private func sendData(_ date: Date) {
         guard let updateBlock = self.didUpdate else { return }
 
-        let dateString: NSString = self.stringForDate(date)
-        let hexString: NSString = self.hexStringFromDateString(dateString as String)
+        let dateString: NSString = self.stringForDate(date) as NSString
+        let hexString: NSString = self.hexStringFromDateString(dateString as String) as NSString
         let color: UIColor = self.colorFromHexString(hexString as String)
         
-        let nextDateString: NSString = self.stringForDate(date.dateByAddingTimeInterval(1.0))
-        let nextHexString: NSString = self.hexStringFromDateString(nextDateString as String)
+        let nextDateString: NSString = self.stringForDate(date.addingTimeInterval(1.0)) as NSString
+        let nextHexString: NSString = self.hexStringFromDateString(nextDateString as String) as NSString
         let nextColor: UIColor = self.colorFromHexString(nextHexString as String)
         
-        let components: NSDateComponents = NSCalendar.currentCalendar().components([
-            NSCalendarUnit.Hour,
-            NSCalendarUnit.Minute
-            ], fromDate: date)
+        let components: DateComponents = Calendar.current.dateComponents([.hour, .minute], from: date)
         
-        updateBlock(timeString: dateString as String, hex: hexString as String, color: color, nextColor: nextColor, hours: components.hour, minutes: components.minute)
+        updateBlock(dateString as String, hexString as String, color, nextColor, components.hour!, components.minute!)
     }
     
-    func stringForDate(date: NSDate) -> String {
-        var onceToken: dispatch_once_t = dispatch_once_t()
-        var formatter: NSDateFormatter = NSDateFormatter()
-        
-        dispatch_once(&onceToken, {
-            formatter = NSDateFormatter()
-            formatter.dateFormat = "HH : mm : ss"
-        })
-        formatter.timeZone = NSTimeZone(forSecondsFromGMT: offset)
-
-        return formatter.stringFromDate(date)
+    private func stringForDate(_ date: Date) -> String {
+        formatter.timeZone = TimeZone(secondsFromGMT: offset)
+        return formatter.string(from: date)
     }
     
-    func hexStringFromDateString(dateString: String) -> String {
-        var components = dateString.componentsSeparatedByString(" : ")
+    private func hexStringFromDateString(_ dateString: String) -> String {
+        var components = dateString.components(separatedBy: " : ")
         let changes: [String: String] = [
             "1" : "A",
             "2" : "B",
@@ -82,14 +80,14 @@ class ColorModel: NSObject {
         ]
         for i in 0..<components.count {
             for (key, obj) in changes {
-                components[i] = components[i].stringByReplacingOccurrencesOfString(key, withString: obj)
+                components[i] = components[i].replacingOccurrences(of: key, with: obj)
             }
         }
-        let hexString = components.joinWithSeparator(" : ")
-        return "#".stringByAppendingString(hexString)
+        let hexString = components.joined(separator: " : ")
+        return "#" + hexString
     }
     
-    func colorFromHexString(hex: String) -> UIColor {
+    private func colorFromHexString(_ hex: String) -> UIColor {
         return UIColor(rgba: hex)
     }
 }
