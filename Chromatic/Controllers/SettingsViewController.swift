@@ -34,48 +34,47 @@ private func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   }
 }
 
-
 final class SettingsViewController: UIViewController {
-    
+
     @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
 //    @IBOutlet weak var placesTextField: GooglePlacesField!
-    
+
     let data = Dictionary<String, String>.fromPlist("Data")
-    
+
     // IAP stuff
     var productIDs: Set<String> = []
     var productsArray: Array<SKProduct?> = []
     var transactionInProgress = false
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         self.setup()
         self.navigationController?.isNavigationBarHidden = false
     }
-    
+
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.default
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
 
     // MARK: Custom functions
-    
+
     private func setup() {
         self.setNeedsStatusBarAppearanceUpdate()
         self.title = "Settings"
 //        self.placesTextField.delegate = self
 //        placesTextField.hidePredictionWhenResigningFirstResponder = true
-        
+
         // IAP setup
         guard let iap1 = data["IAP 1"], let iap2 = data["IAP 2"] else {
             print("Error retrieving IAP from plist")
@@ -86,18 +85,18 @@ final class SettingsViewController: UIViewController {
         requestProductInfo()
         SKPaymentQueue.default().add(self)
     }
-    
+
     private func saveNewCity(_ city: String) {
         UserDefaultsManager.setCurrentCity(city)
     }
-    
+
     private func saveNewOffset(_ offset: Int) {
         UserDefaultsManager.setTimeOffset(offset)
     }
-    
+
     func findNewCity() {
         if !activitySpinner.isAnimating { activitySpinner.startAnimating() }
-        
+
 //        guard (placesTextField.selectedPlaceId != nil) && (placesTextField.text?.count > 0) else {
 //            showBasicAlert("Woops!", message: "You must select a city.")
 //            return
@@ -109,7 +108,7 @@ final class SettingsViewController: UIViewController {
 //        
 //        requestGeocodingFromGoogle(address)
     }
-    
+
     private func updateLocationData(_ city: String, offset: Int) {
         self.saveNewCity(city)
         self.saveNewOffset(offset)
@@ -120,38 +119,38 @@ final class SettingsViewController: UIViewController {
     func showBasicAlert(_ title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { (action) -> Void in }
-        
+
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
-    
+
     func showBasicAlertWithProduct(_ title: String, message: String, product: SKProduct) {
         let actionSheetController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
+
         let buyAction = UIAlertAction(title: "Buy", style: UIAlertAction.Style.default) { (action) -> Void in
             let payment = SKPayment(product: product)
             SKPaymentQueue.default().add(payment)
             self.transactionInProgress = true
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) { (action) -> Void in }
-        
+
         actionSheetController.addAction(buyAction)
         actionSheetController.addAction(cancelAction)
         present(actionSheetController, animated: true, completion: nil)
     }
-    
+
     // MARK: IBActions
-    
+
     @IBAction func supportThanksButtonPressed(_ sender: UIButton) {
         print("Thanks for the support!")
         showThankYouPurchaseAction()
     }
-    
+
     @IBAction func supportCoffeeButtonPressed(_ sender: UIButton) {
         print("Thanks for the coffee!")
         showCoffeePurchaseAction()
     }
-    
+
     @IBAction func twitterButtonPressed(_ sender: UIButton) {
         guard
             let path = data["Twitter"],
@@ -162,7 +161,7 @@ final class SettingsViewController: UIViewController {
         let svc = SFSafariViewController(url: url)
         self.present(svc, animated: true, completion: nil)
     }
-    
+
     @IBAction func githubButtonPressed(_ sender: UIButton) {
         guard
             let path = data["GitHub"],

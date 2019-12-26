@@ -15,7 +15,7 @@ extension Dictionary {
             let pList = Bundle.main.path(forResource: named, ofType: "plist"),
             let dict = NSDictionary(contentsOfFile: pList)
         else { return [:] }
-        
+
         var result = [Key : Value]()
         dict.forEach { (key, value) in
             if let key = key as? Key, let value = value as? Value {

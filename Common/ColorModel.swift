@@ -9,7 +9,13 @@
 import Foundation
 import UIKit
 
-typealias didUpdateBlock = (_ timeString: String, _ hex: String, _ color: UIColor, _ nextColor: UIColor, _ hours: Int, _ minutes: Int) -> Void
+typealias didUpdateBlock = (
+    _ timeString: String,
+    _ hex: String,
+    _ color: UIColor,
+    _ nextColor: UIColor,
+    _ hours: Int,
+    _ minutes: Int) -> Void
 
 final class ColorModel: NSObject {
 
@@ -30,13 +36,13 @@ final class ColorModel: NSObject {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ColorModel.sendData as (ColorModel) -> () -> ()), userInfo: nil, repeats: true)
         self.sendData()
     }
-    
+
     func stopUpdates() {
         timer.invalidate() // TODO: Modify to be thread-safe
     }
 
     // MARK: Private Interface
-    
+
     private func timeTravelWithOffset(_ interval: TimeInterval) -> Void {
         let date: Date = Date().addingTimeInterval(interval)
         self.sendData(date)
@@ -46,28 +52,28 @@ final class ColorModel: NSObject {
         let date = Date()
         self.sendData(date)
     }
-    
+
     private func sendData(_ date: Date) {
         guard let updateBlock = self.didUpdate else { return }
 
         let dateString: NSString = self.stringForDate(date) as NSString
         let hexString: NSString = self.hexStringFromDateString(dateString as String) as NSString
         let color: UIColor = self.colorFromHexString(hexString as String)
-        
+
         let nextDateString: NSString = self.stringForDate(date.addingTimeInterval(1.0)) as NSString
         let nextHexString: NSString = self.hexStringFromDateString(nextDateString as String) as NSString
         let nextColor: UIColor = self.colorFromHexString(nextHexString as String)
-        
+
         let components: DateComponents = Calendar.current.dateComponents([.hour, .minute], from: date)
-        
+
         updateBlock(dateString as String, hexString as String, color, nextColor, components.hour!, components.minute!)
     }
-    
+
     private func stringForDate(_ date: Date) -> String {
         formatter.timeZone = TimeZone(secondsFromGMT: offset)
         return formatter.string(from: date)
     }
-    
+
     private func hexStringFromDateString(_ dateString: String) -> String {
         var components = dateString.components(separatedBy: " : ")
         let changes: [String: String] = [
@@ -86,7 +92,7 @@ final class ColorModel: NSObject {
         let hexString = components.joined(separator: " : ")
         return "#" + hexString
     }
-    
+
     private func colorFromHexString(_ hex: String) -> UIColor {
         return UIColor(rgba: hex)
     }
