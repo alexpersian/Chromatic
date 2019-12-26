@@ -153,22 +153,24 @@ final class SettingsViewController: UIViewController {
     }
     
     @IBAction func twitterButtonPressed(_ sender: UIButton) {
-        guard let url = URL(string: data["Twitter"]!) else { return }
-        if #available(iOS 9.0, *) {
-            let svc = SFSafariViewController(url: url)
-            self.present(svc, animated: true, completion: nil)
-        } else {
-            UIApplication.shared.openURL(url)
+        guard
+            let path = data["Twitter"],
+            let url = URL(string: path) else {
+                print("Twitter URL unavailable within data plist file.")
+                return
         }
+        let svc = SFSafariViewController(url: url)
+        self.present(svc, animated: true, completion: nil)
     }
     
     @IBAction func githubButtonPressed(_ sender: UIButton) {
-        guard let url = URL(string: data["GitHub"]!) else { return }
-        if #available(iOS 9.0, *) {
-            let svc = SFSafariViewController(url: url)
-            self.present(svc, animated: true, completion: nil)
-        } else {
-            UIApplication.shared.openURL(url)
+        guard
+            let path = data["GitHub"],
+            let url = URL(string: path) else {
+                print("GitHub URL unavailable within data plist file.")
+                return
         }
+        let svc = SFSafariViewController(url: url)
+        self.present(svc, animated: true, completion: nil)
     }
 }
