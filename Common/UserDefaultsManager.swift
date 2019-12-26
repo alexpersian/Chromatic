@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UserDefaultsManager {
+final class UserDefaultsManager {
     class var standardUserDefaults: UserDefaults {
         return UserDefaults.standard
     }

@@ -36,7 +36,7 @@ extension SettingsViewController: SKProductsRequestDelegate, SKPaymentTransactio
                 presentThankYouMessage()
                 
             case SKPaymentTransactionState.failed:
-                print("Transaction failed: \(transaction.error?.localizedDescription)")
+                print("Transaction failed: \(String(describing: transaction.error?.localizedDescription))")
                 SKPaymentQueue.default().finishTransaction(transaction)
                 transactionInProgress = false
                 presentFailedTransaction()

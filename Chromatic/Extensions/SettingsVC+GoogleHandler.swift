@@ -14,7 +14,7 @@ extension SettingsViewController {
     func requestGeocodingFromGoogle(_ address: String) {
         guard let googleAPIKey = data["Google API Key"] else { return }
         
-        let params = [
+        let _ = [
             "address": address,
             "key": googleAPIKey
         ]
@@ -46,7 +46,7 @@ extension SettingsViewController {
     func requestTimeZoneFromGoogle(_ location: String, address: String) {
         guard let googleAPIKey = data["Google API Key"] else { return }
         
-        let params = [
+        let _ = [
             "location": location,
             "timestamp": "\(Date().timeIntervalSince1970)",
             "key": googleAPIKey

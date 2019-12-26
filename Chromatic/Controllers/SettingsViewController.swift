@@ -9,9 +9,10 @@
 import UIKit
 import StoreKit
 import SafariServices
+
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
 // Consider refactoring the code to use the non-optional operators.
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+private func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   switch (lhs, rhs) {
   case let (l?, r?):
     return l < r
@@ -24,7 +25,7 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
 // Consider refactoring the code to use the non-optional operators.
-fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+private func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   switch (lhs, rhs) {
   case let (l?, r?):
     return l > r
@@ -34,7 +35,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 }
 
 
-class SettingsViewController: UIViewController {
+final class SettingsViewController: UIViewController {
     
     @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
     @IBOutlet weak var placesTextField: GooglePlacesField!
@@ -67,9 +68,9 @@ class SettingsViewController: UIViewController {
         self.view.endEditing(true)
     }
 
-// MARK: Custom functions
+    // MARK: Custom functions
     
-    func setup() {
+    private func setup() {
         self.setNeedsStatusBarAppearanceUpdate()
         self.title = "Settings"
         self.placesTextField.delegate = self
@@ -86,18 +87,18 @@ class SettingsViewController: UIViewController {
         SKPaymentQueue.default().add(self)
     }
     
-    func saveNewCity(_ city: String) {
+    private func saveNewCity(_ city: String) {
         UserDefaultsManager.setCurrentCity(city)
     }
     
-    func saveNewOffset(_ offset: Int) {
+    private func saveNewOffset(_ offset: Int) {
         UserDefaultsManager.setTimeOffset(offset)
     }
     
     func findNewCity() {
         if !activitySpinner.isAnimating { activitySpinner.startAnimating() }
         
-        guard (placesTextField.selectedPlaceId != nil) && (placesTextField.text?.characters.count > 0) else {
+        guard (placesTextField.selectedPlaceId != nil) && (placesTextField.text?.count > 0) else {
             showBasicAlert("Woops!", message: "You must select a city.")
             return
         }
@@ -109,12 +110,12 @@ class SettingsViewController: UIViewController {
         requestGeocodingFromGoogle(address)
     }
     
-    func updateLocationData(_ city: String, offset: Int) {
+    private func updateLocationData(_ city: String, offset: Int) {
         self.saveNewCity(city)
         self.saveNewOffset(offset)
     }
 
-// MARK: Alert view helpers
+    // MARK: Alert view helpers
 
     func showBasicAlert(_ title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -127,19 +128,19 @@ class SettingsViewController: UIViewController {
     func showBasicAlertWithProduct(_ title: String, message: String, product: SKProduct) {
         let actionSheetController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        let buyAction = UIAlertAction(title: "Buy", style: UIAlertActionStyle.default) { (action) -> Void in
+        let buyAction = UIAlertAction(title: "Buy", style: UIAlertAction.Style.default) { (action) -> Void in
             let payment = SKPayment(product: product)
             SKPaymentQueue.default().add(payment)
             self.transactionInProgress = true
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (action) -> Void in }
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) { (action) -> Void in }
         
         actionSheetController.addAction(buyAction)
         actionSheetController.addAction(cancelAction)
         present(actionSheetController, animated: true, completion: nil)
     }
     
-// MARK: IBActions
+    // MARK: IBActions
     
     @IBAction func supportThanksButtonPressed(_ sender: UIButton) {
         print("Thanks for the support!")

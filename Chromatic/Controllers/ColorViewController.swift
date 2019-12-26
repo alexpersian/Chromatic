@@ -9,13 +9,13 @@
 import UIKit
 import SwiftyTimer
 
-class ColorViewController: UIViewController {
+final class ColorViewController: UIViewController {
     
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var hexLabel: UILabel!
     
-    fileprivate var model: ColorModel?
+    private var model: ColorModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,17 +52,18 @@ class ColorViewController: UIViewController {
     }
     
     // MARK: Model
-    func bindToModel() {
+
+    private func bindToModel() {
         self.model?.didUpdate = self.modelDidUpdate
     }
     
-    func modelDidUpdate(_ dateString: String, hexString: String, color: UIColor, nextColor: UIColor, hour: Int, minutes: Int) {
+    private func modelDidUpdate(_ dateString: String, hexString: String, color: UIColor, nextColor: UIColor, hour: Int, minutes: Int) {
         self.timeLabel.text = dateString
         self.hexLabel.text = hexString
         lerpBackgroundColor(color, fColor: nextColor, step: 0.05)
     }
     
-    func lerpBackgroundColor(_ cColor: UIColor, fColor: UIColor, step: CGFloat) {
+    private func lerpBackgroundColor(_ cColor: UIColor, fColor: UIColor, step: CGFloat) {
         var progress: CGFloat = 0.0
 
         Timer.every(Double(step)) {
