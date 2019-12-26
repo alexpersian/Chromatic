@@ -5,9 +5,6 @@ PODS:
   - GoogleMaps/Base (3.1.0)
   - GoogleMaps/Maps (3.1.0):
     - GoogleMaps/Base
-  - GooglePlacePicker (3.1.0):
-    - GoogleMaps (= 3.1.0)
-    - GooglePlaces (= 3.1.0)
   - GooglePlaces (3.1.0):
     - GoogleMaps/Base (= 3.1.0)
   - SwiftyTimer (2.1.0)
@@ -15,7 +12,6 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - GoogleMaps
-  - GooglePlacePicker
   - GooglePlaces
   - SwiftyTimer
 
@@ -23,17 +19,15 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - GoogleMaps
-    - GooglePlacePicker
     - GooglePlaces
     - SwiftyTimer
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
-  GooglePlacePicker: fa975116ac202ac29822c0a79758ea1c4db5a95f
   GooglePlaces: e874db179f2675c4f3eeda0b686b540273a578b0
   SwiftyTimer: 02dd6cf10cbc71cbf67cec494f6e5eb782102543
 
-PODFILE CHECKSUM: f2c88f986ea7f44b36a6b38510e50b8333effd59
+PODFILE CHECKSUM: ef6f49830b41c6336f15c131355a135fbcaf9b22
 
 COCOAPODS: 1.8.4
