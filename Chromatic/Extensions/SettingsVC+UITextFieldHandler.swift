@@ -12,10 +12,10 @@ import UIKit
 extension SettingsViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if (textField == self.placesTextField) {
-            textField.resignFirstResponder()
-            self.findNewCity()
-        }
+//        if (textField == self.placesTextField) {
+//            textField.resignFirstResponder()
+//            self.findNewCity()
+//        }
         return true
     }
 }

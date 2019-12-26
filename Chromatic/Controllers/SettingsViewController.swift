@@ -38,7 +38,7 @@ private func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 final class SettingsViewController: UIViewController {
     
     @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
-    @IBOutlet weak var placesTextField: GooglePlacesField!
+//    @IBOutlet weak var placesTextField: GooglePlacesField!
     
     let data = Dictionary<String, String>.fromPlist("Data")
     
@@ -73,8 +73,8 @@ final class SettingsViewController: UIViewController {
     private func setup() {
         self.setNeedsStatusBarAppearanceUpdate()
         self.title = "Settings"
-        self.placesTextField.delegate = self
-        placesTextField.hidePredictionWhenResigningFirstResponder = true
+//        self.placesTextField.delegate = self
+//        placesTextField.hidePredictionWhenResigningFirstResponder = true
         
         // IAP setup
         guard let iap1 = data["IAP 1"], let iap2 = data["IAP 2"] else {
@@ -98,16 +98,16 @@ final class SettingsViewController: UIViewController {
     func findNewCity() {
         if !activitySpinner.isAnimating { activitySpinner.startAnimating() }
         
-        guard (placesTextField.selectedPlaceId != nil) && (placesTextField.text?.count > 0) else {
-            showBasicAlert("Woops!", message: "You must select a city.")
-            return
-        }
-        guard let address = placesTextField.text else {
-            print("Error: text field conversion to string failed")
-            return
-        }
-        
-        requestGeocodingFromGoogle(address)
+//        guard (placesTextField.selectedPlaceId != nil) && (placesTextField.text?.count > 0) else {
+//            showBasicAlert("Woops!", message: "You must select a city.")
+//            return
+//        }
+//        guard let address = placesTextField.text else {
+//            print("Error: text field conversion to string failed")
+//            return
+//        }
+//        
+//        requestGeocodingFromGoogle(address)
     }
     
     private func updateLocationData(_ city: String, offset: Int) {
