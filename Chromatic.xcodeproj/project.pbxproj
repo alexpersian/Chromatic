@@ -28,6 +28,9 @@
 		EA63C13F1C6D05CC00AE5B04 /* GooglePlacesField.m in Sources */ = {isa = PBXBuildFile; fileRef = EA63C13C1C6D05CC00AE5B04 /* GooglePlacesField.m */; };
 		EA63C1401C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA63C13E1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m */; };
 		EAA73B731BABB02100BC3988 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */; };
+		FA2B795E23BA70E0005CFB37 /* GMPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B795D23BA70E0005CFB37 /* GMPlace.swift */; };
+		FA2B796023BA7482005CFB37 /* JSONDecoder+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B795F23BA7482005CFB37 /* JSONDecoder+Helpers.swift */; };
+		FA2B796223BA80E0005CFB37 /* GMTimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B796123BA80E0005CFB37 /* GMTimeZone.swift */; };
 		FA9E15C421727B05003D67D2 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA9E15C321727B05003D67D2 /* Data.plist */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +92,9 @@
 		EA63C13D1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlacesFieldPredictionsView.h; sourceTree = "<group>"; };
 		EA63C13E1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesFieldPredictionsView.m; sourceTree = "<group>"; };
 		EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		FA2B795D23BA70E0005CFB37 /* GMPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMPlace.swift; sourceTree = "<group>"; };
+		FA2B795F23BA7482005CFB37 /* JSONDecoder+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Helpers.swift"; sourceTree = "<group>"; };
+		FA2B796123BA80E0005CFB37 /* GMTimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMTimeZone.swift; sourceTree = "<group>"; };
 		FA9E15C321727B05003D67D2 /* Data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +148,8 @@
 				EA3CEEE81BA67DC5000DC2F9 /* ColorModel.swift */,
 				EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */,
 				EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */,
+				FA2B795D23BA70E0005CFB37 /* GMPlace.swift */,
+				FA2B796123BA80E0005CFB37 /* GMTimeZone.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -282,6 +290,7 @@
 				EA3C9C211C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift */,
 				EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */,
 				EA2537871C7C1413008ED52C /* UIColor+Lerp.swift */,
+				FA2B795F23BA7482005CFB37 /* JSONDecoder+Helpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -500,6 +509,7 @@
 			files = (
 				EA2537881C7C1413008ED52C /* UIColor+Lerp.swift in Sources */,
 				EA3CEEF11BA67DC5000DC2F9 /* UIColor+HexConverter.swift in Sources */,
+				FA2B796023BA7482005CFB37 /* JSONDecoder+Helpers.swift in Sources */,
 				EA3C9C241C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift in Sources */,
 				EA1734261BA676DE008F9BB0 /* AppDelegate.swift in Sources */,
 				EA3CEEEF1BA67DC5000DC2F9 /* ColorViewController.swift in Sources */,
@@ -507,9 +517,11 @@
 				EA4DF6A91CB0FD1000128FAB /* Dictionary+PList.swift in Sources */,
 				EAA73B731BABB02100BC3988 /* UserDefaultsManager.swift in Sources */,
 				EA3C9C221C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift in Sources */,
+				FA2B795E23BA70E0005CFB37 /* GMPlace.swift in Sources */,
 				EA2DD6301C8F4A1300BC68AD /* Array+Ref.swift in Sources */,
 				EA63C13F1C6D05CC00AE5B04 /* GooglePlacesField.m in Sources */,
 				EA3CEEEE1BA67DC5000DC2F9 /* ColorModel.swift in Sources */,
+				FA2B796223BA80E0005CFB37 /* GMTimeZone.swift in Sources */,
 				EA3C9C201C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift in Sources */,
 				EA3CEEF01BA67DC5000DC2F9 /* SettingsViewController.swift in Sources */,
 			);
