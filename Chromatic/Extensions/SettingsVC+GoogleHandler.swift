@@ -6,23 +6,26 @@
 //  Copyright © 2016 alexpersian. All rights reserved.
 //
 
-import Foundation
 import Alamofire
 
 extension SettingsViewController {
     
     func requestGeocodingFromGoogle(_ address: String) {
-        guard let googleAPIKey = data["Google API Key"] else { return }
+        guard
+            let googleAPIKey = data["Google API Key"],
+            let requestURL = URL(string: "https://maps.googleapis.com/maps/api/geocode/json")
+            else { return }
         
-        let _ = [
+        let params = [
             "address": address,
             "key": googleAPIKey
         ]
 
-//        Alamofire.request(.GET, "https://maps.googleapis.com/maps/api/geocode/json", parameters: params)
-//            .responseJSON { response in
-//                switch response.result {
-//                case .Success(let value):
+        Alamofire.request(requestURL, method: .get, parameters: params)
+            .responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    print(value) // TODO: This needs to get authorization for the Maps, Geocoding, and Time Zone apis
 //                    do {
 //                        guard let location = value.objectForKey("results")?
 //                            .objectAtIndex(0)
@@ -37,25 +40,29 @@ extension SettingsViewController {
 //
 //                        self.requestTimeZoneFromGoogle("\(lat), \(lng)", address: address)
 //                    }
-//                case .Failure(let error):
-//                    print("Networking Error: \(error)")
-//                }
-//        }
+                case .failure(let error):
+                    print("Networking Error: \(error)")
+                }
+        }
     }
     
-    func requestTimeZoneFromGoogle(_ location: String, address: String) {
-        guard let googleAPIKey = data["Google API Key"] else { return }
+    private func requestTimeZoneFromGoogle(_ location: String, address: String) {
+        guard
+            let googleAPIKey = data["Google API Key"],
+            let requestURL = URL(string: "https://maps.googleapis.com/maps/api/timezone/json")
+            else { return }
         
-        let _ = [
+        let params = [
             "location": location,
             "timestamp": "\(Date().timeIntervalSince1970)",
             "key": googleAPIKey
         ]
-        
-//        Alamofire.request(.GET, "https://maps.googleapis.com/maps/api/timezone/json", parameters: params)
-//            .responseJSON { response in
-//                switch response.result {
-//                case .Success(let value):
+
+        Alamofire.request(requestURL, method: .get, parameters: params)
+            .responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    print(value)
 //                    do {
 //                        guard let dstOffset = value.objectForKey("dstOffset") as? Int else {
 //                            print("Error parsing DST offset")
@@ -71,11 +78,11 @@ extension SettingsViewController {
 //                        self.placesTextField.backgroundColor = self.placesTextField.successBackgroundColor
 //                        if self.activitySpinner.isAnimating() { self.activitySpinner.stopAnimating() }
 //                    }
-//                case .Failure(let error):
-//                    print("Networking Error: \(error)")
+                case .failure(let error):
+                    print("Networking Error: \(error)")
 //                    self.placesTextField.backgroundColor = self.placesTextField.failureBackgroundColor
 //                    if self.activitySpinner.isAnimating() { self.activitySpinner.stopAnimating() }
-//                }
-//        }
+                }
+        }
     }
 }

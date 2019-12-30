@@ -69,12 +69,12 @@ final class ColorModel: NSObject {
         updateBlock(dateString as String, hexString as String, color, nextColor, components.hour!, components.minute!)
     }
 
-    private func stringForDate(_ date: Date) -> String {
+    func stringForDate(_ date: Date) -> String {
         formatter.timeZone = TimeZone(secondsFromGMT: offset)
         return formatter.string(from: date)
     }
 
-    private func hexStringFromDateString(_ dateString: String) -> String {
+    func hexStringFromDateString(_ dateString: String) -> String {
         var components = dateString.components(separatedBy: " : ")
         let changes: [String: String] = [
             "1" : "A",
