@@ -10,12 +10,12 @@ import WatchKit
 import Foundation
 
 class InterfaceController: WKInterfaceController {
-    
+
     @IBOutlet var hexLabel: WKInterfaceLabel!
     @IBOutlet var colorImage: WKInterfaceImage!
-    
+
     private var model: ColorModel?
-    
+
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         self.model = ColorModel()
@@ -34,11 +34,12 @@ class InterfaceController: WKInterfaceController {
         self.model?.stopUpdates()
     }
 
-// MARK: Model
+    // MARK: Model
+
     func bindToModel() {
         self.model?.didUpdate = self.modelDidUpdate
     }
-    
+
     func modelDidUpdate(dateString: String, hexString: String, color: UIColor, nextColor: UIColor, hour: Int, minutes: Int) {
         self.hexLabel.setText(hexString)
         self.colorImage.setTintColor(color)

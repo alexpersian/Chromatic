@@ -15,12 +15,12 @@ import UIKit
 extension UIColor {
     public convenience init(rgba: String) {
         let hexString = rgba.replacingOccurrences(of: ":", with: "")
-        
+
         var red:   CGFloat = 0.0
         var green: CGFloat = 0.0
         var blue:  CGFloat = 0.0
         var alpha: CGFloat = 1.0
-        
+
         if hexString.hasPrefix("#") {
             let index   = rgba.index(rgba.startIndex, offsetBy: 1)
             let hex     = String(hexString[index...])

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension SettingsViewController: UITextFieldDelegate {
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 //        if (textField == self.placesTextField) {
 //            textField.resignFirstResponder()

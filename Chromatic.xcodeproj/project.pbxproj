@@ -25,9 +25,10 @@
 		EA3CEEF01BA67DC5000DC2F9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEA1BA67DC5000DC2F9 /* SettingsViewController.swift */; };
 		EA3CEEF11BA67DC5000DC2F9 /* UIColor+HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */; };
 		EA4DF6A91CB0FD1000128FAB /* Dictionary+PList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DF6A81CB0FD1000128FAB /* Dictionary+PList.swift */; };
-		EA63C13F1C6D05CC00AE5B04 /* GooglePlacesField.m in Sources */ = {isa = PBXBuildFile; fileRef = EA63C13C1C6D05CC00AE5B04 /* GooglePlacesField.m */; };
-		EA63C1401C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA63C13E1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m */; };
 		EAA73B731BABB02100BC3988 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */; };
+		FA2B795E23BA70E0005CFB37 /* GMPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B795D23BA70E0005CFB37 /* GMPlace.swift */; };
+		FA2B796023BA7482005CFB37 /* JSONDecoder+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B795F23BA7482005CFB37 /* JSONDecoder+Helpers.swift */; };
+		FA2B796223BA80E0005CFB37 /* GMTimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B796123BA80E0005CFB37 /* GMTimeZone.swift */; };
 		FA9E15C421727B05003D67D2 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA9E15C321727B05003D67D2 /* Data.plist */; };
 /* End PBXBuildFile section */
 
@@ -83,12 +84,10 @@
 		EA4576A21BC766E2007B5BC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA4576A41BC766E2007B5BC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA4DF6A81CB0FD1000128FAB /* Dictionary+PList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+PList.swift"; sourceTree = "<group>"; };
-		EA63C13A1C6D05CB00AE5B04 /* Chromatic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chromatic-Bridging-Header.h"; sourceTree = "<group>"; };
-		EA63C13B1C6D05CC00AE5B04 /* GooglePlacesField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlacesField.h; sourceTree = "<group>"; };
-		EA63C13C1C6D05CC00AE5B04 /* GooglePlacesField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesField.m; sourceTree = "<group>"; };
-		EA63C13D1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlacesFieldPredictionsView.h; sourceTree = "<group>"; };
-		EA63C13E1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlacesFieldPredictionsView.m; sourceTree = "<group>"; };
 		EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		FA2B795D23BA70E0005CFB37 /* GMPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMPlace.swift; sourceTree = "<group>"; };
+		FA2B795F23BA7482005CFB37 /* JSONDecoder+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Helpers.swift"; sourceTree = "<group>"; };
+		FA2B796123BA80E0005CFB37 /* GMTimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMTimeZone.swift; sourceTree = "<group>"; };
 		FA9E15C321727B05003D67D2 /* Data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +141,8 @@
 				EA3CEEE81BA67DC5000DC2F9 /* ColorModel.swift */,
 				EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */,
 				EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */,
+				FA2B795D23BA70E0005CFB37 /* GMPlace.swift */,
+				FA2B796123BA80E0005CFB37 /* GMTimeZone.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -203,7 +204,6 @@
 		EA3CEEE21BA67A8E000DC2F9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EA63C1391C6D05B100AE5B04 /* GooglePlacesField */,
 				EA3CEEE41BA67AB9000DC2F9 /* Images */,
 				EA3CEEE31BA67AAF000DC2F9 /* Storyboards */,
 				EA1734251BA676DE008F9BB0 /* AppDelegate.swift */,
@@ -245,23 +245,11 @@
 			isa = PBXGroup;
 			children = (
 				EA4576A21BC766E2007B5BC6 /* Assets.xcassets */,
-				EA45769E1BC766E2007B5BC6 /* ExtensionDelegate.swift */,
 				EA4576A41BC766E2007B5BC6 /* Info.plist */,
+				EA45769E1BC766E2007B5BC6 /* ExtensionDelegate.swift */,
 				EA45769C1BC766E2007B5BC6 /* InterfaceController.swift */,
 			);
 			path = "Chromatic Watch App Extension";
-			sourceTree = "<group>";
-		};
-		EA63C1391C6D05B100AE5B04 /* GooglePlacesField */ = {
-			isa = PBXGroup;
-			children = (
-				EA63C13A1C6D05CB00AE5B04 /* Chromatic-Bridging-Header.h */,
-				EA63C13B1C6D05CC00AE5B04 /* GooglePlacesField.h */,
-				EA63C13C1C6D05CC00AE5B04 /* GooglePlacesField.m */,
-				EA63C13D1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.h */,
-				EA63C13E1C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m */,
-			);
-			path = GooglePlacesField;
 			sourceTree = "<group>";
 		};
 		EA63C1411C6D067400AE5B04 /* Controllers */ = {
@@ -282,6 +270,7 @@
 				EA3C9C211C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift */,
 				EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */,
 				EA2537871C7C1413008ED52C /* UIColor+Lerp.swift */,
+				FA2B795F23BA7482005CFB37 /* JSONDecoder+Helpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -479,13 +468,11 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Chromatic/Pods-Chromatic-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,16 +489,17 @@
 			files = (
 				EA2537881C7C1413008ED52C /* UIColor+Lerp.swift in Sources */,
 				EA3CEEF11BA67DC5000DC2F9 /* UIColor+HexConverter.swift in Sources */,
+				FA2B796023BA7482005CFB37 /* JSONDecoder+Helpers.swift in Sources */,
 				EA3C9C241C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift in Sources */,
 				EA1734261BA676DE008F9BB0 /* AppDelegate.swift in Sources */,
 				EA3CEEEF1BA67DC5000DC2F9 /* ColorViewController.swift in Sources */,
-				EA63C1401C6D05CC00AE5B04 /* GooglePlacesFieldPredictionsView.m in Sources */,
 				EA4DF6A91CB0FD1000128FAB /* Dictionary+PList.swift in Sources */,
 				EAA73B731BABB02100BC3988 /* UserDefaultsManager.swift in Sources */,
 				EA3C9C221C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift in Sources */,
+				FA2B795E23BA70E0005CFB37 /* GMPlace.swift in Sources */,
 				EA2DD6301C8F4A1300BC68AD /* Array+Ref.swift in Sources */,
-				EA63C13F1C6D05CC00AE5B04 /* GooglePlacesField.m in Sources */,
 				EA3CEEEE1BA67DC5000DC2F9 /* ColorModel.swift in Sources */,
+				FA2B796223BA80E0005CFB37 /* GMTimeZone.swift in Sources */,
 				EA3C9C201C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift in Sources */,
 				EA3CEEF01BA67DC5000DC2F9 /* SettingsViewController.swift in Sources */,
 			);
@@ -582,6 +570,7 @@
 		EA1734481BA676DE008F9BB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -626,7 +615,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -638,6 +627,7 @@
 		EA1734491BA676DE008F9BB0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -676,7 +666,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -689,7 +679,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 389C15795E8AAAD17EFA0468 /* Pods-Chromatic.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -697,8 +687,9 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Chromatic/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -742,11 +733,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "Chromatic/Supporting Files/GooglePlacesField/Chromatic-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -754,7 +745,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 802A81123A4E7C8C789C0C03 /* Pods-Chromatic.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -762,8 +753,9 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Chromatic/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 2.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -807,16 +799,17 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "Chromatic/Supporting Files/GooglePlacesField/Chromatic-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		EA17344E1BA676DE008F9BB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ChromaticTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -824,6 +817,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chromatic.app/Chromatic";
 			};
 			name = Debug;
@@ -831,6 +825,7 @@
 		EA17344F1BA676DE008F9BB0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ChromaticTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -838,6 +833,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chromatic.app/Chromatic";
 			};
 			name = Release;
@@ -845,12 +841,14 @@
 		EA1734511BA676DE008F9BB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				INFOPLIST_FILE = ChromaticUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.ChromaticUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = Chromatic;
 				USES_XCTRUNNER = YES;
 			};
@@ -859,12 +857,14 @@
 		EA1734521BA676DE008F9BB0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				INFOPLIST_FILE = ChromaticUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexpersian.ChromaticUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = Chromatic;
 				USES_XCTRUNNER = YES;
 			};

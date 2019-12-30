@@ -10,7 +10,7 @@ import Foundation
 import StoreKit
 
 extension SettingsViewController: SKProductsRequestDelegate, SKPaymentTransactionObserver {
-    
+
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         if (response.products.count != 0) {
             for product in response.products {
@@ -19,13 +19,13 @@ extension SettingsViewController: SKProductsRequestDelegate, SKPaymentTransactio
         } else {
             print("There are no products")
         }
-        
+
         /* Check for invalid product identifiers */
         if (response.invalidProductIdentifiers.count != 0) {
             print("Invalid products: \(response.invalidProductIdentifiers.description)")
         }
     }
-    
+
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
             switch transaction.transactionState {
@@ -34,19 +34,19 @@ extension SettingsViewController: SKProductsRequestDelegate, SKPaymentTransactio
                 SKPaymentQueue.default().finishTransaction(transaction)
                 transactionInProgress = false
                 presentThankYouMessage()
-                
+
             case SKPaymentTransactionState.failed:
                 print("Transaction failed: \(String(describing: transaction.error?.localizedDescription))")
                 SKPaymentQueue.default().finishTransaction(transaction)
                 transactionInProgress = false
                 presentFailedTransaction()
-                
+
             default:
                 print(transaction.transactionState.rawValue)
             }
         }
     }
-    
+
     func requestProductInfo() {
         if SKPaymentQueue.canMakePayments() {
             let productRequest = SKProductsRequest(productIdentifiers: productIDs)
@@ -56,44 +56,44 @@ extension SettingsViewController: SKProductsRequestDelegate, SKPaymentTransactio
             print("Cannot perform In App Purchases")
         }
     }
-    
+
     func showThankYouPurchaseAction() {
         if transactionInProgress {
             return
         }
-        
+
         guard let iap = self.productsArray.ref(1) else {
             showBasicAlert("Chromatic", message: "I'm sorry, but in app purchases are not available at this time. Please try again.")
             return
         }
         showBasicAlertWithProduct("Chromatic", message: "Send a thank you to the developer? ($0.99)", product: iap!)
     }
-    
+
     func showCoffeePurchaseAction() {
         if transactionInProgress {
             return
         }
-        
+
         guard let iap = self.productsArray.ref(0) else {
             showBasicAlert("Chromatic", message: "I'm sorry, but in app purchases are not available at this time. Please try again.")
             return
         }
         showBasicAlertWithProduct("Chromatic", message: "Buy the developer a coffee? ($2.99)", product: iap!)
     }
-    
+
     func presentThankYouMessage() {
         if transactionInProgress {
             return
         }
-        
+
         showBasicAlert("Chromatic", message: "You rock! Thanks for the support. \u{1F44D}")
     }
-    
+
     func presentFailedTransaction() {
         if transactionInProgress {
             return
         }
-        
+
         showBasicAlert("Chromatic", message: "Transaction has failed. \u{1F613}")
     }
 }

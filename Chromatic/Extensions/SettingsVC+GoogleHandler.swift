@@ -6,76 +6,60 @@
 //  Copyright © 2016 alexpersian. All rights reserved.
 //
 
-import Foundation
 import Alamofire
 
 extension SettingsViewController {
     
     func requestGeocodingFromGoogle(_ address: String) {
-        guard let googleAPIKey = data["Google API Key"] else { return }
+        guard
+            let googleAPIKey = data["Google API Key"],
+            let requestURL = URL(string: "https://maps.googleapis.com/maps/api/geocode/json")
+            else { return }
         
-        let _ = [
+        let params = [
             "address": address,
             "key": googleAPIKey
         ]
 
-//        Alamofire.request(.GET, "https://maps.googleapis.com/maps/api/geocode/json", parameters: params)
-//            .responseJSON { response in
-//                switch response.result {
-//                case .Success(let value):
-//                    do {
-//                        guard let location = value.objectForKey("results")?
-//                            .objectAtIndex(0)
-//                            .objectForKey("geometry")?
-//                            .objectForKey("location") else {
-//                                print("Error: failed to parse location from JSON data")
-//                                return
-//                        }
-//
-//                        guard let lat = location.objectForKey("lat") else { return }
-//                        guard let lng = location.objectForKey("lng") else { return }
-//
-//                        self.requestTimeZoneFromGoogle("\(lat), \(lng)", address: address)
-//                    }
-//                case .Failure(let error):
-//                    print("Networking Error: \(error)")
-//                }
-//        }
+        Alamofire.request(requestURL, method: .get, parameters: params)
+            .responseData { response in
+                let result: Result<GMPlaceResult> = JSONDecoder().decodeResponse(from: response)
+                switch result {
+                case .success(let results):
+                    print(results)
+                    if let place = results.places.first {
+                        let coordinates = place.geometry.location
+                        self.requestTimeZoneFromGoogle("\(coordinates.lat), \(coordinates.lon)", address: address)
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+        }
     }
     
-    func requestTimeZoneFromGoogle(_ location: String, address: String) {
-        guard let googleAPIKey = data["Google API Key"] else { return }
+    private func requestTimeZoneFromGoogle(_ location: String, address: String) {
+        guard
+            let googleAPIKey = data["Google API Key"],
+            let requestURL = URL(string: "https://maps.googleapis.com/maps/api/timezone/json")
+            else { return }
         
-        let _ = [
+        let params = [
             "location": location,
             "timestamp": "\(Date().timeIntervalSince1970)",
             "key": googleAPIKey
         ]
-        
-//        Alamofire.request(.GET, "https://maps.googleapis.com/maps/api/timezone/json", parameters: params)
-//            .responseJSON { response in
-//                switch response.result {
-//                case .Success(let value):
-//                    do {
-//                        guard let dstOffset = value.objectForKey("dstOffset") as? Int else {
-//                            print("Error parsing DST offset")
-//                            return
-//                        }
-//                        guard let offset = value.objectForKey("rawOffset") as? Int else {
-//                            print("Error parsing raw offset")
-//                            return
-//                        }
-//                        let city = address.componentsSeparatedByString(",")[0]
-//                        let totalOffset = offset + dstOffset
-//                        self.updateLocationData(city, offset: totalOffset)
-//                        self.placesTextField.backgroundColor = self.placesTextField.successBackgroundColor
-//                        if self.activitySpinner.isAnimating() { self.activitySpinner.stopAnimating() }
-//                    }
-//                case .Failure(let error):
-//                    print("Networking Error: \(error)")
-//                    self.placesTextField.backgroundColor = self.placesTextField.failureBackgroundColor
-//                    if self.activitySpinner.isAnimating() { self.activitySpinner.stopAnimating() }
-//                }
-//        }
+
+        Alamofire.request(requestURL, method: .get, parameters: params)
+            .responseData { response in
+                let result: Result<GMTimeZone> = JSONDecoder().decodeResponse(from: response)
+                switch result {
+                case .success(let timeZone):
+                    let city = address.components(separatedBy: ",")[0]
+                    let totalOffset = timeZone.rawOffset + timeZone.dstOffset
+                    self.updateLocationData(city, offset: totalOffset)
+                case .failure(let error):
+                    print(error)
+                }
+        }
     }
 }

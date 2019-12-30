@@ -15,21 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+
         // Gather information from plist file
         let data = Dictionary<String, String>.fromPlist("Data")
-        
+
         // Setup Google Maps services
         guard let apiKey = data["Google API Key"] else {
             fatalError("Unable to retrieve Google API Key from plist file.")
         }
 
         GMSPlacesClient.provideAPIKey(apiKey)
-        
+
         // If the user doesn't have a city chosen, set it to the default.
         UserDefaultsManager.setDefaultCity()
         UserDefaultsManager.setDefaultTimeOffset()
-        
+
         return true
     }
 

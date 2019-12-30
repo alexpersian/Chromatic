@@ -9,6 +9,7 @@
 import UIKit
 import StoreKit
 import SafariServices
+import GooglePlaces
 
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
 // Consider refactoring the code to use the non-optional operators.
@@ -34,48 +35,36 @@ private func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   }
 }
 
-
 final class SettingsViewController: UIViewController {
-    
-    @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
-//    @IBOutlet weak var placesTextField: GooglePlacesField!
-    
+
+    @IBOutlet weak var searchButton: UIButton!
+
     let data = Dictionary<String, String>.fromPlist("Data")
-    
+
     // IAP stuff
     var productIDs: Set<String> = []
     var productsArray: Array<SKProduct?> = []
     var transactionInProgress = false
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         self.setup()
         self.navigationController?.isNavigationBarHidden = false
     }
-    
+
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.default
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
 
     // MARK: Custom functions
-    
+
     private func setup() {
         self.setNeedsStatusBarAppearanceUpdate()
-        self.title = "Settings"
-//        self.placesTextField.delegate = self
-//        placesTextField.hidePredictionWhenResigningFirstResponder = true
-        
+        self.searchButton.setTitle("  \(UserDefaultsManager.getCurrentCity())", for: .normal)
+
         // IAP setup
         guard let iap1 = data["IAP 1"], let iap2 = data["IAP 2"] else {
             print("Error retrieving IAP from plist")
@@ -86,33 +75,19 @@ final class SettingsViewController: UIViewController {
         requestProductInfo()
         SKPaymentQueue.default().add(self)
     }
-    
+
     private func saveNewCity(_ city: String) {
         UserDefaultsManager.setCurrentCity(city)
     }
-    
+
     private func saveNewOffset(_ offset: Int) {
         UserDefaultsManager.setTimeOffset(offset)
     }
-    
-    func findNewCity() {
-        if !activitySpinner.isAnimating { activitySpinner.startAnimating() }
-        
-//        guard (placesTextField.selectedPlaceId != nil) && (placesTextField.text?.count > 0) else {
-//            showBasicAlert("Woops!", message: "You must select a city.")
-//            return
-//        }
-//        guard let address = placesTextField.text else {
-//            print("Error: text field conversion to string failed")
-//            return
-//        }
-//        
-//        requestGeocodingFromGoogle(address)
-    }
-    
-    private func updateLocationData(_ city: String, offset: Int) {
-        self.saveNewCity(city)
-        self.saveNewOffset(offset)
+
+    func updateLocationData(_ city: String, offset: Int) {
+        saveNewCity(city)
+        saveNewOffset(offset)
+        self.searchButton.setTitle("  \(UserDefaultsManager.getCurrentCity())", for: .normal)
     }
 
     // MARK: Alert view helpers
@@ -120,57 +95,104 @@ final class SettingsViewController: UIViewController {
     func showBasicAlert(_ title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) { (action) -> Void in }
-        
+
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
-    
+
     func showBasicAlertWithProduct(_ title: String, message: String, product: SKProduct) {
         let actionSheetController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
+
         let buyAction = UIAlertAction(title: "Buy", style: UIAlertAction.Style.default) { (action) -> Void in
             let payment = SKPayment(product: product)
             SKPaymentQueue.default().add(payment)
             self.transactionInProgress = true
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) { (action) -> Void in }
-        
+
         actionSheetController.addAction(buyAction)
         actionSheetController.addAction(cancelAction)
         present(actionSheetController, animated: true, completion: nil)
     }
-    
+
     // MARK: IBActions
-    
+
+    @IBAction func searchButtonPressed(_ sender: UIButton) {
+        // TODO: Refactor this section to be self-contained
+        print("Searching...")
+        let placesSearchController = GMSAutocompleteViewController()
+        placesSearchController.delegate = self
+
+        // Specify that we want names and PlaceID's returned from autocomplete
+        guard let fields = GMSPlaceField(rawValue:
+            UInt(GMSPlaceField.name.rawValue) |
+            UInt(GMSPlaceField.placeID.rawValue) |
+            UInt(GMSPlaceField.formattedAddress.rawValue) |
+            UInt(GMSPlaceField.addressComponents.rawValue))
+        else { return }
+        placesSearchController.placeFields = fields
+
+        // Restrict results to cities only
+        let filter = GMSAutocompleteFilter()
+        filter.type = .city
+        placesSearchController.autocompleteFilter = filter
+
+        present(placesSearchController, animated: true, completion: nil)
+    }
+
     @IBAction func supportThanksButtonPressed(_ sender: UIButton) {
-        print("Thanks for the support!")
         showThankYouPurchaseAction()
     }
-    
+
     @IBAction func supportCoffeeButtonPressed(_ sender: UIButton) {
-        print("Thanks for the coffee!")
         showCoffeePurchaseAction()
     }
-    
+
     @IBAction func twitterButtonPressed(_ sender: UIButton) {
         guard
             let path = data["Twitter"],
             let url = URL(string: path) else {
-                print("Twitter URL unavailable within data plist file.")
+                print("Error: Twitter URL unavailable within data plist file.")
                 return
         }
         let svc = SFSafariViewController(url: url)
         self.present(svc, animated: true, completion: nil)
     }
-    
+
     @IBAction func githubButtonPressed(_ sender: UIButton) {
         guard
             let path = data["GitHub"],
             let url = URL(string: path) else {
-                print("GitHub URL unavailable within data plist file.")
+                print("Error: GitHub URL unavailable within data plist file.")
                 return
         }
         let svc = SFSafariViewController(url: url)
         self.present(svc, animated: true, completion: nil)
+    }
+}
+
+extension SettingsViewController: GMSAutocompleteViewControllerDelegate {
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        print("Selected place:", place)
+        requestGeocodingFromGoogle(place.formattedAddress ?? "")
+        dismiss(animated: true, completion: nil)
+    }
+
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        print("Encounterd error:", error)
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        print("Cancelled...")
+        dismiss(animated: true, completion: nil)
+    }
+
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
 }
