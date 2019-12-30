@@ -10,7 +10,6 @@ Translated and modified from Ian Keen's implementation in Objective-C (https://g
 * Google Places
 * Google Geocoding API
 * Google Time Zone API
-* [Google Places Field](https://github.com/IanKeen/GooglePlacesField)
 
 #### Requirements:
 You will need to provide a plist file that includes your Google API key, your IAP ID's for two items, and your personal URL's for Twitter/GitHub. Otherwise simply remove these pieces from the codebase before building.
