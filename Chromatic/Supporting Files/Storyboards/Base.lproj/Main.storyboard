@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hfD-B2-e9O">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GiF-rI-dEo">
-                                <rect key="frame" x="326" y="725" width="33" height="33"/>
+                                <rect key="frame" x="358" y="736" width="1" height="22"/>
                                 <state key="normal" image="Gear"/>
                                 <connections>
                                     <segue destination="N5d-Oo-c5U" kind="show" id="dbi-Ur-SsD"/>
@@ -258,6 +257,10 @@
                                 <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="HCX-ps-JmJ">
+                                <rect key="frame" x="169" y="173.66666666666669" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.93626844882965088" green="0.93546473979949951" blue="0.95656323432922363" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -267,6 +270,7 @@
                             <constraint firstItem="jXq-WW-2TK" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3Sm-IE-Gcg" secondAttribute="trailing" symbolic="YES" id="4gW-2s-1wN"/>
                             <constraint firstItem="jXq-WW-2TK" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="InD-ZV-an5" secondAttribute="trailing" symbolic="YES" id="4je-SJ-s8v"/>
                             <constraint firstItem="jXq-WW-2TK" firstAttribute="trailing" secondItem="Gfw-l8-9bC" secondAttribute="trailing" id="7s1-1Z-2c6"/>
+                            <constraint firstItem="HCX-ps-JmJ" firstAttribute="centerX" secondItem="MGc-yE-xrP" secondAttribute="centerX" id="7zT-8i-ghU"/>
                             <constraint firstItem="msL-IZ-eOW" firstAttribute="top" secondItem="MGM-ix-vbK" secondAttribute="bottom" constant="8" id="8Gc-IA-3xX"/>
                             <constraint firstItem="8bg-mE-3l1" firstAttribute="leading" secondItem="InD-ZV-an5" secondAttribute="leading" id="8tR-HQ-vBV"/>
                             <constraint firstItem="3LH-Y2-MAs" firstAttribute="centerX" secondItem="jXq-WW-2TK" secondAttribute="centerX" id="DXq-8a-CSC"/>
@@ -302,6 +306,7 @@
                             <constraint firstItem="msL-IZ-eOW" firstAttribute="leading" secondItem="jXq-WW-2TK" secondAttribute="leading" id="rcT-2K-O3T"/>
                             <constraint firstItem="MGM-ix-vbK" firstAttribute="top" secondItem="tsX-Ig-inM" secondAttribute="bottom" constant="8" id="s2n-Q9-Ifm"/>
                             <constraint firstItem="Gfw-l8-9bC" firstAttribute="leading" secondItem="jXq-WW-2TK" secondAttribute="leading" id="uf5-lU-WVc"/>
+                            <constraint firstItem="HCX-ps-JmJ" firstAttribute="centerY" secondItem="s6C-Hu-gKS" secondAttribute="centerY" id="vNu-5C-XYg"/>
                             <constraint firstAttribute="leadingMargin" secondItem="dON-KK-PMd" secondAttribute="leading" id="xFw-4D-ThY"/>
                             <constraint firstItem="c3r-Tu-9e9" firstAttribute="top" secondItem="8bg-mE-3l1" secondAttribute="bottom" constant="30" id="xWw-yZ-RWr"/>
                             <constraint firstItem="Yrk-C7-knH" firstAttribute="top" secondItem="InD-ZV-an5" secondAttribute="bottom" constant="8" id="xyQ-VA-T87"/>
@@ -309,6 +314,7 @@
                         <viewLayoutGuide key="safeArea" id="jXq-WW-2TK"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="HCX-ps-JmJ" id="Am0-af-0Lu"/>
                         <outlet property="searchButton" destination="s6C-Hu-gKS" id="VqV-SO-jEU"/>
                     </connections>
                 </viewController>
