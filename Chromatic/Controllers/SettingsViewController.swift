@@ -38,6 +38,7 @@ private func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 final class SettingsViewController: UIViewController {
 
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     let data = Dictionary<String, String>.fromPlist("Data")
 
@@ -180,7 +181,7 @@ extension SettingsViewController: GMSAutocompleteViewControllerDelegate {
 
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
         print("Encounterd error:", error)
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        activityIndicator.stopAnimating()
     }
 
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {
@@ -189,10 +190,10 @@ extension SettingsViewController: GMSAutocompleteViewControllerDelegate {
     }
 
     func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        activityIndicator.startAnimating()
     }
 
     func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        activityIndicator.stopAnimating()
     }
 }
