@@ -39,6 +39,7 @@ final class SettingsViewController: UIViewController {
 
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet var buttons: [UIButton]!
 
     let data = Dictionary<String, String>.fromPlist("Data")
 
@@ -46,10 +47,6 @@ final class SettingsViewController: UIViewController {
     var productIDs: Set<String> = []
     var productsArray: Array<SKProduct?> = []
     var transactionInProgress = false
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 
     override func viewWillAppear(_ animated: Bool) {
         self.setup()
@@ -65,6 +62,10 @@ final class SettingsViewController: UIViewController {
     private func setup() {
         self.setNeedsStatusBarAppearanceUpdate()
         self.searchButton.setTitle("  \(UserDefaultsManager.getCurrentCity())", for: .normal)
+        buttons.forEach {
+            $0.clipsToBounds = true
+            $0.layer.cornerRadius = 8.0
+        }
 
         // IAP setup
         guard let iap1 = data["IAP 1"], let iap2 = data["IAP 2"] else {

@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,13 +19,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="syL-rh-Ulx">
-                                <rect key="frame" x="87.666666666666686" y="306" width="200" height="200"/>
+                                <rect key="frame" x="0.0" y="218.66666666666663" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="syL-rh-Ulx" secondAttribute="height" multiplier="1:1" id="dYi-YQ-q30"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="syL-rh-Ulx" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="TVb-Ea-I0Z"/>
                             <constraint firstItem="syL-rh-Ulx" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="amk-me-VPw"/>
+                            <constraint firstItem="syL-rh-Ulx" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="mWs-EY-mNb"/>
+                            <constraint firstAttribute="trailing" secondItem="syL-rh-Ulx" secondAttribute="trailing" id="zlr-FY-tjJ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchScreen" width="200" height="200"/>
+        <image name="LaunchScreen" width="600" height="600"/>
     </resources>
 </document>

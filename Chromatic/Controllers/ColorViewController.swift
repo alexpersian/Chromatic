@@ -26,8 +26,8 @@ final class ColorViewController: UIViewController {
         self.bindToModel()
     }
 
-    override var preferredStatusBarStyle : UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 
     override func viewWillAppear(_ animated: Bool) {
