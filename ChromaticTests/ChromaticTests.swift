@@ -18,7 +18,7 @@ class ChromaticTests: XCTestCase {
         super.setUp()
 
         // TODO: This should really be configurable on the model and not need to be hardcoded here.
-        formatter.dateFormat = "HH : mm : ss"
+        formatter.dateFormat = "HH:mm:ss"
     }
     
     override func tearDown() {
