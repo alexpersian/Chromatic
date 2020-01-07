@@ -75,7 +75,7 @@ final class ColorModel: NSObject {
     }
 
     func hexStringFromDateString(_ dateString: String) -> String {
-        var components = dateString.components(separatedBy: " : ")
+        var components = dateString.components(separatedBy: ":")
         let changes: [String: String] = [
             "1" : "A",
             "2" : "B",
@@ -89,7 +89,7 @@ final class ColorModel: NSObject {
                 components[i] = components[i].replacingOccurrences(of: key, with: obj)
             }
         }
-        let hexString = components.joined(separator: " : ")
+        let hexString = components.joined(separator: ":")
         return "#" + hexString
     }
 
