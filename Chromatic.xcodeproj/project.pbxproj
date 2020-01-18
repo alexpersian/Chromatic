@@ -132,7 +132,6 @@
 		EA1734191BA676DE008F9BB0 = {
 			isa = PBXGroup;
 			children = (
-				FA161D7A23C42A7100728355 /* SnapshotHelper.swift */,
 				EA1734241BA676DE008F9BB0 /* Chromatic */,
 				EA1734391BA676DE008F9BB0 /* ChromaticTests */,
 				EA1734441BA676DE008F9BB0 /* ChromaticUITests */,
@@ -156,11 +155,8 @@
 		EA1734241BA676DE008F9BB0 /* Chromatic */ = {
 			isa = PBXGroup;
 			children = (
-				EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */,
-				EA3CEEE81BA67DC5000DC2F9 /* ColorModel.swift */,
-				FA2B795D23BA70E0005CFB37 /* GMPlace.swift */,
-				FA2B796123BA80E0005CFB37 /* GMTimeZone.swift */,
 				EA63C1411C6D067400AE5B04 /* Controllers */,
+				FA79C1C723D3B09B00F14CB9 /* Models */,
 				EA63C1421C6D068000AE5B04 /* Extensions */,
 				EA3CEEE21BA67A8E000DC2F9 /* Supporting Files */,
 			);
@@ -179,6 +175,7 @@
 		EA1734441BA676DE008F9BB0 /* ChromaticUITests */ = {
 			isa = PBXGroup;
 			children = (
+				FA161D7A23C42A7100728355 /* SnapshotHelper.swift */,
 				EA1734451BA676DE008F9BB0 /* ChromaticUITests.swift */,
 				EA1734471BA676DE008F9BB0 /* Info.plist */,
 			);
@@ -188,6 +185,7 @@
 		EA3CEEE21BA67A8E000DC2F9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA79C1C823D3B0A500F14CB9 /* Helpers */,
 				EA3CEEE41BA67AB9000DC2F9 /* Images */,
 				EA3CEEE31BA67AAF000DC2F9 /* Storyboards */,
 				EA1734251BA676DE008F9BB0 /* AppDelegate.swift */,
@@ -219,6 +217,9 @@
 			children = (
 				EA3CEEE91BA67DC5000DC2F9 /* ColorViewController.swift */,
 				EA3CEEEA1BA67DC5000DC2F9 /* SettingsViewController.swift */,
+				EA3C9C231C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift */,
+				EA3C9C211C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift */,
+				EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -228,14 +229,29 @@
 			children = (
 				EA2DD62F1C8F4A1300BC68AD /* Array+Ref.swift */,
 				EA4DF6A81CB0FD1000128FAB /* Dictionary+PList.swift */,
-				EA3C9C231C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift */,
-				EA3C9C211C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift */,
-				EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */,
-				EA2537871C7C1413008ED52C /* UIColor+Lerp.swift */,
 				FA2B795F23BA7482005CFB37 /* JSONDecoder+Helpers.swift */,
 				EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */,
+				EA2537871C7C1413008ED52C /* UIColor+Lerp.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA79C1C723D3B09B00F14CB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA3CEEE81BA67DC5000DC2F9 /* ColorModel.swift */,
+				FA2B795D23BA70E0005CFB37 /* GMPlace.swift */,
+				FA2B796123BA80E0005CFB37 /* GMTimeZone.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA79C1C823D3B0A500F14CB9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

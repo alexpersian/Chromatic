@@ -10,6 +10,8 @@ import Foundation
 
 extension Dictionary {
     // Thanks to Ian Keen for the help with this great function
+    /// Provides an easy way to access values within a plist file that is in the
+    /// applications main bundle. Provides all of the plist values as a single dictionary.
     static func fromPlist(_ named: String) -> [Key : Value] {
         guard
             let pList = Bundle.main.path(forResource: named, ofType: "plist"),

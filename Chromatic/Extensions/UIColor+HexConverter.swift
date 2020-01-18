@@ -13,8 +13,12 @@ import UIKit
 // Slight modifications made to format the incoming strings.
 
 extension UIColor {
-    public convenience init(rgba: String) {
-        let hexString = rgba.replacingOccurrences(of: ":", with: "")
+
+    /// Creates a `UIColor` based on a passed in hex format `String`. Ensure that
+    /// provided string is prefixed with a `#`.
+    /// - Note: Example: Passing in "#FF0000" will return `UIColor.red`.
+    convenience init(hex: String) {
+        let hexString = hex.replacingOccurrences(of: ":", with: "")
 
         var red:   CGFloat = 0.0
         var green: CGFloat = 0.0
@@ -22,7 +26,7 @@ extension UIColor {
         var alpha: CGFloat = 1.0
 
         if hexString.hasPrefix("#") {
-            let index   = rgba.index(rgba.startIndex, offsetBy: 1)
+            let index   = hex.index(hex.startIndex, offsetBy: 1)
             let hex     = String(hexString[index...])
             let scanner = Scanner(string: hex)
             var hexValue: CUnsignedLongLong = 0

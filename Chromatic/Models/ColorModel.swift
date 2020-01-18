@@ -94,6 +94,6 @@ final class ColorModel: NSObject {
     }
 
     private func colorFromHexString(_ hex: String) -> UIColor {
-        return UIColor(rgba: hex)
+        return UIColor(hex: hex)
     }
 }

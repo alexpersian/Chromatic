@@ -10,6 +10,16 @@ import UIKit
 
 extension UIColor {
 
+    /// Performs a linear interpolation between two `UIColor`s.
+    /// - Parameters:
+    ///     - currentColor: The starting `UIColor`.
+    ///     - finalColor: The ending `UIColor`.
+    ///     - progress: `CGFloat` between 0.0 and 1.0 indicating the progress of the interpolation.
+    ///
+    /// - Note: Rather than performing a timed transition itself, this function simply
+    ///         produces a new `UIColor` between the starting and final colors based on the
+    ///         progress value passed in. This should be used within an external timing block
+    ///         to regulate how fast the interpolation should occur.
     func lerp(_ currentColor: UIColor, finalColor: UIColor, progress: CGFloat) -> UIColor {
         let c1 = currentColor.cgColor.components
         let c2 = finalColor.cgColor.components
