@@ -14,22 +14,20 @@
 		EA1734301BA676DE008F9BB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA17342E1BA676DE008F9BB0 /* LaunchScreen.storyboard */; };
 		EA17343B1BA676DE008F9BB0 /* ChromaticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA17343A1BA676DE008F9BB0 /* ChromaticTests.swift */; };
 		EA1734461BA676DE008F9BB0 /* ChromaticUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1734451BA676DE008F9BB0 /* ChromaticUITests.swift */; };
-		EA2537881C7C1413008ED52C /* UIColor+Lerp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2537871C7C1413008ED52C /* UIColor+Lerp.swift */; };
 		EA2B5E3B1BD499A6005DAB1F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA2B5E3A1BD499A6005DAB1F /* StoreKit.framework */; };
-		EA2DD6301C8F4A1300BC68AD /* Array+Ref.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2DD62F1C8F4A1300BC68AD /* Array+Ref.swift */; };
-		EA3C9C201C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */; };
-		EA3C9C221C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9C211C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift */; };
-		EA3C9C241C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C9C231C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift */; };
+		EA2DD6301C8F4A1300BC68AD /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2DD62F1C8F4A1300BC68AD /* Array+Extensions.swift */; };
 		EA3CEEEE1BA67DC5000DC2F9 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEE81BA67DC5000DC2F9 /* ColorModel.swift */; };
 		EA3CEEEF1BA67DC5000DC2F9 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEE91BA67DC5000DC2F9 /* ColorViewController.swift */; };
 		EA3CEEF01BA67DC5000DC2F9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEA1BA67DC5000DC2F9 /* SettingsViewController.swift */; };
-		EA3CEEF11BA67DC5000DC2F9 /* UIColor+HexConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */; };
-		EA4DF6A91CB0FD1000128FAB /* Dictionary+PList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DF6A81CB0FD1000128FAB /* Dictionary+PList.swift */; };
+		EA3CEEF11BA67DC5000DC2F9 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3CEEEB1BA67DC5000DC2F9 /* UIColor+Extensions.swift */; };
+		EA4DF6A91CB0FD1000128FAB /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DF6A81CB0FD1000128FAB /* Dictionary+Extensions.swift */; };
 		EAA73B731BABB02100BC3988 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */; };
 		FA161D7B23C42A7100728355 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA161D7A23C42A7100728355 /* SnapshotHelper.swift */; };
 		FA2B795E23BA70E0005CFB37 /* GMPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B795D23BA70E0005CFB37 /* GMPlace.swift */; };
-		FA2B796023BA7482005CFB37 /* JSONDecoder+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B795F23BA7482005CFB37 /* JSONDecoder+Helpers.swift */; };
+		FA2B796023BA7482005CFB37 /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B795F23BA7482005CFB37 /* JSONDecoder+Extensions.swift */; };
 		FA2B796223BA80E0005CFB37 /* GMTimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B796123BA80E0005CFB37 /* GMTimeZone.swift */; };
+		FA854DB723D3B23F00112348 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA854DB623D3B23F00112348 /* SettingsViewModel.swift */; };
+		FA854DB923D3B25600112348 /* ColorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA854DB823D3B25600112348 /* ColorViewModel.swift */; };
 		FA9E15C421727B05003D67D2 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA9E15C321727B05003D67D2 /* Data.plist */; };
 /* End PBXBuildFile section */
 
@@ -66,22 +64,20 @@
 		EA1734411BA676DE008F9BB0 /* ChromaticUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChromaticUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1734451BA676DE008F9BB0 /* ChromaticUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromaticUITests.swift; sourceTree = "<group>"; };
 		EA1734471BA676DE008F9BB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA2537871C7C1413008ED52C /* UIColor+Lerp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Lerp.swift"; sourceTree = "<group>"; };
 		EA2B5E3A1BD499A6005DAB1F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		EA2DD62F1C8F4A1300BC68AD /* Array+Ref.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Ref.swift"; sourceTree = "<group>"; };
-		EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingsVC+UITextFieldHandler.swift"; sourceTree = "<group>"; };
-		EA3C9C211C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingsVC+SKHandler.swift"; sourceTree = "<group>"; };
-		EA3C9C231C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SettingsVC+GoogleHandler.swift"; sourceTree = "<group>"; };
+		EA2DD62F1C8F4A1300BC68AD /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		EA3CEEE81BA67DC5000DC2F9 /* ColorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
 		EA3CEEE91BA67DC5000DC2F9 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		EA3CEEEA1BA67DC5000DC2F9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HexConverter.swift"; sourceTree = "<group>"; };
-		EA4DF6A81CB0FD1000128FAB /* Dictionary+PList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+PList.swift"; sourceTree = "<group>"; };
+		EA3CEEEB1BA67DC5000DC2F9 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		EA4DF6A81CB0FD1000128FAB /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 		EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		FA161D7A23C42A7100728355 /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		FA2B795D23BA70E0005CFB37 /* GMPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMPlace.swift; sourceTree = "<group>"; };
-		FA2B795F23BA7482005CFB37 /* JSONDecoder+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Helpers.swift"; sourceTree = "<group>"; };
+		FA2B795F23BA7482005CFB37 /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
 		FA2B796123BA80E0005CFB37 /* GMTimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMTimeZone.swift; sourceTree = "<group>"; };
+		FA854DB623D3B23F00112348 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		FA854DB823D3B25600112348 /* ColorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewModel.swift; sourceTree = "<group>"; };
 		FA9E15C321727B05003D67D2 /* Data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				EA63C1411C6D067400AE5B04 /* Controllers */,
+				FA854DB523D3B22E00112348 /* View Models */,
 				FA79C1C723D3B09B00F14CB9 /* Models */,
 				EA63C1421C6D068000AE5B04 /* Extensions */,
 				EA3CEEE21BA67A8E000DC2F9 /* Supporting Files */,
@@ -217,9 +214,6 @@
 			children = (
 				EA3CEEE91BA67DC5000DC2F9 /* ColorViewController.swift */,
 				EA3CEEEA1BA67DC5000DC2F9 /* SettingsViewController.swift */,
-				EA3C9C231C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift */,
-				EA3C9C211C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift */,
-				EA3C9C1F1C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -227,11 +221,10 @@
 		EA63C1421C6D068000AE5B04 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				EA2DD62F1C8F4A1300BC68AD /* Array+Ref.swift */,
-				EA4DF6A81CB0FD1000128FAB /* Dictionary+PList.swift */,
-				FA2B795F23BA7482005CFB37 /* JSONDecoder+Helpers.swift */,
-				EA3CEEEB1BA67DC5000DC2F9 /* UIColor+HexConverter.swift */,
-				EA2537871C7C1413008ED52C /* UIColor+Lerp.swift */,
+				EA2DD62F1C8F4A1300BC68AD /* Array+Extensions.swift */,
+				EA4DF6A81CB0FD1000128FAB /* Dictionary+Extensions.swift */,
+				FA2B795F23BA7482005CFB37 /* JSONDecoder+Extensions.swift */,
+				EA3CEEEB1BA67DC5000DC2F9 /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -252,6 +245,15 @@
 				EAA73B721BABB02100BC3988 /* UserDefaultsManager.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FA854DB523D3B22E00112348 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA854DB823D3B25600112348 /* ColorViewModel.swift */,
+				FA854DB623D3B23F00112348 /* SettingsViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,21 +468,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA2537881C7C1413008ED52C /* UIColor+Lerp.swift in Sources */,
-				EA3CEEF11BA67DC5000DC2F9 /* UIColor+HexConverter.swift in Sources */,
-				FA2B796023BA7482005CFB37 /* JSONDecoder+Helpers.swift in Sources */,
-				EA3C9C241C6FCB9D00DE09E5 /* SettingsVC+GoogleHandler.swift in Sources */,
+				EA3CEEF11BA67DC5000DC2F9 /* UIColor+Extensions.swift in Sources */,
+				FA2B796023BA7482005CFB37 /* JSONDecoder+Extensions.swift in Sources */,
 				EA1734261BA676DE008F9BB0 /* AppDelegate.swift in Sources */,
 				EA3CEEEF1BA67DC5000DC2F9 /* ColorViewController.swift in Sources */,
-				EA4DF6A91CB0FD1000128FAB /* Dictionary+PList.swift in Sources */,
+				EA4DF6A91CB0FD1000128FAB /* Dictionary+Extensions.swift in Sources */,
 				EAA73B731BABB02100BC3988 /* UserDefaultsManager.swift in Sources */,
-				EA3C9C221C6FAEDA00DE09E5 /* SettingsVC+SKHandler.swift in Sources */,
+				FA854DB923D3B25600112348 /* ColorViewModel.swift in Sources */,
 				FA2B795E23BA70E0005CFB37 /* GMPlace.swift in Sources */,
-				EA2DD6301C8F4A1300BC68AD /* Array+Ref.swift in Sources */,
+				EA2DD6301C8F4A1300BC68AD /* Array+Extensions.swift in Sources */,
 				EA3CEEEE1BA67DC5000DC2F9 /* ColorModel.swift in Sources */,
 				FA2B796223BA80E0005CFB37 /* GMTimeZone.swift in Sources */,
-				EA3C9C201C6FAE7100DE09E5 /* SettingsVC+UITextFieldHandler.swift in Sources */,
 				EA3CEEF01BA67DC5000DC2F9 /* SettingsViewController.swift in Sources */,
+				FA854DB723D3B23F00112348 /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

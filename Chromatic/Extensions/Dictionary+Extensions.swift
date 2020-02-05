@@ -1,5 +1,5 @@
 //
-//  Dictionary+PList.swift
+//  Dictionary+Extensions.swift
 //  Chromatic
 //
 //  Created by Alex Persian on 4/3/16.
