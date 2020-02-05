@@ -9,21 +9,21 @@
 import UIKit
 import SwiftyTimer
 
-final class ColorViewController: UIViewController {
+final class ColorViewController: UIViewController, ColorViewDelegate {
 
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var hexLabel: UILabel!
 
-    private var model: ColorModel?
+    // Lazy declaration here allows us to pass `self` along as delegate on init
+    // while avoiding exposure of  the `bindToModel` function on the VM.
+    private lazy var viewModel: ColorViewModel = {
+        return ColorViewModel(delegate: self)
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.setNeedsStatusBarAppearanceUpdate()
-        
-        self.model = ColorModel()
-        self.bindToModel()
+        setNeedsStatusBarAppearanceUpdate()
     }
 
     override var prefersStatusBarHidden: Bool {
@@ -32,47 +32,35 @@ final class ColorViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = true
+        navigationController?.isNavigationBarHidden = true
 
-        // update the offset and city label in case they were changed elsewhere
-        self.model?.offset = UserDefaultsManager.getTimeOffset()
-        self.cityLabel.text = UserDefaultsManager.getCurrentCity()
-
-        self.model?.startUpdates()
+        // Update the offset and city label in case they were changed elsewhere
+        viewModel.updateTimeOffset(UserDefaultsManager.getTimeOffset())
+        cityLabel.text = UserDefaultsManager.getCurrentCity()
+        // Restart the model updates when we return to this view
+        viewModel.startUpdates()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.model?.stopUpdates()
+        // Stop model updates when we navigate away as there's no need for background updates
+        viewModel.stopUpdates()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: Model
-
-    private func bindToModel() {
-        self.model?.didUpdate = self.modelDidUpdate
-    }
-
-    private func modelDidUpdate(_ dateString: String, hexString: String, color: UIColor, nextColor: UIColor, hour: Int, minutes: Int) {
-        self.timeLabel.text = dateString
-        self.hexLabel.text = hexString
-        lerpBackgroundColor(color, fColor: nextColor, step: 0.05)
-    }
+    // MARK: Color Updates
 
     private func lerpBackgroundColor(_ cColor: UIColor, fColor: UIColor, step: CGFloat) {
         var progress: CGFloat = 0.0
-
-        Timer.every(Double(step)) {
-            if (progress <= 1.0) {
-                self.view.backgroundColor = cColor.lerp(cColor, finalColor: fColor, progress: progress)
-                progress += step
-            } else {
-                return
-            }
+        Timer.every(Double(step)) { [weak self] in
+            guard progress <= 1.0 else { return }
+            self?.view.backgroundColor = cColor.lerp(cColor, finalColor: fColor, progress: progress)
+            progress += step
         }
+    }
+
+    func modelDidUpdate(_ dateString: String, _ hexString: String, _ color: UIColor, _ nextColor: UIColor, _ hour: Int, _ minutes: Int) {
+        timeLabel.text = dateString
+        hexLabel.text = hexString
+        lerpBackgroundColor(color, fColor: nextColor, step: 0.05)
     }
 }

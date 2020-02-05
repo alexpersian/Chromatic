@@ -7,89 +7,47 @@
 //
 
 import UIKit
-import StoreKit
 import SafariServices
 import GooglePlaces
 
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-private func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
+enum ProductType {
+    case thankYou
+    case coffee
 }
 
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-private func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l > r
-  default:
-    return rhs < lhs
-  }
-}
-
-final class SettingsViewController: UIViewController {
+final class SettingsViewController: UIViewController, SettingsViewDelegate {
 
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet var buttons: [UIButton]!
 
-    let data = Dictionary<String, String>.fromPlist("Data")
+    private let viewModel = SettingsViewModel()
 
-    // IAP stuff
-    var productIDs: Set<String> = []
-    var productsArray: Array<SKProduct?> = []
-    var transactionInProgress = false
-
-    override func viewWillAppear(_ animated: Bool) {
-        self.setup()
-        self.navigationController?.isNavigationBarHidden = false
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
     }
 
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.default
     }
 
-    // MARK: Custom functions
+    // MARK: Setup
 
     private func setup() {
-        self.setNeedsStatusBarAppearanceUpdate()
-        self.searchButton.setTitle("  \(UserDefaultsManager.getCurrentCity())", for: .normal)
+        navigationController?.isNavigationBarHidden = false
+        setNeedsStatusBarAppearanceUpdate()
+        setupButtons()
+        viewModel.delegate = self
+        viewModel.setupStoreKitProducts()
+    }
+
+    private func setupButtons() {
+        searchButton.setTitle("  \(UserDefaultsManager.getCurrentCity())", for: .normal)
         buttons.forEach {
             $0.clipsToBounds = true
             $0.layer.cornerRadius = 8.0
         }
-
-        // IAP setup
-        guard let iap1 = data["IAP 1"], let iap2 = data["IAP 2"] else {
-            print("Error retrieving IAP from plist")
-            return
-        }
-        productIDs.insert(iap1)
-        productIDs.insert(iap2)
-        requestProductInfo()
-        SKPaymentQueue.default().add(self)
-    }
-
-    private func saveNewCity(_ city: String) {
-        UserDefaultsManager.setCurrentCity(city)
-    }
-
-    private func saveNewOffset(_ offset: Int) {
-        UserDefaultsManager.setTimeOffset(offset)
-    }
-
-    func updateLocationData(_ city: String, offset: Int) {
-        saveNewCity(city)
-        saveNewOffset(offset)
-        self.searchButton.setTitle("  \(UserDefaultsManager.getCurrentCity())", for: .normal)
     }
 
     // MARK: Alert view helpers
@@ -102,26 +60,36 @@ final class SettingsViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 
-    func showBasicAlertWithProduct(_ title: String, message: String, product: SKProduct) {
+    func showBasicAlertWithProduct(_ title: String, message: String, product: ProductType) {
         let actionSheetController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-
-        let buyAction = UIAlertAction(title: "Buy", style: UIAlertAction.Style.default) { (action) -> Void in
-            let payment = SKPayment(product: product)
-            SKPaymentQueue.default().add(payment)
-            self.transactionInProgress = true
+        let buyAction = UIAlertAction(title: "Buy", style: .default) { [weak self] action in
+            self?.viewModel.initiatePurchase(for: product)
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel) { (action) -> Void in }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
 
         actionSheetController.addAction(buyAction)
         actionSheetController.addAction(cancelAction)
         present(actionSheetController, animated: true, completion: nil)
     }
 
+    // MARK: SettingsViewDelegate
+
+    func updateSearchButtonTitle() {
+        searchButton.setTitle("  \(UserDefaultsManager.getCurrentCity())", for: .normal)
+    }
+
+    func transactionComplete(success: Bool) {
+        if success {
+            showBasicAlert("Chromatic", message: "You rock! Thanks for the support. \u{1F44D}")
+        } else {
+            showBasicAlert("Chromatic", message: "Transaction has failed. \u{1F613}")
+        }
+    }
+
     // MARK: IBActions
 
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         // TODO: Refactor this section to be self-contained
-        print("Searching...")
         let placesSearchController = GMSAutocompleteViewController()
         placesSearchController.delegate = self
 
@@ -143,30 +111,28 @@ final class SettingsViewController: UIViewController {
     }
 
     @IBAction func supportThanksButtonPressed(_ sender: UIButton) {
-        showThankYouPurchaseAction()
+        guard !viewModel.transactionInProgress else { return }
+        showBasicAlertWithProduct("Chromatic", message: "Send a thank you to the developer? ($0.99)", product: .thankYou)
     }
 
     @IBAction func supportCoffeeButtonPressed(_ sender: UIButton) {
-        showCoffeePurchaseAction()
+        guard !viewModel.transactionInProgress else { return }
+        showBasicAlertWithProduct("Chromatic", message: "Buy the developer a coffee? ($2.99)", product: .coffee)
     }
 
     @IBAction func twitterButtonPressed(_ sender: UIButton) {
-        guard
-            let path = data["Twitter"],
-            let url = URL(string: path) else {
-                print("Error: Twitter URL unavailable within data plist file.")
-                return
+        guard let url = viewModel.twitterURL else {
+            print("Error: Twitter URL unavailable within data plist file.")
+            return
         }
         let svc = SFSafariViewController(url: url)
         self.present(svc, animated: true, completion: nil)
     }
 
     @IBAction func githubButtonPressed(_ sender: UIButton) {
-        guard
-            let path = data["GitHub"],
-            let url = URL(string: path) else {
-                print("Error: GitHub URL unavailable within data plist file.")
-                return
+        guard let url = viewModel.githubURL else {
+            print("Error: GitHub URL unavailable within data plist file.")
+            return
         }
         let svc = SFSafariViewController(url: url)
         self.present(svc, animated: true, completion: nil)
@@ -175,18 +141,15 @@ final class SettingsViewController: UIViewController {
 
 extension SettingsViewController: GMSAutocompleteViewControllerDelegate {
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
-        print("Selected place:", place)
-        requestGeocodingFromGoogle(place.formattedAddress ?? "")
+        viewModel.requestGeocodingFromGoogle(place.formattedAddress ?? "")
         dismiss(animated: true, completion: nil)
     }
 
     func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
-        print("Encounterd error:", error)
         activityIndicator.stopAnimating()
     }
 
     func wasCancelled(_ viewController: GMSAutocompleteViewController) {
-        print("Cancelled...")
         dismiss(animated: true, completion: nil)
     }
 
