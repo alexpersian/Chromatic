@@ -1,5 +1,5 @@
 //
-//  JSONDecoder+Helpers.swift
+//  JSONDecoder+Extensions.swift
 //  Chromatic
 //
 //  Created by Alex Persian on 12/30/19.
