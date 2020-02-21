@@ -89,7 +89,6 @@ final class SettingsViewController: UIViewController, SettingsViewDelegate {
     // MARK: IBActions
 
     @IBAction func searchButtonPressed(_ sender: UIButton) {
-        // TODO: Refactor this section to be self-contained
         let placesSearchController = GMSAutocompleteViewController()
         placesSearchController.delegate = self
 
@@ -100,12 +99,15 @@ final class SettingsViewController: UIViewController, SettingsViewDelegate {
             UInt(GMSPlaceField.formattedAddress.rawValue) |
             UInt(GMSPlaceField.addressComponents.rawValue))
         else { return }
-        placesSearchController.placeFields = fields
 
         // Restrict results to cities only
         let filter = GMSAutocompleteFilter()
         filter.type = .city
+
+        placesSearchController.placeFields = fields
         placesSearchController.autocompleteFilter = filter
+
+        styleAutocompleteViewController(placesSearchController)
 
         present(placesSearchController, animated: true, completion: nil)
     }
@@ -140,6 +142,16 @@ final class SettingsViewController: UIViewController, SettingsViewDelegate {
 }
 
 extension SettingsViewController: GMSAutocompleteViewControllerDelegate {
+    private func styleAutocompleteViewController(_ viewController: GMSAutocompleteViewController) {
+        // Configure the autocomplete modal colors based on user interface
+        // style to handle dark mode support.
+
+        if self.traitCollection.userInterfaceStyle == .dark {
+            viewController.tableCellBackgroundColor = .systemGroupedBackground
+            viewController.tableCellSeparatorColor = .secondarySystemGroupedBackground
+        }
+    }
+
     func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
         viewModel.requestGeocodingFromGoogle(place.formattedAddress ?? "")
         dismiss(animated: true, completion: nil)
